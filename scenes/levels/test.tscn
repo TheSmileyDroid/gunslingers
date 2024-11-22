@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=8 format=3 uid="uid://gwvy523xl01f"]
+
+[ext_resource type="Script" path="res://scripts/test.gd" id="1_kkgel"]
+[ext_resource type="PackedScene" uid="uid://dpxtt5l4t58ul" path="res://scenes/enemies/rat.tscn" id="1_uk3nv"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="2_i04ou"]
+[ext_resource type="PackedScene" uid="uid://bxe0x3i1mt8pr" path="res://scenes/towers/gunslinger.tscn" id="2_inges"]
+
+[sub_resource type="Resource" id="Resource_0d551"]
+resource_local_to_scene = true
+script = ExtResource("2_i04ou")
+health = 100
+damage = 10
+speed = 900.0
+
+[sub_resource type="Resource" id="Resource_k32ro"]
+resource_local_to_scene = true
+script = ExtResource("2_i04ou")
+health = 100
+damage = 10
+speed = 100.0
+
+[sub_resource type="Curve2D" id="Curve2D_rnidg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -8, 348, 0, 0, 0, 0, 152, 354, 0, 0, 0, 0, 156, 500, 0, 0, 0, 0, 272, 584, 0, 0, 0, 0, 426, 534, 0, 0, 0, 0, 532, 434, 0, 0, 0, 0, 610, 20, 0, 0, 0, 0, 788, 44, 0, 0, 0, 0, 1056, 288, 0, 0, 0, 0, 1174, 344, 0, 0, 0, 0, 1236, 340)
+}
+point_count = 11
 
 [node name="Test" type="Node2D"]
+script = ExtResource("1_kkgel")
+
+[node name="Rat" parent="." instance=ExtResource("1_uk3nv")]
+position = Vector2(160, 141)
+stats = SubResource("Resource_0d551")
+
+[node name="Gunslinger" parent="." instance=ExtResource("2_inges")]
+position = Vector2(606, 142)
+stats = SubResource("Resource_k32ro")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_rnidg")
