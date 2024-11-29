@@ -11,16 +11,19 @@ resource_local_to_scene = true
 script = ExtResource("2_cn5j0")
 health = 100
 damage = 10
-speed = 400.0
+speed = 100.0
+fire_rate = 1.0
+strategy = 0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gxeas"]
-radius = 68.0661
+radius = 17.0294
 
 [node name="Rat" type="Area2D"]
 script = ExtResource("1_gxr76")
 stats = SubResource("Resource_os2yj")
 
 [node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_u0ea7")
 
 [node name="AttackComponent" type="Node" parent="."]
@@ -32,8 +35,9 @@ script = ExtResource("4_mqgtf")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gxeas")
 
-[node name="HP" type="ProgressBar" parent="."]
-offset_left = -76.0
-offset_top = -109.0
-offset_right = 75.0
-offset_bottom = -82.0
+[node name="HPBar" type="ProgressBar" parent="."]
+offset_left = -49.0
+offset_top = -42.0
+offset_right = 51.0
+offset_bottom = -24.0
+theme_override_font_sizes/font_size = 10

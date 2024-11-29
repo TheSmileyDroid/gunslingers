@@ -8,5 +8,5 @@ script = ExtResource("1_78w2i")
 speed = 1000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.09375, 0.09375)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_q7g7i")
