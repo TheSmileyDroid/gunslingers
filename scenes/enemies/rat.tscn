@@ -11,7 +11,7 @@ resource_local_to_scene = true
 script = ExtResource("2_cn5j0")
 health = 100
 damage = 10
-speed = 700.0
+speed = 400.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gxeas"]
 radius = 68.0661

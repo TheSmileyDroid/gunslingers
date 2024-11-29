@@ -5,7 +5,6 @@ var health_component: HealthComponent
 var attack_component: AttackComponent
 var path = null
 var path_index: int = 0
-var blocked_path = false
 @onready var hp_bar: ProgressBar = get_node("HP")
 
 func _ready():
@@ -25,7 +24,7 @@ func _physics_process(delta):
 	move_along_path(delta)
 
 func move_along_path(delta):
-	if blocked_path:
+	if len(attack_component.targets) > 0:
 		return
 	if path and path_index < path.get_point_count():
 		var point = path.get_point_position(path_index)
@@ -42,11 +41,8 @@ func reach_end():
 
 func _on_Rat_body_entered(body):
 	if body.is_in_group("gunslingers"):
-		print("Tower entered rat's area")
-		attack_component.target = body
-		blocked_path = true
+		attack_component.targets.append(body)
 
 func _on_Rat_body_exited(body):
 	if body.is_in_group("gunslingers"):
-		print("Tower exited rat's area")
-		attack_component.target = null
+		attack_component.targets.erase(body)

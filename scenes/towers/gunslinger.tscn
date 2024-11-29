@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxe0x3i1mt8pr"]
+[gd_scene load_steps=10 format=3 uid="uid://bxe0x3i1mt8pr"]
 
 [ext_resource type="Script" path="res://scripts/tower.gd" id="1_8pf0t"]
 [ext_resource type="Texture2D" uid="uid://b6qjyfkqohig6" path="res://icon.svg" id="1_kpubj"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="2_0qgpf"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_tekad"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="3_jujtn"]
+[ext_resource type="Script" path="res://components/attack_range_component.gd" id="6_0fktm"]
 
 [sub_resource type="Resource" id="Resource_df3ar"]
 resource_local_to_scene = true
@@ -15,6 +16,9 @@ speed = 100.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_76byv"]
 radius = 68.593
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dkw0"]
+radius = 200.0
 
 [node name="Gunslinger" type="Area2D"]
 script = ExtResource("1_8pf0t")
@@ -28,6 +32,7 @@ script = ExtResource("2_0qgpf")
 
 [node name="AttackComponent" type="Node" parent="."]
 script = ExtResource("3_jujtn")
+fire_rate = 0.2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_76byv")
@@ -37,3 +42,11 @@ offset_left = -70.0
 offset_top = -113.0
 offset_right = 71.0
 offset_bottom = -86.0
+
+[node name="AttackRangeComponent" type="Node2D" parent="."]
+script = ExtResource("6_0fktm")
+
+[node name="Area2D" type="Area2D" parent="AttackRangeComponent"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRangeComponent/Area2D"]
+shape = SubResource("CircleShape2D_7dkw0")
