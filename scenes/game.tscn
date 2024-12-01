@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbhi8i1hbcyot"]
+[gd_scene load_steps=6 format=3 uid="uid://dbhi8i1hbcyot"]
 
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_86755"]
 [ext_resource type="PackedScene" uid="uid://c2pvjpt5f1vxb" path="res://scenes/ui.tscn" id="2_mw3pj"]
+[ext_resource type="Script" path="res://scripts/ui/character_stats.gd" id="3_rtxq1"]
+
+[sub_resource type="SystemFont" id="SystemFont_e242o"]
+font_names = PackedStringArray("Sans-Serif")
+generate_mipmaps = true
+force_autohinter = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_6waci"]
+font = SubResource("SystemFont_e242o")
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_86755")
@@ -9,3 +18,27 @@ script = ExtResource("1_86755")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Ui" parent="CanvasLayer" instance=ExtResource("2_mw3pj")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="CharStats" type="PanelContainer" parent="CanvasLayer2"]
+offset_right = 83.0
+offset_bottom = 23.0
+script = ExtResource("3_rtxq1")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2/CharStats"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="CanvasLayer2/CharStats/MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Textooooo"
+label_settings = SubResource("LabelSettings_6waci")
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true

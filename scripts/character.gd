@@ -17,7 +17,7 @@ func _ready():
     if has_node("AttackComponent"):
         attack_component = get_node("AttackComponent")
         attack_component.damage = stats.damage
-        attack_component.fire_rate = stats.fire_rate
+        attack_component.fire_rate = stats.cooldown
         attack_component.strategy = stats.strategy
     if has_node("AttackRangeComponent"):
         attack_range_component = get_node("AttackRangeComponent")
@@ -38,3 +38,9 @@ func _on_area_entered(_body):
 
 func _on_area_exited(_body):
     pass
+
+func _mouse_enter() -> void:
+    Events.character_mouse_enter.emit(self)
+
+func _mouse_exit() -> void:
+    Events.character_mouse_exit.emit(self)
