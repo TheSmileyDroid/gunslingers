@@ -10,10 +10,10 @@ var hp_bar: ProgressBar
 func _ready():
     if has_node("HealthComponent"):
         health_component = get_node("HealthComponent")
-        health_component.max_health = stats.health
+        health_component.stats = stats
     if has_node("HPBar"):
         hp_bar = get_node("HPBar")
-        hp_bar.max_value = stats.health
+        hp_bar.max_value = stats.max_health
     if has_node("AttackComponent"):
         attack_component = get_node("AttackComponent")
         attack_component.damage = stats.damage
@@ -28,10 +28,17 @@ func _ready():
             area_entered.connect(_on_area_entered)
         if has_signal("area_exited"):
             area_exited.connect(_on_area_exited)
+    hp_bar.value = stats.health
+    hp_bar.max_value = stats.max_health
+    stats.changed.connect(_stats_changed)
 
-func _physics_process(_delta):
-    if health_component and hp_bar:
-        hp_bar.value = health_component.current_health
+func _stats_changed():
+    hp_bar.value = stats.health
+    hp_bar.max_value = stats.max_health
+        
+
+func _physics_process(_delta: float) -> void:
+    pass
 
 func _on_area_entered(_body):
     pass
