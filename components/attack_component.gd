@@ -1,13 +1,13 @@
 extends Node
 class_name AttackComponent
 
-enum Strategy {first, last, strongest, weakest}
+enum Strategy {first, last, strongest, weakest, nearest}
 
 @export var damage: int = 10
 @export var fire_rate: float = 1.0
 @export var strategy: AttackComponent.Strategy = Strategy.first
 var can_attack: bool = true
-var targets = []
+var targets: Array[Character] = []
 
 func _process(_delta):
 	if can_attack and len(targets) > 0:
@@ -24,15 +24,21 @@ func get_target():
 	elif strategy == Strategy.strongest:
 		var strongest = targets[0]
 		for target in targets:
-			if target.get_node("HealthComponent").current_health > strongest.get_node("HealthComponent").current_health:
+			if target.stats.health > strongest.stats.health:
 				strongest = target
 		return strongest
 	elif strategy == Strategy.weakest:
 		var weakest = targets[0]
 		for target in targets:
-			if target.get_node("HealthComponent").current_health < weakest.get_node("HealthComponent").current_health:
+			if target.stats.health < weakest.stats.health:
 				weakest = target
 		return weakest
+	elif strategy == Strategy.nearest:
+		var nearest = targets[0]
+		for target in targets:
+			if target.global_position.distance_to(get_parent().global_position) < nearest.global_position.distance_to(get_parent().global_position):
+				nearest = target
+		return nearest
 
 func attack():
 	if len(targets) == 0:

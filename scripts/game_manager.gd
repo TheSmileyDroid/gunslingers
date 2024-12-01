@@ -1,8 +1,8 @@
 extends Node
 
-var current_level = "test"
 
 func _ready():
+	var current_level = GameInstance.save_data.current_level
 	load_level(current_level)
 	
 

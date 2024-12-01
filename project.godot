@@ -18,3 +18,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 Events="*res://scripts/global/events.gd"
+GameInstance="*res://scripts/global/game_instance.gd"
+LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/localization_editor/plugin.cfg")
+
+[internationalization]
+
+locale/translation_add_builtin_strings_to_pot=true

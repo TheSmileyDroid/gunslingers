@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=12 format=3 uid="uid://gwvy523xl01f"]
 
-[ext_resource type="Script" path="res://scripts/test.gd" id="1_kkgel"]
+[ext_resource type="Script" path="res://scenes/levels/test.gd" id="1_kkgel"]
 [ext_resource type="PackedScene" uid="uid://dpxtt5l4t58ul" path="res://scenes/enemies/rat.tscn" id="1_uk3nv"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_i04ou"]
 [ext_resource type="PackedScene" uid="uid://bxe0x3i1mt8pr" path="res://scenes/towers/gunslinger.tscn" id="2_inges"]
@@ -9,46 +9,61 @@
 resource_local_to_scene = true
 script = ExtResource("2_i04ou")
 health = 100
+max_health = 100
 damage = 10
 speed = 100.0
-fire_rate = 1.0
+cooldown = 0.5
 strategy = 0
 
 [sub_resource type="Resource" id="Resource_k32ro"]
 resource_local_to_scene = true
 script = ExtResource("2_i04ou")
 health = 100
+max_health = 100
 damage = 10
 speed = 100.0
-fire_rate = 1.0
-strategy = 1
+cooldown = 0.5
+strategy = 4
 
 [sub_resource type="Resource" id="Resource_4kbuw"]
 resource_local_to_scene = true
 script = ExtResource("2_i04ou")
 health = 100
+max_health = 100
 damage = 10
 speed = 100.0
-fire_rate = 0.1
+cooldown = 0.5
 strategy = 0
 
 [sub_resource type="Resource" id="Resource_7yc7v"]
 resource_local_to_scene = true
 script = ExtResource("2_i04ou")
 health = 100
+max_health = 100
 damage = 10
 speed = 100.0
-fire_rate = 1.0
+cooldown = 0.5
 strategy = 0
 
 [sub_resource type="Resource" id="Resource_c8u43"]
 resource_local_to_scene = true
 script = ExtResource("2_i04ou")
 health = 100
+max_health = 100
 damage = 10
 speed = 100.0
-fire_rate = 1.0
-strategy = 0
+cooldown = 0.5
+strategy = 3
+
+[sub_resource type="Resource" id="Resource_sdsrx"]
+resource_local_to_scene = true
+script = ExtResource("2_i04ou")
+health = 100
+max_health = 100
+damage = 10
+speed = 100.0
+cooldown = 0.5
+strategy = 4
 
 [sub_resource type="Curve2D" id="Curve2D_rnidg"]
 _data = {
@@ -75,9 +90,13 @@ stats = SubResource("Resource_4kbuw")
 position = Vector2(1025, 195)
 stats = SubResource("Resource_7yc7v")
 
-[node name="Gunslinger" parent="." instance=ExtResource("2_inges")]
-position = Vector2(646, 96)
+[node name="Gunslinger5" parent="." instance=ExtResource("2_inges")]
+position = Vector2(594, 121)
 stats = SubResource("Resource_c8u43")
+
+[node name="Gunslinger" parent="." instance=ExtResource("2_inges")]
+position = Vector2(632, 90)
+stats = SubResource("Resource_sdsrx")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_rnidg")

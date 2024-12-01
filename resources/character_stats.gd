@@ -34,18 +34,18 @@ func set_strategy(value: AttackComponent.Strategy) -> void:
 func _display_strategy(t_strategy: AttackComponent.Strategy) -> String:
     match t_strategy:
         AttackComponent.Strategy.first:
-            return "First"
+            return tr("First")
         AttackComponent.Strategy.last:
-            return "Last"
+            return tr("Last")
         AttackComponent.Strategy.strongest:
-            return "Strongest"
+            return tr("Strongest")
         AttackComponent.Strategy.weakest:
-            return "Weakest"
+            return tr("Weakest")
         
-    return "Unknown"
+    return tr("Unknown")
 
 func to_display_string() -> String:
-    return "Health: {health}/{max_health}\nDamage: {damage}\nSpeed: {speed}\nCooldown: {cooldown}\nStrategy: {strategy}".format({
+    return tr("Health: {health}/{max_health}\nDamage: {damage}\nSpeed: {speed}\nCooldown: {cooldown}\nStrategy: {strategy}").format({
         "health": health,
         "max_health": max_health,
         "damage": damage,
