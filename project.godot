@@ -19,11 +19,10 @@ config/icon="res://icon.svg"
 
 Events="*res://scripts/global/events.gd"
 GameInstance="*res://scripts/global/game_instance.gd"
-LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/localization_editor/plugin.cfg")
+enabled=PackedStringArray()
 
 [internationalization]
 

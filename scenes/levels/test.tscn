@@ -33,7 +33,7 @@ max_health = 100
 damage = 10
 speed = 100.0
 cooldown = 0.5
-strategy = 0
+strategy = 1
 
 [sub_resource type="Resource" id="Resource_7yc7v"]
 resource_local_to_scene = true
@@ -79,7 +79,7 @@ position = Vector2(-15, 346)
 stats = SubResource("Resource_0d551")
 
 [node name="Gunslinger2" parent="." instance=ExtResource("2_inges")]
-position = Vector2(485, 423)
+position = Vector2(461, 449)
 stats = SubResource("Resource_k32ro")
 
 [node name="Gunslinger3" parent="." instance=ExtResource("2_inges")]
