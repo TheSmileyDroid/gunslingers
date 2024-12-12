@@ -19,6 +19,12 @@ config/icon="res://icon.svg"
 
 Events="*res://scripts/global/events.gd"
 GameInstance="*res://scripts/global/game_instance.gd"
+LocalizationManager="*res://addons/localization_editor/LocalizationManager.gd"
+
+[display]
+
+mouse_cursor/custom_image="res://assets/mouse/hand_point.png"
+mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
 
@@ -27,3 +33,7 @@ enabled=PackedStringArray()
 [internationalization]
 
 locale/translation_add_builtin_strings_to_pot=true
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=3
