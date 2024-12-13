@@ -10,3 +10,5 @@ signal character_mouse_exit(character: Character)
 
 signal save_game(save_name: String)
 signal load_game(save_name: String)
+
+signal tower_selected(tower_id: String)

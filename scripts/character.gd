@@ -14,13 +14,14 @@ func _ready():
     if has_node("HPBar"):
         hp_bar = get_node("HPBar")
         hp_bar.max_value = stats.max_health
+        print(stats.health)
+        hp_bar.value = stats.health
     if has_node("AttackComponent"):
         attack_component = get_node("AttackComponent")
-        attack_component.damage = stats.damage
-        attack_component.fire_rate = stats.cooldown
-        attack_component.strategy = stats.strategy
+        attack_component.stats = stats
     if has_node("AttackRangeComponent"):
         attack_range_component = get_node("AttackRangeComponent")
+        attack_range_component.stats = stats
         attack_range_component.area2d.area_entered.connect(_on_area_entered)
         attack_range_component.area2d.area_exited.connect(_on_area_exited)
     else:
@@ -28,8 +29,6 @@ func _ready():
             area_entered.connect(_on_area_entered)
         if has_signal("area_exited"):
             area_exited.connect(_on_area_exited)
-    hp_bar.value = stats.health
-    hp_bar.max_value = stats.max_health
     stats.changed.connect(_stats_changed)
 
 func _stats_changed():
