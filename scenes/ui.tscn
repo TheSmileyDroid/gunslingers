@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2pvjpt5f1vxb"]
+[gd_scene load_steps=3 format=3 uid="uid://c2pvjpt5f1vxb"]
 
 [ext_resource type="Script" path="res://scenes/ui.gd" id="1_k3po2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dr7o4"]
+font_size = 32
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Ui" type="Control"]
 layout_mode = 3
@@ -52,5 +57,17 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 8
 text = "Flip UI"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Onda 1"
+label_settings = SubResource("LabelSettings_dr7o4")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Button" to="." method="_on__flip_button_pressed"]
