@@ -7,6 +7,7 @@ var stats: CharacterStats
 var can_attack: bool = true
 var targets: Array[Character] = []
 
+
 func _process(_delta):
 	if can_attack and len(targets) > 0:
 		attack()

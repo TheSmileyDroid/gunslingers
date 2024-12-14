@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://6wc5jxoxtrys"]
 
 [ext_resource type="Script" path="res://scripts/projectile.gd" id="1_78w2i"]
-[ext_resource type="Texture2D" uid="uid://b6qjyfkqohig6" path="res://icon.svg" id="1_q7g7i"]
+[ext_resource type="Texture2D" uid="uid://c3rmdfy2u1m6g" path="res://assets/bullet.png" id="2_rlbut"]
 
 [node name="Projectile" type="Node2D"]
 script = ExtResource("1_78w2i")
 speed = 1000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_q7g7i")
+texture = ExtResource("2_rlbut")

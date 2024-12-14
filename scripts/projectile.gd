@@ -12,6 +12,8 @@ func _physics_process(delta):
 		var direction = (target.global_position - global_position).normalized()
 		position += direction * speed * delta
 
+		rotation = direction.angle()
+
 		if global_position.distance_to(target.global_position) < 10:
 			target.get_node("HealthComponent").take_damage(damage)
 			queue_free()
