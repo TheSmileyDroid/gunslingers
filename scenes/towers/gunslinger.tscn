@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://bxe0x3i1mt8pr"]
 
 [ext_resource type="Script" path="res://scripts/tower.gd" id="1_8pf0t"]
-[ext_resource type="Texture2D" uid="uid://b6qjyfkqohig6" path="res://icon.svg" id="1_kpubj"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="2_0qgpf"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_tekad"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="3_jujtn"]
+[ext_resource type="Texture2D" uid="uid://bhn75hpjyywcd" path="res://assets/heroes/sheriff.png" id="3_p6cm4"]
 [ext_resource type="Script" path="res://components/attack_range_component.gd" id="6_0fktm"]
 
 [sub_resource type="Resource" id="Resource_df3ar"]
@@ -18,7 +18,7 @@ cooldown = 0.5
 strategy = 0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_76byv"]
-radius = 15.0333
+radius = 20.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7dkw0"]
 radius = 100.0
@@ -65,8 +65,11 @@ script = ExtResource("1_8pf0t")
 stats = SubResource("Resource_df3ar")
 
 [node name="Icon" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_kpubj")
+position = Vector2(0, -10)
+scale = Vector2(3, 3)
+texture = ExtResource("3_p6cm4")
+region_enabled = true
+region_rect = Rect2(0, 0, 20, 20)
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("2_0qgpf")
@@ -81,9 +84,9 @@ shape = SubResource("CircleShape2D_76byv")
 
 [node name="HPBar" type="ProgressBar" parent="."]
 offset_left = -43.0
-offset_top = -39.0
+offset_top = -44.0
 offset_right = 47.0
-offset_bottom = -21.0
+offset_bottom = -26.0
 theme_override_font_sizes/font_size = 10
 
 [node name="AttackRangeComponent" type="Node2D" parent="."]
