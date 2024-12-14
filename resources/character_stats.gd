@@ -6,9 +6,10 @@ class_name CharacterStats
 @export var speed: float = 100.0: set = set_speed
 @export var cooldown: float = 0.5: set = set_cooldown
 @export var strategy: AttackComponent.Strategy = AttackComponent.Strategy.first: set = set_strategy
+@export var attack_range: float = 100.0: set = set_range
 
 func set_health(value: int) -> void:
-    health = clamp(value, 0, max_health)
+    health = value
     changed.emit()
 
 func set_max_health(value: int) -> void:
@@ -31,6 +32,10 @@ func set_strategy(value: AttackComponent.Strategy) -> void:
     strategy = value
     changed.emit()
 
+func set_range(value: float) -> void:
+    attack_range = max(0.0, value)
+    changed.emit()
+
 func _display_strategy(t_strategy: AttackComponent.Strategy) -> String:
     match t_strategy:
         AttackComponent.Strategy.first:
@@ -41,6 +46,8 @@ func _display_strategy(t_strategy: AttackComponent.Strategy) -> String:
             return tr("Strongest")
         AttackComponent.Strategy.weakest:
             return tr("Weakest")
+        AttackComponent.Strategy.nearest:
+            return tr("Closest")
         
     return tr("Unknown")
 

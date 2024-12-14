@@ -13,7 +13,7 @@ func _display_character_info(t_character: Character) -> void:
 	position = get_viewport().get_mouse_position()
 	visible = true
 
-	if character:
+	if character and is_instance_valid(character):
 		character.stats.changed.disconnect(_handle_changes)
 	character = t_character
 	_handle_changes()
