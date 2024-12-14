@@ -13,6 +13,7 @@ force_autohinter = true
 font = SubResource("SystemFont_e242o")
 
 [node name="Game" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_86755")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bsjcgnlnskxfp"]
+[gd_scene load_steps=26 format=3 uid="uid://diktuk75bf5a7"]
 
 [ext_resource type="Script" path="res://scripts/tower.gd" id="1_vsq3r"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_glpaj"]
-[ext_resource type="Texture2D" uid="uid://b6qjyfkqohig6" path="res://icon.svg" id="3_bqxyw"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="3_flrlr"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="4_qfi2u"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="5_y7tjq"]
-[ext_resource type="Script" path="res://components/attack_range_component.gd" id="6_hynry"]
 
 [sub_resource type="Resource" id="Resource_df3ar"]
 resource_local_to_scene = true
@@ -18,15 +17,131 @@ cooldown = 0.7
 strategy = 4
 attack_range = 50.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h3pc"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpmop"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpy77"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6rsd"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brk7w"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dwc3"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjxi4"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncu8t"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwh66"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jf4x"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(96, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7sgj"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(120, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kccpn"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afeip"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtn4g"]
+atlas = ExtResource("3_flrlr")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_js4tr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h3pc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpmop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpy77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6rsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brk7w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dwc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjxi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncu8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwh66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jf4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7sgj")
+}],
+"loop": true,
+"name": &"melee",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kccpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afeip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtn4g")
+}],
+"loop": true,
+"name": &"ranged",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_76byv"]
-radius = 15.0333
+radius = 27.074
 
 [sub_resource type="Animation" id="Animation_mtpmi"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:modulate")
+tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -42,7 +157,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:modulate")
+tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,10 +177,12 @@ _data = {
 script = ExtResource("1_vsq3r")
 stats = SubResource("Resource_df3ar")
 
-[node name="Icon" type="Sprite2D" parent="."]
-self_modulate = Color(60, 1, 1, 1)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_bqxyw")
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1.429, 1, 1, 1)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_js4tr")
+animation = &"ranged"
+autoplay = "idle"
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("4_qfi2u")
@@ -74,6 +191,7 @@ script = ExtResource("4_qfi2u")
 script = ExtResource("5_y7tjq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_76byv")
 
 [node name="HPBar" type="ProgressBar" parent="."]
@@ -82,9 +200,6 @@ offset_top = -39.0
 offset_right = 47.0
 offset_bottom = -21.0
 theme_override_font_sizes/font_size = 10
-
-[node name="AttackRangeComponent" type="Node2D" parent="."]
-script = ExtResource("6_hynry")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

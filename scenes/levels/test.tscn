@@ -78,6 +78,7 @@ _data = {
 point_count = 11
 
 [node name="Test" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_kkgel")
 
 [node name="Rat" parent="." instance=ExtResource("1_uk3nv")]
