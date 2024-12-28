@@ -66,4 +66,5 @@ script = ExtResource("9_w1x84")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
 
 [node name="FireRateComponent" type="Timer" parent="."]
+autostart = true
 script = ExtResource("10_o76o2")

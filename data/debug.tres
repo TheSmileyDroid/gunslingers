@@ -1,0 +1,4 @@
+[gd_resource type="SystemFont" format=3 uid="uid://4lom1s8s0von"]
+
+[resource]
+font_names = PackedStringArray("OpenDyslexic3", "Monospace")

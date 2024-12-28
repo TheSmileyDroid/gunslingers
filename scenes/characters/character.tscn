@@ -43,6 +43,8 @@ script = ExtResource("5_5l51v")
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("6_nda5c")
 animation = &"attack"
+frame = 5
+frame_progress = 1.0
 script = ExtResource("7_51r4x")
 
 [node name="DetectionArea" type="Area2D" parent="."]
@@ -64,4 +66,5 @@ theme_override_font_sizes/font_size = 12
 script = ExtResource("9_4je33")
 
 [node name="FireRateComponent" type="Timer" parent="."]
+autostart = true
 script = ExtResource("10_kvcg7")

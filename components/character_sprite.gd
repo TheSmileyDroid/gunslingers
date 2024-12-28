@@ -15,7 +15,6 @@ func _ready():
 
 func _on_animation_finished():
     if animation == "attack":
-        character.get_node("AttackComponent").finish_attack()
         play("idle")
 
 func on_enemy_detected(_character: Character):

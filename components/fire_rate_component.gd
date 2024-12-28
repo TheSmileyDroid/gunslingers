@@ -7,8 +7,10 @@ var character: Character
 func _ready():
 	character = get_parent()
 	character.character_updated.connect(_on_character_updated)
-	one_shot = true
+	autostart = true
 	_on_character_updated()
+	timeout.connect(character.get_node("AttackComponent").attack)
+	start()
 
 func _on_character_updated():
-	wait_time = 1.0 / character.stats.fire_rate
+	wait_time = 10.0 / character.stats.fire_rate

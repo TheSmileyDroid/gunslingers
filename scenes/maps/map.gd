@@ -9,7 +9,8 @@ class_name Map
         Events.cash_changed.emit(cash)
 @export var lives: int
 
-var placer: Sprite2D
+var placer: Node2D
+var dragging_character_data: CharacterData
 
 func _ready() -> void:
     cash = map_data.initial_cash
@@ -18,10 +19,8 @@ func _ready() -> void:
     Events.received_reward.connect(on_received_reward)
     Events.character_drag.connect(on_character_drag)
     Events.buy_character.connect(on_buy_character)
-    placer = Sprite2D.new()
+    placer = preload("res://scenes/placer.tscn").instantiate()
     placer.visible = false
-    placer.scale.x = 3
-    placer.scale.y = 3
     add_child(placer)
 
 func spawn_wave() -> void:
@@ -32,16 +31,18 @@ func spawn_wave() -> void:
 func _input(event: InputEvent) -> void:
     if placer.visible and event is InputEventMouseMotion:
         placer.position = event.position
-
+        
 
 func on_received_reward(amount: int) -> void:
     cash += amount
 
 func on_character_drag(character_type: String):
     if character_type != "":
-        var character_data: CharacterData = load("res://data/characters/%s.tres" % character_type)
-        var texture = character_data.sprite_frames.get_frame_texture("idle", 0)
-        placer.texture = texture
+        dragging_character_data = load("res://data/characters/%s.tres" % character_type)
+        var texture = dragging_character_data.sprite_frames.get_frame_texture("idle", 0)
+        placer.get_node("Sprite2D").texture = texture
+        placer.get_node("Area2D/CollisionShape2D").shape.radius = dragging_character_data.size * 10
+        placer.attack_range = dragging_character_data.attack_range
         placer.visible = true
     else:
         placer.visible = false

@@ -7,16 +7,10 @@ var character: Character
 
 signal attack_started(character: Character)
 
-var starting_attack: bool = false
-
 func _ready():
 	character = get_parent()
 
-func _process(_delta):
-	if len(character.get_node("DetectionArea").targets) > 0:
-		attack()
 		
-
 func get_target():
 	if len(character.get_node("DetectionArea").targets) == 0:
 		return null
@@ -44,16 +38,16 @@ func get_target():
 		return nearest
 
 func attack():
-	if len(character.get_node("DetectionArea").targets) == 0 or starting_attack:
+	if len(character.get_node("DetectionArea").targets) == 0:
 		return
 	var current_target = get_target()
-	if is_instance_valid(current_target) and character.get_node("FireRateComponent").is_stopped():
+	if is_instance_valid(current_target):
 		attack_started.emit(character)
 		character.get_node("FireRateComponent").start()
-
-func finish_attack():
-	
-	var current_target = get_target()
+		finish_attack(current_target)
+		
+		
+func finish_attack(current_target: Character):
 	if is_instance_valid(current_target):
 		if character.stats.attack_type == CharacterData.AttackType.ranged:
 			var projectile_scene = preload("res://scenes/projectile.tscn")
@@ -66,4 +60,3 @@ func finish_attack():
 			get_tree().current_scene.add_child(projectile)
 		if character.stats.attack_type == CharacterData.AttackType.melee:
 			current_target.get_node("HealthComponent").take_damage(character.stats.damage, character)
-		starting_attack = false

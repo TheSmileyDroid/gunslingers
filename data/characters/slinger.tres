@@ -49,7 +49,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -75,6 +75,7 @@ animations = [{
 [resource]
 script = ExtResource("1_qwlfq")
 name = "Slinger"
+price = 100
 sprite_frames = SubResource("SpriteFrames_g2bxd")
 health = 100
 max_health = 100

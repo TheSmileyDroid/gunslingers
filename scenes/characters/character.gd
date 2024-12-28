@@ -18,7 +18,15 @@ enum Team {PLAYER, ENEMY}
 		character_updated.emit(self)
 		
 func _physics_process(_delta: float) -> void:
-	pass
+	if GameInstance.debug_mode:
+		queue_redraw()
+
+func _draw() -> void:
+	if GameInstance.debug_mode:
+		var red: float = 1.0 if team == Team.ENEMY else 0.0
+		var blue: float = 1.0 if team == Team.PLAYER else 0.0
+		@warning_ignore("int_as_enum_without_cast")
+		draw_string(GameInstance.debug_font, Vector2(0, -20), stats.name + " - " + name, 0, -1, 12, Color(red, 0.0, blue, 1.0))
 
 func _on_area_entered(_body):
 	pass
