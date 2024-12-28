@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://cto82k0emlha5"]
+
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="1_e0a5g"]
+[ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="2_u177t"]
+
+[resource]
+script = ExtResource("1_e0a5g")
+name = "Rat"
+sprite_frames = ExtResource("2_u177t")
+health = 10
+max_health = 10
+damage = 2
+speed = 50.0
+fire_rate = 20.0
+pierce = 1
+strategy = 4
+attack_range = 20.0
+attack_type = 0
+size = 1
+reward = 20

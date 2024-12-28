@@ -1,11 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://6wc5jxoxtrys"]
+[gd_scene load_steps=4 format=3 uid="uid://6wc5jxoxtrys"]
 
-[ext_resource type="Script" path="res://scripts/projectile.gd" id="1_78w2i"]
+[ext_resource type="Script" path="res://scenes/projectile.gd" id="1_78w2i"]
 [ext_resource type="Texture2D" uid="uid://c3rmdfy2u1m6g" path="res://assets/bullet.png" id="2_rlbut"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lju74"]
+radius = 3.16228
 
 [node name="Projectile" type="Node2D"]
 script = ExtResource("1_78w2i")
-speed = 1000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_rlbut")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lju74")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

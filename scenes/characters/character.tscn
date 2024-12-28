@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://bxe0x3i1mt8pr"]
+
+[ext_resource type="Script" path="res://scenes/tower.gd" id="1_gqhet"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="2_g2dt3"]
+[ext_resource type="Script" path="res://components/health_component.gd" id="4_jpjhx"]
+[ext_resource type="Script" path="res://components/attack_component.gd" id="5_5l51v"]
+[ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="6_nda5c"]
+[ext_resource type="Script" path="res://components/character_sprite.gd" id="7_51r4x"]
+[ext_resource type="Script" path="res://components/detection_area.gd" id="8_xj0ie"]
+[ext_resource type="Script" path="res://components/health_bar.gd" id="9_4je33"]
+[ext_resource type="Script" path="res://components/collision_area.gd" id="9_mfbl3"]
+[ext_resource type="Script" path="res://components/fire_rate_component.gd" id="10_kvcg7"]
+
+[sub_resource type="Resource" id="Resource_df3ar"]
+resource_local_to_scene = true
+script = ExtResource("2_g2dt3")
+name = "Character"
+price = 100
+sprite_frames = ExtResource("6_nda5c")
+health = 100
+max_health = 100
+damage = 10
+speed = 100.0
+fire_rate = 10.0
+pierce = 1
+strategy = 0
+attack_range = 100.0
+attack_type = 0
+size = 1
+reward = 10
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_gqhet")
+stats = SubResource("Resource_df3ar")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("4_jpjhx")
+
+[node name="AttackComponent" type="Node" parent="."]
+script = ExtResource("5_5l51v")
+
+[node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = ExtResource("6_nda5c")
+animation = &"attack"
+script = ExtResource("7_51r4x")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+script = ExtResource("8_xj0ie")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+
+[node name="CollisionArea" type="Area2D" parent="."]
+script = ExtResource("9_mfbl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -34.0
+offset_top = -61.0
+offset_right = 34.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 12
+script = ExtResource("9_4je33")
+
+[node name="FireRateComponent" type="Timer" parent="."]
+script = ExtResource("10_kvcg7")

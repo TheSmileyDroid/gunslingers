@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://vqqlwrvxtkq2"]
+
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="1_3grpn"]
+[ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="2_pij0e"]
+
+[resource]
+script = ExtResource("1_3grpn")
+name = "Brawler"
+sprite_frames = ExtResource("2_pij0e")
+health = 100
+max_health = 100
+damage = 10
+speed = 0.0
+fire_rate = 10.0
+pierce = 1
+strategy = 4
+attack_range = 40.0
+attack_type = 0
+size = 2
+reward = 10

@@ -1,11 +1,12 @@
 extends Character
+class_name Rat
 
 var path = null
 var path_index: int = 0
 
+signal has_reached_end(damage: int)
+
 func _ready():
-	add_to_group("rats")
-	super()
 	if get_parent().has_node("Path2D"):
 		path = get_parent().get_node("Path2D").curve
 
@@ -14,7 +15,7 @@ func _physics_process(delta):
 	move_along_path(delta)
 
 func move_along_path(delta):
-	if len(attack_component.targets) > 0:
+	if len($DetectionArea.targets) > 0 or $CharacterSprite.animation != "idle":
 		return
 	if path and path_index < path.get_point_count():
 		var point = path.get_point_position(path_index)
@@ -26,13 +27,6 @@ func move_along_path(delta):
 		reach_end()
 
 func reach_end():
+	has_reached_end.emit(stats.damage)
 	if path:
 		queue_free()
-
-func _on_area_entered(body):
-	if body.is_in_group("gunslingers"):
-		attack_component.targets.append(body)
-
-func _on_area_exited(body):
-	if body.is_in_group("gunslingers"):
-		attack_component.targets.erase(body)

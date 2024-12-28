@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=12 format=3 uid="uid://ctuaql02wr7vq"]
+
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="1_qwlfq"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_3npo8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2owp"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fctc"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mxtv"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wbtb"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26kbk"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g374f"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vg2i"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_070py"]
+atlas = ExtResource("2_3npo8")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2bxd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2owp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fctc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mxtv")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wbtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26kbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g374f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vg2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_070py")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_qwlfq")
+name = "Slinger"
+sprite_frames = SubResource("SpriteFrames_g2bxd")
+health = 100
+max_health = 100
+damage = 4
+speed = 100.0
+fire_rate = 20.0
+pierce = 1
+strategy = 0
+attack_range = 150.0
+attack_type = 1
+size = 2
+reward = 10
