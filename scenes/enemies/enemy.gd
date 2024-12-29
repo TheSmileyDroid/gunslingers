@@ -21,6 +21,11 @@ func move_along_path(delta):
 		var point = path.get_point_position(path_index)
 		var direction = (point - global_position).normalized()
 		position += direction * stats.speed * delta
+		if direction.x < 0:
+			get_node("CharacterSprite").flip_h = true
+		else:
+			get_node("CharacterSprite").flip_h = false
+
 		if global_position.distance_to(point) < 10:
 			path_index += 1
 	else:

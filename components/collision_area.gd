@@ -5,7 +5,6 @@ var character: Character
 
 var targets: Array = []
 
-var draw_area: bool = true
 
 func _ready():
     character = get_parent()
@@ -28,5 +27,5 @@ func _on_stats_changed():
     $CollisionShape2D.shape.radius = character.stats.size * 10
 
 func _draw() -> void:
-    if draw_area:
+    if GameInstance.debug_mode:
         draw_circle($CollisionShape2D.position, character.stats.size * 10, Color(0, 0, 1, 0.1))

@@ -1,6 +1,7 @@
 extends Node2D
 class_name Character
 
+
 signal character_updated(character: Character)
 
 @export var stats: CharacterData:

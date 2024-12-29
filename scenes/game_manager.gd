@@ -25,10 +25,14 @@ func _unhandled_input(event):
 
 
 func spawn_character(character_id: String, position: Vector2):
-	if len(level_instance.placer.overlapping) > 0:
+	var stats: CharacterData = load("res://data/characters/%s.tres" % character_id).duplicate()
+	var has_money = stats.price <= level_instance.cash
+	var is_overlapping = len(level_instance.placer.overlapping) > 0
+	print_debug("Cash: %s" % level_instance.cash + "  Price: %s" % stats.price)
+	if is_overlapping or !has_money:
 		return
 	var character = preload("res://scenes/characters/character.tscn").instantiate()
-	character.stats = load("res://data/characters/%s.tres" % character_id).duplicate()
+	character.stats = stats
 	character.position = position
 	level_instance.add_child(character)
 	Events.buy_character.emit(character_id)

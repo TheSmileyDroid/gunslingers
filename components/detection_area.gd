@@ -5,7 +5,6 @@ var character: Character
 
 var targets: Array = []
 
-var draw_area: bool = true
 
 signal enemy_detected(character: Character)
 signal enemy_lost(character: Character)
@@ -42,5 +41,5 @@ func _on_area_exited(area):
         enemy_lost.emit(area.character)
 
 func _draw() -> void:
-    if draw_area:
+    if GameInstance.debug_mode:
         draw_circle($CollisionShape2D.position, character.stats.attack_range, Color(1, 0, 0, 0.1))

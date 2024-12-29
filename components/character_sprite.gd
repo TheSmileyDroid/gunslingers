@@ -1,5 +1,7 @@
+@tool
 extends AnimatedSprite2D
 class_name CharacterSprite
+
 
 var character: Character
 
@@ -13,6 +15,7 @@ func _ready():
     animation_finished.connect(_on_animation_finished)
     play("idle")
 
+
 func _on_animation_finished():
     if animation == "attack":
         play("idle")
@@ -24,6 +27,7 @@ func on_enemy_detected(_character: Character):
             flip_h = false
         else:
             flip_h = true
+    
 
 func on_attack_started(_character: Character):
     play("attack")
