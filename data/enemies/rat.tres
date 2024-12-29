@@ -1,23 +1,27 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://cto82k0emlha5"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=18 format=3 uid="uid://cto82k0emlha5"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_e0a5g"]
 [ext_resource type="Texture2D" uid="uid://cxqbh7kx32ahs" path="res://assets/enemies/base.png" id="2_up65l"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yw3co"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d318"]
 atlas = ExtResource("2_up65l")
-region = Rect2(0, 0, 24, 24)
+region = Rect2(0, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_abmbx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cx6g"]
 atlas = ExtResource("2_up65l")
-region = Rect2(24, 0, 24, 24)
+region = Rect2(24, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lynwr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1pbo"]
 atlas = ExtResource("2_up65l")
-region = Rect2(48, 0, 24, 24)
+region = Rect2(48, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2jokb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0s4l"]
 atlas = ExtResource("2_up65l")
-region = Rect2(72, 0, 24, 24)
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fleh"]
+atlas = ExtResource("2_up65l")
+region = Rect2(96, 48, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lttd2"]
 atlas = ExtResource("2_up65l")
@@ -59,20 +63,23 @@ region = Rect2(72, 0, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yw3co")
+"texture": SubResource("AtlasTexture_7d318")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_abmbx")
+"texture": SubResource("AtlasTexture_0cx6g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lynwr")
+"texture": SubResource("AtlasTexture_g1pbo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2jokb")
+"texture": SubResource("AtlasTexture_i0s4l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fleh")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,

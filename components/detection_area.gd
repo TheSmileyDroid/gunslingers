@@ -27,6 +27,8 @@ func _on_character_updated():
     _on_stats_changed()
 
 func _on_stats_changed():
+    if is_queued_for_deletion():
+        return
     $CollisionShape2D.shape = CircleShape2D.new()
     $CollisionShape2D.shape.radius = character.stats.attack_range
 

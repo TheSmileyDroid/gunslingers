@@ -6,10 +6,11 @@
 [resource]
 script = ExtResource("1_3grpn")
 name = "Brawler"
+price = 100
 sprite_frames = ExtResource("2_pij0e")
 health = 100
 max_health = 100
-damage = 10
+damage = 5
 speed = 0.0
 fire_rate = 10.0
 pierce = 1
