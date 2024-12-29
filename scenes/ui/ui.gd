@@ -29,11 +29,11 @@ func on_tower_pressed(tower_id: String) -> void:
 
 
 func _on__flip_button_pressed() -> void:
-	if $PanelContainer.position.x == 0:
-		$PanelContainer.position.x = get_viewport_rect().size.x - $PanelContainer.size.x
-		print(get_viewport_rect().size.x - $PanelContainer.size.x)
+	if %PanelContainer.position.x == 0:
+		%PanelContainer.position.x = get_viewport_rect().size.x - %PanelContainer.size.x
+		print(get_viewport_rect().size.x - %PanelContainer.size.x)
 	else:
-		$PanelContainer.position.x = 0
+		%PanelContainer.position.x = 0
 
 func on_cash_changed(cash: int):
 	%Cash.text = "$" + str(cash)
