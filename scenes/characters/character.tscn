@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://bxe0x3i1mt8pr"]
+[gd_scene load_steps=14 format=3 uid="uid://bxe0x3i1mt8pr"]
 
+[ext_resource type="Shader" path="res://assets/shaders/damage_shader.gdshader" id="1_dw0yc"]
 [ext_resource type="Script" path="res://scenes/tower.gd" id="1_gqhet"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_g2dt3"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="4_jpjhx"]
@@ -29,6 +30,11 @@ attack_type = 0
 size = 1
 reward = 10
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ii0nc"]
+shader = ExtResource("1_dw0yc")
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_intensity = 1.0
+
 [node name="Character" type="Node2D"]
 script = ExtResource("1_gqhet")
 stats = SubResource("Resource_df3ar")
@@ -40,6 +46,7 @@ script = ExtResource("4_jpjhx")
 script = ExtResource("5_5l51v")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ii0nc")
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("6_nda5c")
 animation = &"attack"

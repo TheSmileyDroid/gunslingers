@@ -1,15 +1,21 @@
-[gd_scene load_steps=25 format=3 uid="uid://dpxtt5l4t58ul"]
+[gd_scene load_steps=27 format=3 uid="uid://dpxtt5l4t58ul"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_vxfr8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="2_e5grm"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="4_wlxog"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="5_x8ulw"]
+[ext_resource type="Shader" path="res://assets/shaders/damage_shader.gdshader" id="6_7mhq7"]
 [ext_resource type="Script" path="res://components/health_bar.gd" id="6_5168f"]
 [ext_resource type="Texture2D" uid="uid://cxqbh7kx32ahs" path="res://assets/enemies/base.png" id="6_puo40"]
 [ext_resource type="Script" path="res://components/character_sprite.gd" id="7_l6hlr"]
 [ext_resource type="Script" path="res://components/detection_area.gd" id="8_m3v1n"]
 [ext_resource type="Script" path="res://components/collision_area.gd" id="9_w1x84"]
 [ext_resource type="Script" path="res://components/fire_rate_component.gd" id="10_o76o2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ph25s"]
+shader = ExtResource("6_7mhq7")
+shader_parameter/blink_color = Color(1, 1, 1, 1)
+shader_parameter/blink_intensity = 1.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yw3co"]
 atlas = ExtResource("6_puo40")
@@ -140,6 +146,7 @@ theme_override_font_sizes/font_size = 12
 script = ExtResource("6_5168f")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ph25s")
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_bo1nx")
 animation = &"idle"
