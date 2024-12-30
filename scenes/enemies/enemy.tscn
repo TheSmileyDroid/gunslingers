@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://components/fire_rate_component.gd" id="10_o76o2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ph25s"]
+resource_local_to_scene = true
 shader = ExtResource("6_7mhq7")
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_intensity = 1.0

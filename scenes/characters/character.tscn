@@ -31,6 +31,7 @@ size = 1
 reward = 10
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ii0nc"]
+resource_local_to_scene = true
 shader = ExtResource("1_dw0yc")
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_intensity = 1.0
@@ -50,7 +51,7 @@ material = SubResource("ShaderMaterial_ii0nc")
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("6_nda5c")
 animation = &"attack"
-frame = 5
+frame = 3
 frame_progress = 1.0
 script = ExtResource("7_51r4x")
 

@@ -1,10 +1,6 @@
-[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://c348gyd4lwjrv"]
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://c348gyd4lwjrv"]
 
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="1_tvsl6"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2if1i"]
-atlas = ExtResource("1_tvsl6")
-region = Rect2(0, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_md55o"]
 atlas = ExtResource("1_tvsl6")
@@ -13,10 +9,6 @@ region = Rect2(24, 24, 24, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5re7"]
 atlas = ExtResource("1_tvsl6")
 region = Rect2(48, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_quryh"]
-atlas = ExtResource("1_tvsl6")
-region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5idhh"]
 atlas = ExtResource("1_tvsl6")
@@ -50,16 +42,10 @@ region = Rect2(96, 0, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2if1i")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_md55o")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_r5re7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_quryh")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5idhh")
@@ -69,7 +55,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 20.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
