@@ -8,6 +8,8 @@ const CHARACTER_DATA_PATH = "res://data/characters/"
 
 func _ready() -> void:
 	Events.cash_changed.connect(on_cash_changed)
+	Events.entered_game.connect(_on_entered_game)
+	Events.exited_game.connect(_on_exited_game)
 	_load_character_buttons()
 
 func _load_character_buttons() -> void:
@@ -54,3 +56,9 @@ func _on__flip_button_pressed() -> void:
 
 func on_cash_changed(cash: int):
 	cash_label.text = "$%d" % cash # Using format for clarity
+
+func _on_entered_game() -> void:
+	%GameHUD.visible = true
+
+func _on_exited_game() -> void:
+	%GameHUD.visible = false

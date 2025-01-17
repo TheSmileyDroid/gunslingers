@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dpxtt5l4t58ul"]
+[gd_scene load_steps=28 format=3 uid="uid://dpxtt5l4t58ul"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_vxfr8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="2_e5grm"]
@@ -18,21 +18,25 @@ shader = ExtResource("6_7mhq7")
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_intensity = 1.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yw3co"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xyrr"]
 atlas = ExtResource("6_puo40")
-region = Rect2(0, 0, 24, 24)
+region = Rect2(0, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_abmbx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnueq"]
 atlas = ExtResource("6_puo40")
-region = Rect2(24, 0, 24, 24)
+region = Rect2(24, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lynwr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sowmd"]
 atlas = ExtResource("6_puo40")
-region = Rect2(48, 0, 24, 24)
+region = Rect2(48, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2jokb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqff7"]
 atlas = ExtResource("6_puo40")
-region = Rect2(72, 0, 24, 24)
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swp2v"]
+atlas = ExtResource("6_puo40")
+region = Rect2(96, 48, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lttd2"]
 atlas = ExtResource("6_puo40")
@@ -74,20 +78,23 @@ region = Rect2(72, 0, 24, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yw3co")
+"texture": SubResource("AtlasTexture_7xyrr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_abmbx")
+"texture": SubResource("AtlasTexture_pnueq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lynwr")
+"texture": SubResource("AtlasTexture_sowmd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2jokb")
+"texture": SubResource("AtlasTexture_gqff7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swp2v")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -150,8 +157,7 @@ script = ExtResource("6_5168f")
 material = SubResource("ShaderMaterial_ph25s")
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_bo1nx")
-animation = &"idle"
-frame_progress = 0.567148
+animation = &"attack"
 script = ExtResource("7_l6hlr")
 
 [node name="DetectionArea" type="Area2D" parent="."]

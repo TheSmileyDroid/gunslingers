@@ -9,6 +9,18 @@ signal player_won
 signal changed_level(level_name: String)
 
 @warning_ignore("unused_signal")
+signal entered_game
+
+@warning_ignore("unused_signal")
+signal exited_game
+
+@warning_ignore("unused_signal")
+signal paused_game
+
+@warning_ignore("unused_signal")
+signal unpaused_game
+
+@warning_ignore("unused_signal")
 signal character_mouse_enter(character: Character)
 @warning_ignore("unused_signal")
 signal character_mouse_exit(character: Character)

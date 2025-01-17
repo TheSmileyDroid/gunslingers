@@ -27,7 +27,9 @@ func _on_area_2d_area_exited(_area: Area2D) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area is CollisionArea and !is_queued_for_deletion():
 		var character: Character = area.get_parent()
-		if character not in hits and is_instance_valid(character) and character.team != source.team:
+		if !is_instance_valid(character):
+			return
+		if character not in hits and character.team != source.team:
 			hits.append(character)
 			hits_count += 1
 			character.get_node("HealthComponent").take_damage(damage, source)

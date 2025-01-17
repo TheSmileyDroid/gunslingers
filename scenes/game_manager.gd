@@ -7,9 +7,10 @@ func _ready():
 
 func load_level(level):
 	await SceneManager.change_scene(("res://scenes/maps/%s.tscn" % level), {
-		"pattern": "squares"
+		"pattern": "scribbles"
 	})
 	Events.changed_level.emit(level)
+	Events.entered_game.emit()
 
 func on_character_selected(character_id: String) -> void:
 	selected_character = character_id

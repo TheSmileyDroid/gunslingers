@@ -15,19 +15,27 @@ func get_target():
 	if len(character.get_node("DetectionArea").targets) == 0:
 		return null
 	if character.stats.strategy == Strategy.first:
-		return character.get_node("DetectionArea").targets[0]
+		var first = character.get_node("DetectionArea").targets[0]
+		for target in character.get_node("DetectionArea").targets:
+			if target.time_alive > first.time_alive:
+				first = target
+		return first
 	elif character.stats.strategy == Strategy.last:
-		return character.get_node("DetectionArea").targets[-1]
+		var last = character.get_node("DetectionArea").targets[-1]
+		for target in character.get_node("DetectionArea").targets:
+			if target.time_alive < last.time_alive:
+				last = target
+		return last
 	elif character.stats.strategy == Strategy.strongest:
 		var strongest = character.get_node("DetectionArea").targets[0]
 		for target in character.get_node("DetectionArea").targets:
-			if target.character.stats.health > strongest.character.stats.health:
+			if target.stats.health > strongest.stats.health:
 				strongest = target
 		return strongest
 	elif character.stats.strategy == Strategy.weakest:
 		var weakest = character.get_node("DetectionArea").targets[0]
 		for target in character.get_node("DetectionArea").targets:
-			if target.character.stats.health < weakest.character.stats.health:
+			if target.stats.health < weakest.stats.health:
 				weakest = target
 		return weakest
 	elif character.stats.strategy == Strategy.nearest:

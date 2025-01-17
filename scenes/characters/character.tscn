@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxe0x3i1mt8pr"]
+[gd_scene load_steps=27 format=3 uid="uid://bxe0x3i1mt8pr"]
 
 [ext_resource type="Shader" path="res://assets/shaders/damage_shader.gdshader" id="1_dw0yc"]
 [ext_resource type="Script" path="res://scenes/tower.gd" id="1_gqhet"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://components/attack_component.gd" id="5_5l51v"]
 [ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="6_nda5c"]
 [ext_resource type="Script" path="res://components/character_sprite.gd" id="7_51r4x"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="7_e78r7"]
 [ext_resource type="Script" path="res://components/detection_area.gd" id="8_xj0ie"]
 [ext_resource type="Script" path="res://components/health_bar.gd" id="9_4je33"]
 [ext_resource type="Script" path="res://components/collision_area.gd" id="9_mfbl3"]
@@ -36,6 +37,96 @@ shader = ExtResource("1_dw0yc")
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_intensity = 1.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_225dg"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgthb"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwc1k"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_el1ua"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v31x0"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(96, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taxcc"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(120, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwwmw"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0gj3"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvvvs"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ky4fd"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpy2d"]
+atlas = ExtResource("7_e78r7")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vaqgb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_225dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgthb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwc1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_el1ua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v31x0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taxcc")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwwmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0gj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvvvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ky4fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpy2d")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 9.0
+}]
+
 [node name="Character" type="Node2D"]
 script = ExtResource("1_gqhet")
 stats = SubResource("Resource_df3ar")
@@ -49,9 +140,9 @@ script = ExtResource("5_5l51v")
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_ii0nc")
 scale = Vector2(3, 3)
-sprite_frames = ExtResource("6_nda5c")
+sprite_frames = SubResource("SpriteFrames_vaqgb")
 animation = &"attack"
-frame = 3
+frame = 5
 frame_progress = 1.0
 script = ExtResource("7_51r4x")
 

@@ -1,6 +1,7 @@
 extends Node2D
 class_name Character
 
+var time_alive := 0.0
 
 signal character_updated(character: Character)
 
@@ -18,7 +19,8 @@ enum Team {PLAYER, ENEMY}
 		add_to_group("player" if value == Team.PLAYER else "enemy")
 		character_updated.emit(self)
 		
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
+	time_alive += delta
 	if GameInstance.debug_mode:
 		queue_redraw()
 

@@ -1,0 +1,90 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=12 format=3 uid="uid://dmooxiiicsuhc"]
+
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="1_fjq40"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_pgh2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxpde"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aue3c"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs6hh"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qf2a"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wwsv"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nxwj"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afxfh"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv22g"]
+atlas = ExtResource("2_pgh2m")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fljd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxpde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aue3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs6hh")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qf2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wwsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nxwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afxfh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv22g")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 14.0
+}]
+
+[resource]
+script = ExtResource("1_fjq40")
+name = "Sheriff"
+price = 200
+sprite_frames = SubResource("SpriteFrames_5fljd")
+health = 80
+max_health = 80
+damage = 8
+speed = 100.0
+fire_rate = 5.0
+pierce = 3
+strategy = 0
+attack_range = 200.0
+attack_type = 1
+size = 2
+reward = 10

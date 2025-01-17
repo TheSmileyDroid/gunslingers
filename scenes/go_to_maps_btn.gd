@@ -6,5 +6,5 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	SceneManager.change_scene("res://scenes/maps.tscn", {
-		"pattern": "squares"
+		"pattern": "scribbles"
 	})

@@ -9,12 +9,20 @@ class_name Map
         Events.cash_changed.emit(cash)
 @export var lives: int
 
+@export var difficulty: Curve
+
+@warning_ignore("unused_parameter")
+func _play_cutscene() -> void:
+    pass
+
 var placer: Node2D
 var dragging_character_data: CharacterData
 
 func _ready() -> void:
     cash = map_data.initial_cash
     lives = map_data.initial_lives
+
+    _play_cutscene()
     spawn_wave()
     Events.received_reward.connect(on_received_reward)
     Events.character_drag.connect(on_character_drag)
@@ -22,6 +30,7 @@ func _ready() -> void:
     placer = preload("res://scenes/placer.tscn").instantiate()
     placer.visible = false
     add_child(placer)
+    
 
 func spawn_wave() -> void:
     if wave >= map_data.waves:
