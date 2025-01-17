@@ -8,10 +8,22 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/array_color_tint=100.0
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+resources_spreadsheet_view/fold_docks=true
+resources_spreadsheet_view/resource_cell_label_mode=1
+
 [application]
 
 config/name="gunslingers"
-run/main_scene="res://scenes/maps/test.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,8 +31,9 @@ config/icon="res://icon.svg"
 
 Events="*res://scripts/global/events.gd"
 GameInstance="*res://scripts/global/game_instance.gd"
-Ui="*res://scenes/ui/ui.tscn"
 GameManager="*res://scenes/game_manager.gd"
+SceneManager="*res://addons/scene_manager/SceneManager.tscn"
+Ui="*res://scenes/ui/ui.tscn"
 
 [display]
 
@@ -32,7 +45,7 @@ mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
 
 [input]
 
