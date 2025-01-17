@@ -151,7 +151,7 @@ material = SubResource("ShaderMaterial_ph25s")
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_bo1nx")
 animation = &"idle"
-frame_progress = 0.703448
+frame_progress = 0.567148
 script = ExtResource("7_l6hlr")
 
 [node name="DetectionArea" type="Area2D" parent="."]

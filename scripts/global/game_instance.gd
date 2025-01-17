@@ -3,7 +3,7 @@ extends Node
 var save_data: SaveData
 
 var debug_mode: bool = false
-var debug_font: Font = load("res://data/debug.tres")
+var debug_font: Font = preload("res://assets/debug.tres")
 
 func _ready():
 	save_data = load_game()
