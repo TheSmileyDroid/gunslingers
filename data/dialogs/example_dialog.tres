@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=11 format=3 uid="uid://cpdnwlnknlhmj"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=18 format=3 uid="uid://cpdnwlnknlhmj"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_gkkpl"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="1_u4r6j"]
@@ -55,6 +55,57 @@ sprite_frames = SubResource("SpriteFrames_g3yss")
 position = 0
 animation = "talk"
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_00pyx"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx78e"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6rnc"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56la1"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqru8"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g5fhw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00pyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx78e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6rnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56la1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqru8")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_jhlms"]
+script = ExtResource("1_gkkpl")
+character_name = "Prefeito"
+text = "Rapido em posições!"
+sprite_frames = SubResource("SpriteFrames_g5fhw")
+position = 1
+animation = "talk"
+
 [resource]
 script = ExtResource("1_u4r6j")
-lines = Array[ExtResource("1_gkkpl")]([SubResource("Resource_0ijnl")])
+lines = Array[ExtResource("1_gkkpl")]([SubResource("Resource_0ijnl"), SubResource("Resource_jhlms")])

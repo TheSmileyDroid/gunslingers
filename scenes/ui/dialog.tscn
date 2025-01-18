@@ -11,6 +11,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xjvw4")
 
+[node name="LeftCharacter" type="AnimatedSprite2D" parent="."]
+position = Vector2(200, 400)
+scale = Vector2(6, 6)
+
+[node name="RightCharacter" type="AnimatedSprite2D" parent="."]
+position = Vector2(824, 400)
+scale = Vector2(6, 6)
+flip_h = true
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 12
@@ -44,11 +53,3 @@ text = "Nome"
 [node name="Text" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Texto do diálogo..."
-
-[node name="LeftCharacter" type="AnimatedSprite2D" parent="."]
-position = Vector2(200, 400)
-scale = Vector2(6, 6)
-
-[node name="RightCharacter" type="AnimatedSprite2D" parent="."]
-position = Vector2(824, 400)
-scale = Vector2(6, 6)
