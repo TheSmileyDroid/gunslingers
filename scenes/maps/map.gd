@@ -1,7 +1,9 @@
 extends Node2D
 class_name Map
 
-@export var map_data: MapData
+@export
+var map_data: MapData
+
 @export var wave: int = 0
 @export var cash: int:
     set(value):
@@ -18,10 +20,22 @@ func _play_cutscene() -> void:
 var placer: Node2D
 var dragging_character_data: CharacterData
 
+var current_wave: WaveData
+var spawn_timer: Timer
+var enemies_to_spawn: Array[CharacterData] = []
+
 func _ready() -> void:
     cash = map_data.initial_cash
     lives = map_data.initial_lives
+    
+    spawn_timer = Timer.new()
+    spawn_timer.one_shot = false
+    spawn_timer.timeout.connect(spawn_enemy)
+    add_child(spawn_timer)
 
+    if map_data.initial_dialog != null:
+        await show_dialog(map_data.initial_dialog)
+    
     _play_cutscene()
     spawn_wave()
     Events.received_reward.connect(on_received_reward)
@@ -33,9 +47,32 @@ func _ready() -> void:
     
 
 func spawn_wave() -> void:
-    if wave >= map_data.waves:
+    if wave >= len(map_data.waves):
         return
+        
+    current_wave = map_data.waves[wave]
     wave += 1
+    
+    if current_wave.initial_dialog != null:
+        await show_dialog(current_wave.initial_dialog)
+    
+    enemies_to_spawn = current_wave.enemies.duplicate()
+    spawn_timer.start(current_wave.spawn_rate)
+
+func spawn_enemy() -> void:
+    if enemies_to_spawn.is_empty():
+        spawn_timer.stop()
+        if current_wave.victory_dialog != null:
+            await show_dialog(current_wave.victory_dialog)
+        spawn_wave()
+        return
+         
+    var enemy_data = enemies_to_spawn.pop_front()
+    var path2d: Path2D = get_node("Path2D")
+    GameManager.spawn_enemy(enemy_data.type, path2d.curve.get_point_position(0))
+
+func show_dialog(dialog_path: DialogData) -> void:
+    await Ui.start_dialog(dialog_path)
 
 func _input(event: InputEvent) -> void:
     if placer.visible and event is InputEventMouseMotion:

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WaveData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/wave_data.gd" id="1_w4j3d"]
+
+[resource]
+script = ExtResource("1_w4j3d")
+enemies = [{"type": "bandit", "count": 5}, {"type": "gunslinger", "count": 2}]
+spawn_rate = 1.5
+initial_dialog = "Cuidado! Um grupo de bandidos se aproxima!"
+victory_dialog = "Você conseguiu derrotar esta wave!"

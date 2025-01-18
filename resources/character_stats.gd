@@ -14,7 +14,9 @@ class_name CharacterData
 @export var pierce: int = 1
 @export var strategy: AttackComponent.Strategy = AttackComponent.Strategy.first: set = set_strategy
 @export var attack_range: float = 100.0: set = set_range
-
+var type: String:
+    get():
+        return resource_path.get_basename()
 
 enum AttackType {melee, ranged}
 

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=11 format=3 uid="uid://cpdnwlnknlhmj"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_gkkpl"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="1_u4r6j"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_vtulh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck7aq"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_makka"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35lkx"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grfbb"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg8gh"]
+atlas = ExtResource("2_vtulh")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3yss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck7aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_makka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35lkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grfbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg8gh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_0ijnl"]
+script = ExtResource("1_gkkpl")
+character_name = "Roberto"
+text = "Parece que eles estão vindo"
+sprite_frames = SubResource("SpriteFrames_g3yss")
+position = 0
+animation = "talk"
+
+[resource]
+script = ExtResource("1_u4r6j")
+lines = Array[ExtResource("1_gkkpl")]([SubResource("Resource_0ijnl")])
