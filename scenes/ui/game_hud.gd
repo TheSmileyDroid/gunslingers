@@ -10,6 +10,7 @@ func _ready() -> void:
 	Events.cash_changed.connect(on_cash_changed)
 	Events.entered_game.connect(_on_entered_game)
 	Events.exited_game.connect(_on_exited_game)
+	Events.wave_started.connect(_on_wave_started)
 	_load_character_buttons()
 
 
@@ -66,3 +67,6 @@ func _on_entered_game() -> void:
 
 func _on_exited_game() -> void:
 	visible = false
+
+func _on_wave_started(wave: int) -> void:
+	$Wave.text = "Onda %d" % wave

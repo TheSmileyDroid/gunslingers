@@ -11,7 +11,6 @@ signal enemy_lost(character: Character)
 
 func _ready():
     character = get_parent()
-    character.stats.changed.connect(_on_stats_changed)
     character.character_updated.connect(_on_character_updated)
     area_entered.connect(_on_area_entered)
     area_exited.connect(_on_area_exited)

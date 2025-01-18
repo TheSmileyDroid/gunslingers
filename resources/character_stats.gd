@@ -16,7 +16,7 @@ class_name CharacterData
 @export var attack_range: float = 100.0: set = set_range
 var type: String:
     get():
-        return resource_path.get_basename()
+        return resource_path.get_file().get_basename()
 
 enum AttackType {melee, ranged}
 

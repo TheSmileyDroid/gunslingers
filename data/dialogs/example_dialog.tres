@@ -43,7 +43,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_tg8gh")
 }],
 "loop": true,
-"name": &"default",
+"name": &"talk",
 "speed": 5.0
 }]
 

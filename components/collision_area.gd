@@ -8,7 +8,6 @@ var targets: Array = []
 
 func _ready():
     character = get_parent()
-    character.stats.changed.connect(_on_stats_changed)
     character.character_updated.connect(_on_character_updated)
     _on_stats_changed()
 

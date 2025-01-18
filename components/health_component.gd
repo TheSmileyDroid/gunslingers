@@ -21,4 +21,5 @@ func take_damage(amount: int, source: Character):
 		die()
 
 func die():
+	Events.character_died.emit(get_parent())
 	get_parent().queue_free()

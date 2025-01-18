@@ -18,6 +18,7 @@ enum Team {PLAYER, ENEMY}
 		remove_from_group("enemy" if value == Team.PLAYER else "player")
 		add_to_group("player" if value == Team.PLAYER else "enemy")
 		character_updated.emit(self)
+
 		
 func _physics_process(delta: float) -> void:
 	time_alive += delta

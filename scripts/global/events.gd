@@ -41,3 +41,12 @@ signal buy_character(character_id: String)
 
 @warning_ignore("unused_signal")
 signal cash_changed(amount: int)
+
+@warning_ignore("unused_signal")
+signal character_died(character: Character)
+
+@warning_ignore("unused_signal")
+signal wave_started(wave: int)
+
+@warning_ignore("unused_signal")
+signal won_game

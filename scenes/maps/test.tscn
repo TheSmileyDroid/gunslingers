@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=29 format=4 uid="uid://gwvy523xl01f"]
 
 [ext_resource type="Script" path="res://scenes/maps/test.gd" id="1_kkgel"]
 [ext_resource type="Script" path="res://resources/map_data.gd" id="2_axekq"]
@@ -7,13 +7,106 @@
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="4_pbno8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="5_2htoy"]
 [ext_resource type="Resource" uid="uid://cpdnwlnknlhmj" path="res://data/dialogs/example_dialog.tres" id="6_y7et7"]
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="7_r2pr6"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="8_tw6ag"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="9_4gh2v"]
 
 [sub_resource type="Resource" id="Resource_4iyqa"]
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
 spawn_rate = 1.0
+count = 10
 initial_dialog = ExtResource("6_y7et7")
-victory_dialog = ExtResource("6_y7et7")
+
+[sub_resource type="Resource" id="Resource_5hc1l"]
+script = ExtResource("3_rhhou")
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
+spawn_rate = 0.6
+count = 15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ck7aq"]
+atlas = ExtResource("8_tw6ag")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_makka"]
+atlas = ExtResource("8_tw6ag")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35lkx"]
+atlas = ExtResource("8_tw6ag")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grfbb"]
+atlas = ExtResource("8_tw6ag")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg8gh"]
+atlas = ExtResource("8_tw6ag")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vixey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck7aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_makka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35lkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grfbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg8gh")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_8xu3v"]
+script = ExtResource("7_r2pr6")
+character_name = "Roberto"
+text = "EDF!!"
+sprite_frames = SubResource("SpriteFrames_vixey")
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_3427e"]
+script = ExtResource("9_4gh2v")
+lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_8xu3v")])
+
+[sub_resource type="Resource" id="Resource_b7ce6"]
+script = ExtResource("3_rhhou")
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
+spawn_rate = 0.3
+count = 30
+initial_dialog = SubResource("Resource_3427e")
+
+[sub_resource type="Resource" id="Resource_wl0su"]
+script = ExtResource("9_4gh2v")
+lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_8xu3v")])
+
+[sub_resource type="Resource" id="Resource_dn1yv"]
+script = ExtResource("3_rhhou")
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
+spawn_rate = 0.2
+count = 60
+initial_dialog = SubResource("Resource_wl0su")
+
+[sub_resource type="Resource" id="Resource_hguto"]
+script = ExtResource("9_4gh2v")
+lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_8xu3v")])
+
+[sub_resource type="Resource" id="Resource_k6tjw"]
+script = ExtResource("3_rhhou")
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
+spawn_rate = 0.1
+count = 100
+initial_dialog = SubResource("Resource_hguto")
 
 [sub_resource type="Resource" id="Resource_sbvrk"]
 script = ExtResource("2_axekq")
@@ -21,7 +114,7 @@ name = "Teste"
 difficulty = 1
 initial_cash = 150
 initial_lives = 10
-waves = Array[ExtResource("3_rhhou")]([SubResource("Resource_4iyqa")])
+waves = Array[ExtResource("3_rhhou")]([SubResource("Resource_4iyqa"), SubResource("Resource_5hc1l"), SubResource("Resource_b7ce6"), SubResource("Resource_dn1yv"), SubResource("Resource_k6tjw")])
 
 [sub_resource type="Curve" id="Curve_gd2i5"]
 _data = [Vector2(0, 0.076033), 0.0, 0.0, 0, 0, Vector2(0.249254, 0.570248), 0.0, 0.0, 0, 0, Vector2(0.497015, 0.23719), 0.0, 0.0, 0, 0, Vector2(0.971642, 0.924793), 0.0, 0.0, 0, 0]
@@ -29,7 +122,7 @@ point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_rnidg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -6, 327, 0, 0, 0, 0, 176, 327, 0, 0, 0, 0, 177, 541, 0, 0, 0, 0, 307, 543, 0, 0, 0, 0, 468, 544, 0, 0, 0, 0, 471, 465, 0, 0, 0, 0, 541, 468, 0, 0, 0, 0, 539, 253, 0, 0, 0, 0, 612, 180, 0, 0, 0, 0, 616, 34, 0, 0, 0, 0, 825, 28, 0, 0, 0, 0, 833, 109, 0, 0, 0, 0, 897, 110, 0, 0, 0, 0, 901, 184, 0, 0, 0, 0, 972, 180, 0, 0, 0, 0, 979, 250, 0, 0, 0, 0, 1045, 261, 0, 0, 0, 0, 1056, 331, 0, 0, 0, 0, 1134, 327, 0, 0, 0, 0, 1209, 331)
+"points": PackedVector2Array(0, 0, 0, 0, -62, 322, 0, 0, 0, 0, 176, 327, 0, 0, 0, 0, 177, 541, 0, 0, 0, 0, 307, 543, 0, 0, 0, 0, 468, 544, 0, 0, 0, 0, 471, 465, 0, 0, 0, 0, 541, 468, 0, 0, 0, 0, 539, 253, 0, 0, 0, 0, 612, 180, 0, 0, 0, 0, 616, 34, 0, 0, 0, 0, 825, 28, 0, 0, 0, 0, 833, 109, 0, 0, 0, 0, 897, 110, 0, 0, 0, 0, 901, 184, 0, 0, 0, 0, 972, 180, 0, 0, 0, 0, 979, 250, 0, 0, 0, 0, 1045, 261, 0, 0, 0, 0, 1056, 331, 0, 0, 0, 0, 1134, 327, 0, 0, 0, 0, 1209, 331)
 }
 point_count = 20
 
@@ -37,9 +130,6 @@ point_count = 20
 y_sort_enabled = true
 script = ExtResource("1_kkgel")
 map_data = SubResource("Resource_sbvrk")
-wave = null
-cash = null
-lives = null
 difficulty = SubResource("Curve_gd2i5")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

@@ -40,8 +40,10 @@ func spawn_character(character_id: String, position: Vector2):
 	Events.character_drag.emit("")
 	
 
-func spawn_enemy(enemy_id: String, position: Vector2):
+func spawn_enemy(enemy_id: String, position: Vector2) -> Character:
 	var enemy = preload("res://scenes/enemies/enemy.tscn").instantiate()
+	print(enemy_id)
 	enemy.stats = load("res://data/enemies/%s.tres" % enemy_id).duplicate()
 	enemy.position = position
 	get_tree().current_scene.add_child(enemy)
+	return enemy

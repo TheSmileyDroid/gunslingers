@@ -90,7 +90,7 @@ animations = [{
 [resource]
 script = ExtResource("1_3grpn")
 name = "Brawler"
-price = 100
+price = 50
 sprite_frames = SubResource("SpriteFrames_su8w5")
 health = 100
 max_health = 100
