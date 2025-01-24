@@ -1,11 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=8 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
+[ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
 [ext_resource type="FontFile" uid="uid://4rbvhg85gh43" path="res://assets/fonts/RootBeer.ttf" id="2_kr3al"]
+[ext_resource type="Script" path="res://scenes/ui/name_label.gd" id="3_hmyc8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rj5gv"]
 font_size = 10
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vm52"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+texture = ExtResource("2_3qmpj")
+texture_margin_left = 17.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(165, 66, 32, 32)
 
 [sub_resource type="LabelSettings" id="LabelSettings_v1jck"]
 font = ExtResource("2_kr3al")
@@ -46,6 +60,16 @@ text = "1000 $"
 label_settings = SubResource("LabelSettings_rj5gv")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_styles/fill = SubResource("StyleBoxTexture_0vm52")
+theme_override_styles/background = SubResource("StyleBoxTexture_0vm52")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0vm52")
+text = " "
+fit_content = true
+script = ExtResource("3_hmyc8")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

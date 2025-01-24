@@ -87,3 +87,7 @@ func to_display_string() -> String:
         "fire_rate": fire_rate,
         "strategy": _display_strategy(strategy)
     })
+
+static func get_character_data(character_type: String) -> CharacterData:
+    var _resource_path = "res://data/characters/%s.tres" % character_type
+    return load(_resource_path) as CharacterData
