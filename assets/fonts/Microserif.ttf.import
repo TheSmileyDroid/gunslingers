@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://4rbvhg85gh43"
-path="res://.godot/imported/RootBeer.ttf-4bff5caabdb448b37a3c646acd7bad91.fontdata"
+uid="uid://c8bdxshy6pqqr"
+path="res://.godot/imported/Microserif.ttf-1bb29f4b8ab8bb7463cc97e8bd5c1bcf.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/RootBeer.ttf"
-dest_files=["res://.godot/imported/RootBeer.ttf-4bff5caabdb448b37a3c646acd7bad91.fontdata"]
+source_file="res://assets/fonts/Microserif.ttf"
+dest_files=["res://.godot/imported/Microserif.ttf-1bb29f4b8ab8bb7463cc97e8bd5c1bcf.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=0
-subpixel_positioning=1
+subpixel_positioning=0
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

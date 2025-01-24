@@ -13,6 +13,7 @@ var is_text_completed: bool = true
 @onready var text: Label = $Panel/MarginContainer/VBoxContainer/Text
 @onready var left_character: AnimatedSprite2D = $LeftCharacter
 @onready var right_character: AnimatedSprite2D = $RightCharacter
+@onready var background: TextureRect = $TextureRect
 @onready var text_timer: Timer = Timer.new()
 
 func _ready() -> void:
@@ -38,6 +39,7 @@ func show_line() -> void:
 	text.text = ""
 	text_index = 0
 	is_text_completed = false
+	background.texture = line.background
 	
 	var character = left_character if line.position == DialogData.Position.LEFT else right_character
 	var other_character = right_character if line.position == DialogData.Position.LEFT else left_character

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://4rbvhg85gh43"
-path="res://.godot/imported/RootBeer.ttf-4bff5caabdb448b37a3c646acd7bad91.fontdata"
+uid="uid://bj6c0obhejj16"
+path="res://.godot/imported/monogram.ttf-c95719ff5218ca8efa10f8f40fd456da.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/RootBeer.ttf"
-dest_files=["res://.godot/imported/RootBeer.ttf-4bff5caabdb448b37a3c646acd7bad91.fontdata"]
+source_file="res://assets/fonts/monogram.ttf"
+dest_files=["res://.godot/imported/monogram.ttf-c95719ff5218ca8efa10f8f40fd456da.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=0
-subpixel_positioning=1
+subpixel_positioning=0
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

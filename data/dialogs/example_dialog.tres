@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=18 format=3 uid="uid://cpdnwlnknlhmj"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=19 format=3 uid="uid://cpdnwlnknlhmj"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_gkkpl"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="1_u4r6j"]
+[ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="2_cv8vl"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_vtulh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ck7aq"]
@@ -54,6 +55,7 @@ text = "Parece que eles estão vindo"
 sprite_frames = SubResource("SpriteFrames_g3yss")
 position = 0
 animation = "talk"
+background = ExtResource("2_cv8vl")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00pyx"]
 atlas = ExtResource("2_vtulh")

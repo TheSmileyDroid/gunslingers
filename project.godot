@@ -37,15 +37,50 @@ Ui="*res://scenes/ui/ui.tscn"
 
 [display]
 
+window/size/viewport_width=400
+window/size/viewport_height=240
 window/size/initial_position_type=3
-window/stretch/mode="canvas_items"
-window/stretch/scale_mode="integer"
-mouse_cursor/custom_image="res://assets/mouse/hand_point.png"
+window/size/window_width_override=800
+window/size/window_height_override=480
+window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/cursor.tres"
 mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
+
+[gui]
+
+theme/custom="res://assets/theme.tres"
+theme/default_font_antialiasing=0
+theme/default_font_hinting=0
+theme/default_font_subpixel_positioning=0
+
+[importer_defaults]
+
+font_data_dynamic={
+"Compress": null,
+"Fallbacks": null,
+"Rendering": null,
+"allow_system_fallback": true,
+"antialiasing": 0,
+"compress": true,
+"disable_embedded_bitmaps": true,
+"fallbacks": [],
+"force_autohinter": false,
+"generate_mipmaps": false,
+"hinting": 0,
+"language_support": {},
+"msdf_pixel_range": 8,
+"msdf_size": 48,
+"multichannel_signed_distance_field": false,
+"opentype_features": {},
+"oversampling": 0.0,
+"preload": [],
+"script_support": {},
+"subpixel_positioning": 0
+}
 
 [input]
 
@@ -63,3 +98,4 @@ locale/translation_add_builtin_strings_to_pot=true
 
 textures/canvas_textures/default_texture_filter=3
 2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

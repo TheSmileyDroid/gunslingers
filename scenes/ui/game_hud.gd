@@ -12,6 +12,7 @@ func _ready() -> void:
 	Events.exited_game.connect(_on_exited_game)
 	Events.wave_started.connect(_on_wave_started)
 	_load_character_buttons()
+	visible = false
 
 
 func _process(_delta: float) -> void:
@@ -28,26 +29,17 @@ func _load_character_buttons() -> void:
 
 	while file_name != "":
 		if file_name.ends_with(".tres"):
-			var character_button = Button.new()
-			character_button.custom_minimum_size = Vector2(0, 64)
+			var character_button = preload("res://scenes/ui/shop_button.tscn").instantiate()
 
 			var resource_path = CHARACTER_DATA_PATH + file_name
 			var stats: CharacterData = load(resource_path)
-
-			if stats:
-				character_button.text = "%s\n$%d" % [stats.name, stats.price] # Using format for clarity
-				var tower_id = file_name.get_basename() # More direct way to get the ID
-				character_button.pressed.connect(on_tower_pressed.bind(tower_id))
-				character_list_container.add_child(character_button)
-			else:
-				printerr("Error loading character data:", resource_path)
+			
+			character_button.character_data = stats
+			character_list_container.add_child(character_button)
 
 		file_name = dir.get_next()
 
 	dir.list_dir_end()
-
-func on_tower_pressed(tower_id: String) -> void:
-	Events.character_drag.emit(tower_id)
 
 func _on__flip_button_pressed() -> void:
 	var target_x = 0.0
