@@ -1,0 +1,190 @@
+[gd_resource type="Theme" load_steps=19 format=3 uid="uid://bygdwpdi6lqpn"]
+
+[ext_resource type="Texture2D" uid="uid://dom40pm43tjxj" path="res://assets/ui/tilemap.png" id="2_558fa"]
+[ext_resource type="FontFile" uid="uid://sfh3c6mf0m55" path="res://assets/fonts/monogram.ttf" id="2_i458s"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gum27"]
+load_path = "res://.godot/imported/tilemap.png-cc54adafb85d770760bc0268fc94ca9e.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5o7fp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = SubResource("CompressedTexture2D_gum27")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(238, 34, 16, 16)
+modulate_color = Color(0.29268, 0.29268, 0.29268, 0.592157)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2umd6"]
+load_path = "res://.godot/imported/tilemap.png-cc54adafb85d770760bc0268fc94ca9e.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ixhj2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = SubResource("CompressedTexture2D_2umd6")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(238, 34, 16, 16)
+modulate_color = Color(0.753963, 0.750293, 0.60393, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_msd4a"]
+load_path = "res://.godot/imported/tilemap.png-cc54adafb85d770760bc0268fc94ca9e.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vhalg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = SubResource("CompressedTexture2D_msd4a")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(238, 34, 16, 16)
+modulate_color = Color(0.798773, 0.763389, 0.701719, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e2xmb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = ExtResource("2_558fa")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(238, 34, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fkqkn"]
+load_path = "res://.godot/imported/tilemap.png-cc54adafb85d770760bc0268fc94ca9e.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3b48"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+texture = SubResource("CompressedTexture2D_fkqkn")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(238, 34, 16, 16)
+modulate_color = Color(0.449203, 0.450682, 0.656099, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5e1q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdbyq"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = ExtResource("2_558fa")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(170, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_53ocy"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+texture = ExtResource("2_558fa")
+texture_margin_left = 13.0
+texture_margin_top = 13.0
+texture_margin_right = 13.0
+texture_margin_bottom = 13.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(187, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dg57l"]
+texture = ExtResource("2_558fa")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(119, 17, 16, 16)
+modulate_color = Color(1, 1, 1, 0.54902)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvd6n"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_558fa")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(3, 54, 10, 10)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72r2w"]
+texture = ExtResource("2_558fa")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(106, 55, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_alyrl"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = ExtResource("2_558fa")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(170, 0, 16, 16)
+
+[resource]
+default_font = ExtResource("2_i458s")
+default_font_size = 16
+Button/styles/disabled = SubResource("StyleBoxTexture_5o7fp")
+Button/styles/focus = SubResource("StyleBoxTexture_ixhj2")
+Button/styles/hover = SubResource("StyleBoxTexture_vhalg")
+Button/styles/normal = SubResource("StyleBoxTexture_e2xmb")
+Button/styles/pressed = SubResource("StyleBoxTexture_i3b48")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 1
+Label/styles/normal = SubResource("StyleBoxEmpty_g5e1q")
+LineEdit/colors/caret_color = Color(0.227451, 0.141176, 0.0705882, 1)
+LineEdit/colors/font_color = Color(0.270588, 0.168627, 0.109804, 1)
+LineEdit/constants/caret_width = 2
+LineEdit/styles/normal = SubResource("StyleBoxTexture_rdbyq")
+Panel/styles/panel = SubResource("StyleBoxTexture_53ocy")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_dg57l")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_xvd6n")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_72r2w")
+TextEdit/colors/caret_color = Color(0.227208, 0.140009, 0.0725469, 1)
+TextEdit/colors/font_color = Color(0.269548, 0.169326, 0.108464, 1)
+TextEdit/constants/caret_width = 2
+TextEdit/styles/normal = SubResource("StyleBoxTexture_alyrl")

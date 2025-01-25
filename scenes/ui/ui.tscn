@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2pvjpt5f1vxb"]
+[gd_scene load_steps=5 format=3 uid="uid://c2pvjpt5f1vxb"]
 
+[ext_resource type="Theme" uid="uid://bygdwpdi6lqpn" path="res://assets/theme.tres" id="1_cifr2"]
 [ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_k3po2"]
 [ext_resource type="PackedScene" uid="uid://efgjrmiec4v2" path="res://scenes/ui/game_hud.tscn" id="2_mg71s"]
 [ext_resource type="PackedScene" uid="uid://cd7oyt073aqg7" path="res://scenes/ui/dialog.tscn" id="3_f6snl"]
@@ -12,12 +13,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_cifr2")
 script = ExtResource("1_k3po2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="GameHUD" parent="CanvasLayer" instance=ExtResource("2_mg71s")]
 unique_name_in_owner = true
+visible = false
 
 [node name="Dialog" parent="CanvasLayer" instance=ExtResource("3_f6snl")]
 unique_name_in_owner = true

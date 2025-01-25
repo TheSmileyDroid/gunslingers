@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://bsvo61fyyqbyl"
+path="res://.godot/imported/monogram.fnt-3ef2f6b85f6c9c8a7858528d6c67ed1d.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/monogram.fnt"
+dest_files=["res://.godot/imported/monogram.fnt-3ef2f6b85f6c9c8a7858528d6c67ed1d.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=1

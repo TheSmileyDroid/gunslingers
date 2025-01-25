@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://bcx6yoo4esr3d"
+path="res://.godot/imported/microserif.fnt-28d13327a29a989391f983f2167fb4fe.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/microserif.fnt"
+dest_files=["res://.godot/imported/microserif.fnt-28d13327a29a989391f983f2167fb4fe.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
