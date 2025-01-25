@@ -39,6 +39,8 @@ Ui="*res://scenes/ui/ui.tscn"
 
 window/size/viewport_width=400
 window/size/viewport_height=240
+window/size/viewport_width=400
+window/size/viewport_height=240
 window/size/initial_position_type=3
 window/size/window_width_override=800
 window/size/window_height_override=480
@@ -75,4 +77,5 @@ textures/canvas_textures/default_texture_filter=3
 textures/lossless_compression/force_png=true
 textures/default_filters/anisotropic_filtering_level=0
 2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true
 2d/snap/snap_2d_vertices_to_pixel=true

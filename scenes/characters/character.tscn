@@ -139,7 +139,6 @@ script = ExtResource("5_5l51v")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_ii0nc")
-scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_vaqgb")
 animation = &"attack"
 frame = 5
@@ -157,13 +156,15 @@ script = ExtResource("9_mfbl3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -34.0
-offset_top = -61.0
-offset_right = 34.0
-offset_bottom = -40.0
-theme_override_font_sizes/font_size = 12
+offset_left = -25.0
+offset_top = -30.0
+offset_right = 26.0
+offset_bottom = -14.0
 script = ExtResource("9_4je33")
 
 [node name="FireRateComponent" type="Timer" parent="."]
 autostart = true
 script = ExtResource("10_kvcg7")
+
+[node name="Cursor" type="Sprite2D" parent="."]
+position = Vector2(26, 32)

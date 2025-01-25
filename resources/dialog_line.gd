@@ -5,3 +5,4 @@ class_name DialogLine extends Resource
 @export var sprite_frames: SpriteFrames
 @export var position: DialogData.Position
 @export var animation: String = "talk"
+@export var background: Texture = null

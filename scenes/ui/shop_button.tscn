@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwkpiv2skvme3"]
+
+[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_53gko"]
+[ext_resource type="Script" path="res://scenes/ui/shop_button.gd" id="1_w7661"]
+[ext_resource type="Resource" uid="uid://vqqlwrvxtkq2" path="res://data/characters/brawler.tres" id="3_o8aue"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lwl10"]
+font_size = 10
+
+[node name="ShopButton" type="Button"]
+custom_minimum_size = Vector2(32, 52)
+anchors_preset = -1
+anchor_right = 0.12
+anchor_bottom = 0.217
+offset_bottom = -0.0800018
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_53gko")
+theme_type_variation = &"wanted"
+script = ExtResource("1_w7661")
+character_data = ExtResource("3_o8aue")
+
+[node name="Wanted" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 12.0
+grow_horizontal = 2
+text = "WANTED"
+label_settings = SubResource("LabelSettings_lwl10")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 15.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 3
+
+[node name="Price" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 38.0
+offset_right = 20.0
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "WANTED"
+label_settings = SubResource("LabelSettings_lwl10")
+horizontal_alignment = 1
+vertical_alignment = 1
