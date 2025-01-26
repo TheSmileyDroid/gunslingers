@@ -12,6 +12,7 @@ func _ready():
 	Events.won_game.connect(_on_win_game)
 	Events.character_mouse_enter.connect(_on_character_mouse_enter)
 	Events.character_mouse_exit.connect(_on_character_mouse_exit)
+	Events.player_died.connect(_on_player_died)
 
 func _entered_game():
 	in_game = true
@@ -81,3 +82,7 @@ func _on_character_mouse_enter(character: Character) -> void:
 func _on_character_mouse_exit(character: Character) -> void:
 	if hovering_character == character:
 		hovering_character = null
+
+func _on_player_died() -> void:
+	get_tree().paused = true
+	Ui.get_node("%LoseScreen").show()

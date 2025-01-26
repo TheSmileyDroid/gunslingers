@@ -3,47 +3,35 @@ extends Control
 @onready var character_list_container: VBoxContainer = %CharacterList
 @onready var panel_container: PanelContainer = %PanelContainer
 @onready var cash_label: Label = %Cash
+@onready var lives_label: Label = %Lives
+@onready var wave_label: Label = %Wave
 
-const CHARACTER_DATA_PATH = "res://data/characters/"
+@export var characters: Array[CharacterData] = []
 
 func _ready() -> void:
-	Events.cash_changed.connect(on_cash_changed)
+	Events.cash_changed.connect(update_cash)
+	Events.lives_changed.connect(update_lives)
+	Events.wave_started.connect(update_wave)
 	Events.entered_game.connect(_on_entered_game)
 	Events.exited_game.connect(_on_exited_game)
-	Events.wave_started.connect(_on_wave_started)
 	$PanelContainer/MarginContainer/VBoxContainer/Button.pressed.connect(_on_flip_button_pressed)
 	_load_character_buttons()
 	visible = false
-
 
 func _process(_delta: float) -> void:
 	pass
 
 func _load_character_buttons() -> void:
-	var dir = DirAccess.open(CHARACTER_DATA_PATH)
-	if dir == null:
-		printerr("Error opening directory:", CHARACTER_DATA_PATH)
-		return
-
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-
 	for child in character_list_container.get_children():
 		character_list_container.remove_child(child)
 
-	while file_name != "":
-		if file_name.ends_with(".tres"):
-			var character_button = preload("res://scenes/ui/shop_button.tscn").instantiate()
+	for character in characters:
+		var character_button = preload("res://scenes/ui/shop_button.tscn").instantiate()
 
-			var resource_path = CHARACTER_DATA_PATH + file_name
-			var stats: CharacterData = load(resource_path)
+		var stats: CharacterData = character
 
-			character_button.character_data = stats
-			character_list_container.add_child(character_button)
-
-		file_name = dir.get_next()
-
-	dir.list_dir_end()
+		character_button.character_data = stats
+		character_list_container.add_child(character_button)
 
 func _on_flip_button_pressed() -> void:
 	var target_x = 0.0
@@ -55,8 +43,14 @@ func _on_flip_button_pressed() -> void:
 	tween.set_trans(Tween.TRANS_SINE) # Optional: Set the transition type
 	tween.set_ease(Tween.EASE_IN_OUT) # Optional: Set the easing function
 
-func on_cash_changed(cash: int):
-	cash_label.text = "$%d" % cash # Using format for clarity
+func update_cash(amount: int) -> void:
+	cash_label.text = "$%s" % str(amount)
+
+func update_lives(lives: int) -> void:
+	lives_label.text = "♥ %s" % str(lives)
+
+func update_wave(wave: int) -> void:
+	wave_label.text = "Wave %d" % wave
 
 func _on_entered_game() -> void:
 	visible = true

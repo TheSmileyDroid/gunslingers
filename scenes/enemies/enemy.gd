@@ -4,8 +4,6 @@ class_name Rat
 var path = null
 var path_index: int = 0
 
-signal has_reached_end(damage: int)
-
 func _ready():
 	if get_parent().has_node("Path2D"):
 		path = get_parent().get_node("Path2D").curve
@@ -33,7 +31,7 @@ func move_along_path(delta):
 		reach_end()
 
 func reach_end():
-	has_reached_end.emit(stats.damage)
+	Events.enemy_has_reached_goal.emit(self)
 	if path:
 		Events.character_died.emit(self)
 		queue_free()

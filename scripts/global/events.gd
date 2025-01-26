@@ -58,3 +58,9 @@ signal reset_game
 signal character_selected(character: Character)
 @warning_ignore("unused_signal")
 signal character_deselected
+
+@warning_ignore("unused_signal")
+signal lives_changed(lives: int)
+
+@warning_ignore("unused_signal")
+signal enemy_has_reached_goal(enemy: Character)

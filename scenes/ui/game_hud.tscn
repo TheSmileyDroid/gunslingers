@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=14 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
 [ext_resource type="FontFile" uid="uid://4rbvhg85gh43" path="res://assets/fonts/RootBeer.ttf" id="2_kr3al"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="2_tvdrb"]
+[ext_resource type="Resource" uid="uid://vqqlwrvxtkq2" path="res://data/characters/brawler.tres" id="3_54lv0"]
 [ext_resource type="Script" path="res://scenes/ui/name_label.gd" id="3_hmyc8"]
+[ext_resource type="Resource" uid="uid://ctuaql02wr7vq" path="res://data/characters/slinger.tres" id="4_ou7w5"]
 [ext_resource type="PackedScene" uid="uid://bwkpiv2skvme3" path="res://scenes/ui/shop_button.tscn" id="4_t548n"]
+[ext_resource type="Resource" uid="uid://dmooxiiicsuhc" path="res://data/characters/sheriff.tres" id="5_tnj6y"]
 [ext_resource type="PackedScene" uid="uid://dwk7788dlt882" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rj5gv"]
@@ -37,6 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_ixvhd")
+characters = Array[ExtResource("2_tvdrb")]([ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("5_tnj6y")])
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 unique_name_in_owner = true
@@ -111,18 +116,29 @@ layout_mode = 2
 size_flags_vertical = 8
 text = "Flip UI"
 
-[node name="Wave" type="Label" parent="."]
-unique_name_in_owner = true
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -18.5
-offset_right = 18.5
+offset_left = -37.0
+offset_right = 37.0
 offset_bottom = 16.0
 grow_horizontal = 2
+
+[node name="Wave" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 text = "Onda 1"
 label_settings = SubResource("LabelSettings_v1jck")
+
+[node name="Lives" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1000 $"
+label_settings = SubResource("LabelSettings_rj5gv")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="StatusWindow" parent="." instance=ExtResource("5_vq0pi")]
 layout_mode = 0

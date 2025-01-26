@@ -9,7 +9,12 @@ var map_data: MapData
 	set(value):
 		cash = value
 		Events.cash_changed.emit(cash)
-@export var lives: int
+@export var lives: int:
+	set(value):
+		lives = value
+		Events.lives_changed.emit(lives)
+		if lives <= 0:
+			Events.player_died.emit()
 
 @export var difficulty: Curve
 
@@ -51,13 +56,13 @@ func _ready() -> void:
 	placer.visible = false
 	add_child(placer)
 
+	Events.enemy_has_reached_goal.connect(_on_enemy_reached_end)
 
 func spawn_wave() -> void:
 	wave += 1
 	print("Wave ", wave, "/", len(map_data.waves))
 
 	if wave > len(map_data.waves):
-		Events.won_game.emit()
 		return
 
 	current_wave = map_data.waves[wave-1]
@@ -90,6 +95,8 @@ func spawn_enemy() -> void:
 func _on_enemy_death(enemy: Character):
 	alive_enemies.erase(enemy)
 	if enemy is Rat and alive_enemies.is_empty() and can_spawn_wave and enemies_to_spawn.is_empty():
+		if wave >= len(map_data.waves):
+			Events.win_game.emit()
 		spawn_wave()
 
 
@@ -118,3 +125,6 @@ func on_character_drag(character_type: String):
 func on_buy_character(character_id: String):
 	var character_data: CharacterData = load("res://data/characters/%s.tres" % character_id)
 	cash -= character_data.price
+
+func _on_enemy_reached_end(enemy: Character) -> void:
+	lives -= enemy.stats.damage
