@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=35 format=4 uid="uid://gwvy523xl01f"]
 
 [ext_resource type="Script" path="res://scenes/maps/test.gd" id="1_kkgel"]
 [ext_resource type="Script" path="res://resources/map_data.gd" id="2_axekq"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="4_pbno8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="5_2htoy"]
 [ext_resource type="Resource" uid="uid://cpdnwlnknlhmj" path="res://data/dialogs/example_dialog.tres" id="6_y7et7"]
+[ext_resource type="Resource" uid="uid://c0dlbvjsgd0f" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
+[ext_resource type="Resource" uid="uid://4g3cld60513r" path="res://data/enemies/healer_rat.tres" id="7_kk01n"]
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="7_r2pr6"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="8_tw6ag"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="9_4gh2v"]
@@ -21,7 +23,7 @@ initial_dialog = ExtResource("6_y7et7")
 [sub_resource type="Resource" id="Resource_5hc1l"]
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
-spawn_rate = 0.6
+spawn_rate = 0.8
 count = 15
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ck7aq"]
@@ -44,7 +46,7 @@ region = Rect2(72, 0, 24, 24)
 atlas = ExtResource("8_tw6ag")
 region = Rect2(96, 0, 24, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_vixey"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_yrine"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -67,46 +69,108 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_8xu3v"]
+[sub_resource type="Resource" id="Resource_brbm7"]
 script = ExtResource("7_r2pr6")
-character_name = "Roberto"
-text = "EDF!!"
-sprite_frames = SubResource("SpriteFrames_vixey")
-position = 0
+character_name = "Prefeito"
+text = "Pela bota do meu vô! Aquilo são ratos gigantes? O que eles andaram comendo?"
+sprite_frames = SubResource("SpriteFrames_yrine")
+position = 1
 animation = "talk"
 
-[sub_resource type="Resource" id="Resource_3427e"]
+[sub_resource type="Resource" id="Resource_gp02m"]
 script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_8xu3v")])
+lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_brbm7")])
 
 [sub_resource type="Resource" id="Resource_b7ce6"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
-spawn_rate = 0.3
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy")])
+spawn_rate = 0.7
 count = 30
-initial_dialog = SubResource("Resource_3427e")
+initial_dialog = SubResource("Resource_gp02m")
 
-[sub_resource type="Resource" id="Resource_wl0su"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_w4pee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck7aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_makka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35lkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grfbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg8gh")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_m5brt"]
+script = ExtResource("7_r2pr6")
+character_name = "Prefeito"
+text = "Aquele rato... Aquele rato está de pé! E ele está fazendo algo com os outros ratos"
+sprite_frames = SubResource("SpriteFrames_w4pee")
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_k22qa"]
 script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_8xu3v")])
+lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_m5brt")])
 
 [sub_resource type="Resource" id="Resource_dn1yv"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
-spawn_rate = 0.2
-count = 60
-initial_dialog = SubResource("Resource_wl0su")
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("7_kk01n"), ExtResource("5_2htoy"), ExtResource("5_2htoy")])
+spawn_rate = 0.5
+count = 30
+initial_dialog = SubResource("Resource_k22qa")
 
-[sub_resource type="Resource" id="Resource_hguto"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1e48l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ck7aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_makka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35lkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grfbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg8gh")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_60kme"]
+script = ExtResource("7_r2pr6")
+character_name = "Prefeito"
+text = "Ratos me mordam... Quero dizer... ELES NÃO PARAM DE VIR!"
+sprite_frames = SubResource("SpriteFrames_1e48l")
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_7jvfn"]
 script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_8xu3v")])
+lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_60kme")])
 
 [sub_resource type="Resource" id="Resource_k6tjw"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy"), ExtResource("7_d7ixt"), ExtResource("7_kk01n"), ExtResource("5_2htoy")])
 spawn_rate = 0.1
 count = 100
-initial_dialog = SubResource("Resource_hguto")
+initial_dialog = SubResource("Resource_7jvfn")
 
 [sub_resource type="Resource" id="Resource_sbvrk"]
 script = ExtResource("2_axekq")
@@ -122,7 +186,7 @@ point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_xcw55"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -10, 107, 0, 0, 0, 0, 60, 108, 0, 0, 0, 0, 61, 179, 0, 0, 0, 0, 156, 177, 0, 0, 0, 0, 159, 158, 0, 0, 0, 0, 179, 156, 0, 0, 0, 0, 181, 85, 0, 0, 0, 0, 204, 59, 0, 0, 0, 0, 207, 13, 0, 0, 0, 0, 277, 11, 0, 0, 0, 0, 275, 34, 0, 0, 0, 0, 301, 36, 0, 0, 0, 0, 299, 58, 0, 0, 0, 0, 324, 60, 0, 0, 0, 0, 324, 80, 0, 0, 0, 0, 349, 85, 0, 0, 0, 0, 348, 104, 0, 0, 0, 0, 378, 107, 0, 0, 0, 0, 397, 106)
+"points": PackedVector2Array(0, 0, 0, 0, -28, 107, 0, 0, 0, 0, 60, 108, 0, 0, 0, 0, 61, 179, 0, 0, 0, 0, 156, 177, 0, 0, 0, 0, 159, 158, 0, 0, 0, 0, 179, 156, 0, 0, 0, 0, 181, 85, 0, 0, 0, 0, 204, 59, 0, 0, 0, 0, 207, 13, 0, 0, 0, 0, 277, 11, 0, 0, 0, 0, 275, 34, 0, 0, 0, 0, 301, 36, 0, 0, 0, 0, 299, 58, 0, 0, 0, 0, 324, 60, 0, 0, 0, 0, 324, 80, 0, 0, 0, 0, 349, 85, 0, 0, 0, 0, 348, 104, 0, 0, 0, 0, 378, 107, 0, 0, 0, 0, 442, 106)
 }
 point_count = 19
 

@@ -15,79 +15,81 @@ class_name CharacterData
 @export var strategy: AttackComponent.Strategy = AttackComponent.Strategy.first: set = set_strategy
 @export var attack_range: float = 100.0: set = set_range
 var type: String:
-    get():
-        return resource_path.get_file().get_basename()
+	get():
+		return resource_path.get_file().get_basename()
 
-enum AttackType {melee, ranged}
+enum AttackType {melee, ranged, heal}
 
 @export var attack_type: AttackType = AttackType.melee
 
 @export var size: int = 2:
-    set(value):
-        size = max(1, value)
-        changed.emit()
+	set(value):
+		size = max(1, value)
+		changed.emit()
 
 @export var reward: int = 10:
-    set(value):
-        reward = max(0, value)
-        changed.emit()
+	set(value):
+		reward = max(0, value)
+		changed.emit()
 
 func set_health(value: int) -> void:
-    health = value
-    changed.emit()
+	health = value
+	changed.emit()
 
 func set_max_health(value: int) -> void:
-    max_health = max(1, value)
-    changed.emit()
+	max_health = max(1, value)
+	changed.emit()
 
 func set_damage(value: int) -> void:
-    damage = max(1, value)
-    changed.emit()
+	damage = max(1, value)
+	changed.emit()
 
 func set_speed(value: float) -> void:
-    speed = max(0.0, value)
-    changed.emit()
+	speed = max(0.0, value)
+	changed.emit()
 
 func set_fire_rate(value: float) -> void:
-    fire_rate = max(0.0, value)
-    changed.emit()
+	fire_rate = max(0.0, value)
+	changed.emit()
 
 func set_strategy(value: AttackComponent.Strategy) -> void:
-    strategy = value
-    changed.emit()
+	strategy = value
+	changed.emit()
 
 func set_range(value: float) -> void:
-    attack_range = max(0.0, value)
-    changed.emit()
+	attack_range = max(0.0, value)
+	changed.emit()
 
 func _init() -> void:
-    pass
+	pass
 
 func _display_strategy(t_strategy: AttackComponent.Strategy) -> String:
-    match t_strategy:
-        AttackComponent.Strategy.first:
-            return tr("First")
-        AttackComponent.Strategy.last:
-            return tr("Last")
-        AttackComponent.Strategy.strongest:
-            return tr("Strongest")
-        AttackComponent.Strategy.weakest:
-            return tr("Weakest")
-        AttackComponent.Strategy.nearest:
-            return tr("Closest")
-        
-    return tr("Unknown")
+	match t_strategy:
+		AttackComponent.Strategy.first:
+			return tr("First")
+		AttackComponent.Strategy.last:
+			return tr("Last")
+		AttackComponent.Strategy.strongest:
+			return tr("Strongest")
+		AttackComponent.Strategy.weakest:
+			return tr("Weakest")
+		AttackComponent.Strategy.nearest:
+			return tr("Closest")
+
+	return tr("Unknown")
 
 func to_display_string() -> String:
-    return tr("Health: {health} / {max_health} \nDamage: {damage}\nSpeed: {speed}\nFire Rate: {fire_rate}\nStrategy: {strategy}").format({
-        "health": health,
-        "max_health": max_health,
-        "damage": damage,
-        "speed": speed,
-        "fire_rate": fire_rate,
-        "strategy": _display_strategy(strategy)
-    })
+	return tr("Health: {health} / {max_health} \nDamage: {damage}\nSpeed: {speed}\nFire Rate: {fire_rate}\nStrategy: {strategy}").format({
+		"health": health,
+		"max_health": max_health,
+		"damage": damage,
+		"speed": speed,
+		"fire_rate": fire_rate,
+		"strategy": _display_strategy(strategy)
+	})
 
 static func get_character_data(character_type: String) -> CharacterData:
-    var _resource_path = "res://data/characters/%s.tres" % character_type
-    return load(_resource_path) as CharacterData
+	if len(character_type) == 0 or character_type == " ":
+		return null
+	var _resource_path = "res://data/characters/%s.tres" % character_type
+	return load(_resource_path) as CharacterData

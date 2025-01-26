@@ -50,3 +50,11 @@ signal wave_started(wave: int)
 
 @warning_ignore("unused_signal")
 signal won_game
+
+@warning_ignore("unused_signal")
+signal reset_game
+
+@warning_ignore("unused_signal")
+signal character_selected(character: Character)
+@warning_ignore("unused_signal")
+signal character_deselected

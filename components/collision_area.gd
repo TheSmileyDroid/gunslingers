@@ -25,8 +25,8 @@ func _on_stats_changed():
     if is_queued_for_deletion() or $CollisionShape2D.is_queued_for_deletion():
         return
     $CollisionShape2D.shape = CircleShape2D.new()
-    $CollisionShape2D.shape.radius = character.stats.size * 10
+    $CollisionShape2D.shape.radius = character.stats.size * 4
 
 func _draw() -> void:
     if GameInstance.debug_mode:
-        draw_circle($CollisionShape2D.position, character.stats.size * 10, Color(0, 0, 1, 0.1))
+        draw_circle($CollisionShape2D.position, character.stats.size * 4, Color(0, 0, 1, 0.1))

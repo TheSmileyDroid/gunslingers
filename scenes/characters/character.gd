@@ -19,7 +19,14 @@ enum Team {PLAYER, ENEMY}
 		add_to_group("player" if value == Team.PLAYER else "enemy")
 		character_updated.emit(self)
 
-		
+func _ready() -> void:
+	var collision_area: Area2D = $CollisionArea
+	collision_area.mouse_entered.connect(_mouse_enter)
+	collision_area.mouse_exited.connect(_mouse_exit)
+	print("Character ready")
+
+
+
 func _physics_process(delta: float) -> void:
 	time_alive += delta
 	if GameInstance.debug_mode:
@@ -40,6 +47,8 @@ func _on_area_exited(_body):
 
 func _mouse_enter() -> void:
 	Events.character_mouse_enter.emit(self)
+	print("Mouse enter")
 
 func _mouse_exit() -> void:
 	Events.character_mouse_exit.emit(self)
+	print("Mouse exit")

@@ -1,12 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://dpxtt5l4t58ul"]
+[gd_scene load_steps=15 format=3 uid="uid://dpxtt5l4t58ul"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_vxfr8"]
-[ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="2_e5grm"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="4_wlxog"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="5_x8ulw"]
 [ext_resource type="Shader" path="res://assets/shaders/damage_shader.gdshader" id="6_7mhq7"]
 [ext_resource type="Script" path="res://components/health_bar.gd" id="6_5168f"]
-[ext_resource type="Texture2D" uid="uid://cxqbh7kx32ahs" path="res://assets/enemies/base.png" id="6_puo40"]
+[ext_resource type="Texture2D" uid="uid://rsjovo43e2be" path="res://assets/enemies/healer_rat.png" id="6_t5h7u"]
 [ext_resource type="Script" path="res://components/character_sprite.gd" id="7_l6hlr"]
 [ext_resource type="Script" path="res://components/detection_area.gd" id="8_m3v1n"]
 [ext_resource type="Script" path="res://components/collision_area.gd" id="9_w1x84"]
@@ -18,125 +17,35 @@ shader = ExtResource("6_7mhq7")
 shader_parameter/blink_color = Color(1, 1, 1, 1)
 shader_parameter/blink_intensity = 1.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7xyrr"]
-atlas = ExtResource("6_puo40")
-region = Rect2(0, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pnueq"]
-atlas = ExtResource("6_puo40")
-region = Rect2(24, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sowmd"]
-atlas = ExtResource("6_puo40")
-region = Rect2(48, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqff7"]
-atlas = ExtResource("6_puo40")
-region = Rect2(72, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swp2v"]
-atlas = ExtResource("6_puo40")
-region = Rect2(96, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lttd2"]
-atlas = ExtResource("6_puo40")
-region = Rect2(0, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pimmq"]
-atlas = ExtResource("6_puo40")
-region = Rect2(24, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_flvd4"]
-atlas = ExtResource("6_puo40")
-region = Rect2(48, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqyd1"]
-atlas = ExtResource("6_puo40")
-region = Rect2(72, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bjgf1"]
-atlas = ExtResource("6_puo40")
-region = Rect2(96, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_th634"]
-atlas = ExtResource("6_puo40")
+[sub_resource type="AtlasTexture" id="AtlasTexture_62ml7"]
+atlas = ExtResource("6_t5h7u")
 region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqfi8"]
-atlas = ExtResource("6_puo40")
-region = Rect2(24, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_oykgs"]
+atlas = ExtResource("6_t5h7u")
+region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ai1p"]
-atlas = ExtResource("6_puo40")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vljis"]
-atlas = ExtResource("6_puo40")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bo1nx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_en0jf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7xyrr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pnueq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sowmd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gqff7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_swp2v")
+"texture": SubResource("AtlasTexture_62ml7")
 }],
 "loop": false,
 "name": &"attack",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lttd2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pimmq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_flvd4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hqyd1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bjgf1")
+"texture": SubResource("AtlasTexture_oykgs")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_th634")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gqfi8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6ai1p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vljis")
-}],
-"loop": true,
-"name": &"stay",
-"speed": 7.0
+"speed": 5.0
 }]
 
 [node name="Enemy" type="Node2D"]
 script = ExtResource("1_vxfr8")
-stats = ExtResource("2_e5grm")
 team = 1
 
 [node name="AttackComponent" type="Node" parent="."]
@@ -155,8 +64,8 @@ script = ExtResource("6_5168f")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_ph25s")
-sprite_frames = SubResource("SpriteFrames_bo1nx")
-animation = &"attack"
+sprite_frames = SubResource("SpriteFrames_en0jf")
+animation = &"idle"
 script = ExtResource("7_l6hlr")
 
 [node name="DetectionArea" type="Area2D" parent="."]

@@ -9,6 +9,7 @@ signal has_reached_end(damage: int)
 func _ready():
 	if get_parent().has_node("Path2D"):
 		path = get_parent().get_node("Path2D").curve
+	super._ready()
 
 func _physics_process(delta):
 	super._physics_process(delta)
@@ -34,4 +35,5 @@ func move_along_path(delta):
 func reach_end():
 	has_reached_end.emit(stats.damage)
 	if path:
+		Events.character_died.emit(self)
 		queue_free()

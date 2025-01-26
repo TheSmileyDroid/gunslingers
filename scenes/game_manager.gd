@@ -1,9 +1,21 @@
 extends Node
 
 var selected_character: String = ""
+var in_game: bool = false
+var loaded_level: String = ""
+var hovering_character: Character = null
 
 func _ready():
 	Events.character_drag.connect(on_character_selected)
+	Events.entered_game.connect(_entered_game)
+	Events.reset_game.connect(_reset_game)
+	Events.won_game.connect(_on_win_game)
+	Events.character_mouse_enter.connect(_on_character_mouse_enter)
+	Events.character_mouse_exit.connect(_on_character_mouse_exit)
+
+func _entered_game():
+	in_game = true
+
 
 func load_level(level):
 	await SceneManager.change_scene(("res://scenes/maps/%s.tscn" % level), {
@@ -11,6 +23,11 @@ func load_level(level):
 	})
 	Events.changed_level.emit(level)
 	Events.entered_game.emit()
+	loaded_level = level
+
+func _reset_game():
+	if loaded_level != "":
+		load_level(loaded_level)
 
 func on_character_selected(character_id: String) -> void:
 	selected_character = character_id
@@ -23,6 +40,15 @@ func _unhandled_input(event):
 			selected_character = ""
 			Events.character_drag.emit("")
 
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed and hovering_character != null:
+		Events.character_selected.emit(hovering_character)
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed and hovering_character == null:
+		Events.character_deselected.emit()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause") and in_game:
+		get_tree().paused = true
+		Events.paused_game.emit()
 
 func spawn_character(character_id: String, position: Vector2):
 	var stats: CharacterData = load("res://data/characters/%s.tres" % character_id).duplicate()
@@ -38,7 +64,7 @@ func spawn_character(character_id: String, position: Vector2):
 	Events.buy_character.emit(character_id)
 	selected_character = ""
 	Events.character_drag.emit("")
-	
+
 
 func spawn_enemy(enemy_id: String, position: Vector2) -> Character:
 	var enemy = preload("res://scenes/enemies/enemy.tscn").instantiate()
@@ -47,3 +73,13 @@ func spawn_enemy(enemy_id: String, position: Vector2) -> Character:
 	enemy.position = position
 	get_tree().current_scene.add_child(enemy)
 	return enemy
+
+func _on_win_game() -> void:
+	get_tree().paused = true
+
+func _on_character_mouse_enter(character: Character) -> void:
+	hovering_character = character
+
+func _on_character_mouse_exit(character: Character) -> void:
+	if hovering_character == character:
+		hovering_character = null

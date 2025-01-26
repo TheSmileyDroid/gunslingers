@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2pvjpt5f1vxb"]
+[gd_scene load_steps=7 format=3 uid="uid://c2pvjpt5f1vxb"]
 
-[ext_resource type="Theme" uid="uid://bygdwpdi6lqpn" path="res://assets/theme.tres" id="1_cifr2"]
+[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_cifr2"]
 [ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_k3po2"]
-[ext_resource type="PackedScene" uid="uid://efgjrmiec4v2" path="res://scenes/ui/game_hud.tscn" id="2_mg71s"]
-[ext_resource type="PackedScene" uid="uid://cd7oyt073aqg7" path="res://scenes/ui/dialog.tscn" id="3_f6snl"]
+[ext_resource type="PackedScene" uid="uid://c377mm17ckmab" path="res://scenes/ui/game_hud.tscn" id="2_mg71s"]
+[ext_resource type="PackedScene" uid="uid://buuf8jf84be44" path="res://scenes/ui/dialog.tscn" id="3_f6snl"]
+[ext_resource type="PackedScene" uid="uid://cml228kpi1y0l" path="res://scenes/ui/pause_menu.tscn" id="5_k2p4m"]
+[ext_resource type="PackedScene" uid="uid://cyefbrywx6yyd" path="res://scenes/ui/win_screen.tscn" id="6_w3win"]
 
 [node name="Ui" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,3 +28,12 @@ visible = false
 [node name="Dialog" parent="CanvasLayer" instance=ExtResource("3_f6snl")]
 unique_name_in_owner = true
 visible = false
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_k2p4m")]
+unique_name_in_owner = true
+visible = false
+
+[node name="WinScreen" parent="CanvasLayer" instance=ExtResource("6_w3win")]
+unique_name_in_owner = true
+visible = false
+theme = null
