@@ -135,4 +135,4 @@ strategy = 4
 attack_range = 15.0
 attack_type = 0
 size = 2
-reward = 20
+reward = 10
