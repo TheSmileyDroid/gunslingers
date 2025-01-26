@@ -23,7 +23,6 @@ func _ready() -> void:
 	var collision_area: Area2D = $CollisionArea
 	collision_area.mouse_entered.connect(_mouse_enter)
 	collision_area.mouse_exited.connect(_mouse_exit)
-	print("Character ready")
 
 
 

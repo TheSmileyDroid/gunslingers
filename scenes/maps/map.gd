@@ -53,12 +53,15 @@ func _ready() -> void:
 
 
 func spawn_wave() -> void:
-	if wave >= len(map_data.waves):
+	wave += 1
+	print("Wave ", wave, "/", len(map_data.waves))
+
+	if wave > len(map_data.waves):
 		Events.won_game.emit()
 		return
 
-	current_wave = map_data.waves[wave]
-	wave += 1
+	current_wave = map_data.waves[wave-1]
+
 	Events.wave_started.emit(wave)
 
 	if current_wave.initial_dialog != null:
@@ -86,8 +89,9 @@ func spawn_enemy() -> void:
 
 func _on_enemy_death(enemy: Character):
 	alive_enemies.erase(enemy)
-	if enemy is Rat and alive_enemies.is_empty() and can_spawn_wave:
+	if enemy is Rat and alive_enemies.is_empty() and can_spawn_wave and enemies_to_spawn.is_empty():
 		spawn_wave()
+
 
 func show_dialog(dialog_path: DialogData) -> void:
 	await Ui.start_dialog(dialog_path)

@@ -25,7 +25,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -42,7 +42,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [resource]
@@ -52,9 +52,9 @@ price = 100
 sprite_frames = SubResource("SpriteFrames_n2yx0")
 health = 5
 max_health = 5
-damage = 3
+damage = 8
 speed = 40.0
-fire_rate = 1.0
+fire_rate = 15.0
 pierce = 1
 strategy = 4
 attack_range = 100.0

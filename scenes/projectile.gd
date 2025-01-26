@@ -4,7 +4,12 @@ var target: Character
 var speed: float = 700.0
 var damage: int = 10
 var lifetime: float = 1.0
-var source: Character
+var source_team: Character.Team
+var source: Character:
+	set(value):
+		source = value
+		source_team = source.team
+
 var hits: Array[Character] = []
 var max_hits: int = 1
 var hits_count: int = 0
@@ -15,8 +20,8 @@ func _physics_process(delta):
 		direction = (target.global_position - global_position).normalized()
 		rotation = direction.angle()
 	position += direction * speed * delta
-	
-		
+
+
 func _ready():
 	direction = (target.global_position - global_position).normalized()
 	rotation = direction.angle()
@@ -32,10 +37,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		var character: Character = area.get_parent()
 		if !is_instance_valid(character):
 			return
-		if character not in hits and character.team != source.team:
+		if character not in hits and character.team != source_team:
 			hits.append(character)
 			hits_count += 1
-			character.get_node("HealthComponent").take_damage(damage, source)
+			character.get_node("HealthComponent").take_damage(damage, source_team)
 			if hits_count >= max_hits:
 				queue_free()
 				return

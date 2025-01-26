@@ -16,7 +16,7 @@ func _physics_process(delta):
 	move_along_path(delta)
 
 func move_along_path(delta):
-	if len($DetectionArea.targets) > 0 or $CharacterSprite.animation != "idle":
+	if $AttackComponent.get_target() != null or $CharacterSprite.animation != "idle":
 		return
 	if path and path_index < path.get_point_count():
 		var point = path.get_point_position(path_index)

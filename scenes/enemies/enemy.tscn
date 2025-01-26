@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dpxtt5l4t58ul"]
+[gd_scene load_steps=16 format=3 uid="uid://dpxtt5l4t58ul"]
 
 [ext_resource type="Script" path="res://scenes/enemies/enemy.gd" id="1_vxfr8"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="4_wlxog"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://components/detection_area.gd" id="8_m3v1n"]
 [ext_resource type="Script" path="res://components/collision_area.gd" id="9_w1x84"]
 [ext_resource type="Script" path="res://components/fire_rate_component.gd" id="10_o76o2"]
+[ext_resource type="PackedScene" uid="uid://ctlmsd4xgwtds" path="res://components/heal_particles.tscn" id="11_dlbq0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ph25s"]
 resource_local_to_scene = true
@@ -55,10 +56,10 @@ script = ExtResource("4_wlxog")
 script = ExtResource("5_x8ulw")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -17.0
-offset_top = -29.0
-offset_right = 18.0
-offset_bottom = -10.0
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+offset_bottom = -17.0
 theme_override_font_sizes/font_size = 12
 script = ExtResource("6_5168f")
 
@@ -69,12 +70,16 @@ animation = &"idle"
 script = ExtResource("7_l6hlr")
 
 [node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+input_pickable = false
+monitorable = false
 script = ExtResource("8_m3v1n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 position = Vector2(0, 5)
 
 [node name="CollisionArea" type="Area2D" parent="."]
+collision_priority = 0.2
 script = ExtResource("9_w1x84")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
@@ -82,3 +87,5 @@ script = ExtResource("9_w1x84")
 [node name="FireRateComponent" type="Timer" parent="."]
 autostart = true
 script = ExtResource("10_o76o2")
+
+[node name="HealParticles" parent="." instance=ExtResource("11_dlbq0")]

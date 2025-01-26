@@ -54,7 +54,6 @@ func spawn_character(character_id: String, position: Vector2):
 	var stats: CharacterData = load("res://data/characters/%s.tres" % character_id).duplicate()
 	var has_money = stats.price <= get_tree().current_scene.cash
 	var is_overlapping = len(get_tree().current_scene.placer.overlapping) > 0
-	print_debug("Cash: %s" % get_tree().current_scene.cash + "  Price: %s" % stats.price)
 	if is_overlapping or !has_money:
 		return
 	var character = preload("res://scenes/characters/character.tscn").instantiate()
@@ -68,7 +67,6 @@ func spawn_character(character_id: String, position: Vector2):
 
 func spawn_enemy(enemy_id: String, position: Vector2) -> Character:
 	var enemy = preload("res://scenes/enemies/enemy.tscn").instantiate()
-	print(enemy_id)
 	enemy.stats = load("res://data/enemies/%s.tres" % enemy_id).duplicate()
 	enemy.position = position
 	get_tree().current_scene.add_child(enemy)

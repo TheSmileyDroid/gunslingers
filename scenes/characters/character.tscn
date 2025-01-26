@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bxe0x3i1mt8pr"]
+[gd_scene load_steps=28 format=3 uid="uid://bxe0x3i1mt8pr"]
 
 [ext_resource type="Shader" path="res://assets/shaders/damage_shader.gdshader" id="1_dw0yc"]
 [ext_resource type="Script" path="res://scenes/tower.gd" id="1_gqhet"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://components/health_bar.gd" id="9_4je33"]
 [ext_resource type="Script" path="res://components/collision_area.gd" id="9_mfbl3"]
 [ext_resource type="Script" path="res://components/fire_rate_component.gd" id="10_kvcg7"]
+[ext_resource type="PackedScene" uid="uid://ctlmsd4xgwtds" path="res://components/heal_particles.tscn" id="13_on6b4"]
 
 [sub_resource type="Resource" id="Resource_df3ar"]
 resource_local_to_scene = true
@@ -146,25 +147,28 @@ frame_progress = 1.0
 script = ExtResource("7_51r4x")
 
 [node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 0
+input_pickable = false
+monitorable = false
 script = ExtResource("8_xj0ie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
 
 [node name="CollisionArea" type="Area2D" parent="."]
+collision_priority = 0.2
 script = ExtResource("9_mfbl3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -25.0
-offset_top = -30.0
-offset_right = 26.0
-offset_bottom = -14.0
+offset_left = -16.0
+offset_top = -24.0
+offset_right = 16.0
+offset_bottom = -12.0
 script = ExtResource("9_4je33")
 
 [node name="FireRateComponent" type="Timer" parent="."]
 autostart = true
 script = ExtResource("10_kvcg7")
 
-[node name="Cursor" type="Sprite2D" parent="."]
-position = Vector2(26, 32)
+[node name="HealParticles" parent="." instance=ExtResource("13_on6b4")]

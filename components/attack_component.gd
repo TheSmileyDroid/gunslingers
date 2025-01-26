@@ -58,8 +58,6 @@ func get_target():
 		return nearest
 
 func attack():
-	if len(character.get_node("DetectionArea").targets) == 0:
-		return
 	var current_target = get_target()
 	if is_instance_valid(current_target):
 		attack_started.emit(character)
@@ -79,6 +77,8 @@ func finish_attack(current_target: Character):
 			projectile.max_hits = character.stats.pierce
 			get_tree().current_scene.add_child(projectile)
 		elif character.stats.attack_type == CharacterData.AttackType.melee:
-			current_target.get_node("HealthComponent").take_damage(character.stats.damage, character)
+			current_target.get_node("HealthComponent").take_damage(character.stats.damage, character.team)
 		elif character.stats.attack_type == CharacterData.AttackType.heal:
-			current_target.stats.health = min(current_target.stats.health + character.stats.damage, current_target.stats.max_health)
+			current_target.get_node("HealthComponent").heal(character.stats.damage)
+		else:
+			print("Invalid attack type")

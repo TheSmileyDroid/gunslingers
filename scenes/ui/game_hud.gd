@@ -11,6 +11,7 @@ func _ready() -> void:
 	Events.entered_game.connect(_on_entered_game)
 	Events.exited_game.connect(_on_exited_game)
 	Events.wave_started.connect(_on_wave_started)
+	$PanelContainer/MarginContainer/VBoxContainer/Button.pressed.connect(_on_flip_button_pressed)
 	_load_character_buttons()
 	visible = false
 
@@ -27,13 +28,16 @@ func _load_character_buttons() -> void:
 	dir.list_dir_begin()
 	var file_name = dir.get_next()
 
+	for child in character_list_container.get_children():
+		character_list_container.remove_child(child)
+
 	while file_name != "":
 		if file_name.ends_with(".tres"):
 			var character_button = preload("res://scenes/ui/shop_button.tscn").instantiate()
 
 			var resource_path = CHARACTER_DATA_PATH + file_name
 			var stats: CharacterData = load(resource_path)
-			
+
 			character_button.character_data = stats
 			character_list_container.add_child(character_button)
 
@@ -41,7 +45,7 @@ func _load_character_buttons() -> void:
 
 	dir.list_dir_end()
 
-func _on__flip_button_pressed() -> void:
+func _on_flip_button_pressed() -> void:
 	var target_x = 0.0
 	if panel_container.position.x == 0:
 		target_x = get_viewport_rect().size.x - panel_container.size.x

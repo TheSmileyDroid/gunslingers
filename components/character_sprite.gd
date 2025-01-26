@@ -35,14 +35,15 @@ func on_enemy_detected(_character: Character):
             flip_h = false
         else:
             flip_h = true
-    
+
 
 func on_attack_started(_character: Character):
     play("attack")
 
 
 func _on_character_updated():
-    sprite_frames = character.stats.sprite_frames
+    if character.stats:
+        sprite_frames = character.stats.sprite_frames
 
 
 func start_blink():

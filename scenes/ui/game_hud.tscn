@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=10 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
 [ext_resource type="FontFile" uid="uid://4rbvhg85gh43" path="res://assets/fonts/RootBeer.ttf" id="2_kr3al"]
 [ext_resource type="Script" path="res://scenes/ui/name_label.gd" id="3_hmyc8"]
+[ext_resource type="PackedScene" uid="uid://bwkpiv2skvme3" path="res://scenes/ui/shop_button.tscn" id="4_t548n"]
 [ext_resource type="PackedScene" uid="uid://dwk7788dlt882" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rj5gv"]
@@ -92,6 +93,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 2
 theme_override_constants/separation = 5
 alignment = 1
+
+[node name="ShopButton" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+layout_mode = 2
+
+[node name="ShopButton2" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+layout_mode = 2
+
+[node name="ShopButton3" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+layout_mode = 2
+
+[node name="ShopButton4" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+layout_mode = 2
 
 [node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
