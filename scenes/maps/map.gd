@@ -94,10 +94,11 @@ func spawn_enemy() -> void:
 
 func _on_enemy_death(enemy: Character):
 	alive_enemies.erase(enemy)
-	if enemy is Rat and alive_enemies.is_empty() and can_spawn_wave and enemies_to_spawn.is_empty():
+	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
 		if wave >= len(map_data.waves):
-			Events.win_game.emit()
-		spawn_wave()
+			Events.won_game.emit()
+		elif can_spawn_wave:
+			spawn_wave()
 
 
 func show_dialog(dialog_path: DialogData) -> void:
