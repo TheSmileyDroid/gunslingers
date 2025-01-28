@@ -64,3 +64,6 @@ signal lives_changed(lives: int)
 
 @warning_ignore("unused_signal")
 signal enemy_has_reached_goal(enemy: Character)
+
+@warning_ignore("unused_signal")
+signal show_health_bars(isHealthBarVisible: bool)

@@ -4,6 +4,7 @@ var selected_character: String = ""
 var in_game: bool = false
 var loaded_level: String = ""
 var hovering_character: Character = null
+var show_health_bars: bool = false
 
 func _ready():
 	Events.character_drag.connect(on_character_selected)
@@ -47,9 +48,14 @@ func _unhandled_input(event):
 		Events.character_deselected.emit()
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause") and in_game:
-		get_tree().paused = true
-		Events.paused_game.emit()
+	if in_game:
+		if event.is_action_pressed("pause"):
+			get_tree().paused = true
+			Events.paused_game.emit()
+		if event.is_action_pressed("toggle_health_bar"):
+			show_health_bars = !show_health_bars
+			Events.show_health_bars.emit(show_health_bars)
+
 
 func spawn_character(character_id: String, position: Vector2):
 	var stats: CharacterData = load("res://data/characters/%s.tres" % character_id).duplicate()

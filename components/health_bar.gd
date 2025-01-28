@@ -7,6 +7,12 @@ func _ready():
 	get_parent().character_updated.connect(_on_character_updated)
 	_on_character_updated()
 	visible = false
+	Events.show_health_bars.connect(_show_health_bars)
+
+func _show_health_bars(isHealthBarVisible: bool):
+	visible = isHealthBarVisible
+	if visible:
+		_on_character_updated()
 
 func _on_character_updated():
 	if !visible:
@@ -19,12 +25,6 @@ func _on_character_updated():
 		value = stats.health
 		stats.changed.connect(_stats_changed)
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_health_bar"):
-		visible = !visible
-		if visible:
-			_on_character_updated()
-			_stats_changed()
 
 func _stats_changed():
 	if !visible:
