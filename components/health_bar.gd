@@ -6,7 +6,7 @@ var stats: CharacterData
 func _ready():
 	get_parent().character_updated.connect(_on_character_updated)
 	_on_character_updated()
-	visible = false
+	visible = GameManager.show_health_bars
 	Events.show_health_bars.connect(_show_health_bars)
 
 func _show_health_bars(isHealthBarVisible: bool):
