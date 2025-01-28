@@ -8,7 +8,6 @@ var max_time_alive := 0.5
 var team: Character.Team = Character.Team.ENEMY
 @onready var area2d :Area2D = get_node("Area2D")
 @onready var shape : CircleShape2D = get_node("Area2D").get_node("CollisionShape2D").shape
-@onready var sprite := $Sprite2D
 
 func _ready() -> void:
 	area2d.area_entered.connect(_on_area_entered)
