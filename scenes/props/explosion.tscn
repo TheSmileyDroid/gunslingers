@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4s55sk5e4tej"]
+
+[ext_resource type="Script" path="res://scenes/props/explosion.gd" id="1_c1b1q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3b4tr"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ry6kx"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 2.0
+color = Color(1, 0.717647, 0, 1)
+
+[node name="Explosion" type="Node2D"]
+script = ExtResource("1_c1b1q")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3b4tr")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_ry6kx")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.8

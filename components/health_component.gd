@@ -27,5 +27,7 @@ func heal(amount: int):
 	get_parent().get_node("HealParticles").emitting = true
 
 func die():
+	for effect in stats.on_death_effects:
+		effect.trigger_effect(get_parent())
 	Events.character_died.emit(get_parent())
 	get_parent().queue_free()

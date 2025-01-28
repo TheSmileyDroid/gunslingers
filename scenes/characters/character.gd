@@ -3,6 +3,7 @@ class_name Character
 
 var time_alive := 0.0
 
+
 signal character_updated(character: Character)
 
 @export var stats: CharacterData:
