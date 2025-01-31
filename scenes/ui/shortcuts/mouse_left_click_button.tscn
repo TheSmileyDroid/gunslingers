@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw0unu13kf6yf"]
+
+[ext_resource type="Texture2D" uid="uid://dsxxbeqwbhtcd" path="res://assets/shortcuts.png" id="1_bj1vh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_583b7"]
+atlas = ExtResource("1_bj1vh")
+region = Rect2(147, 49, 10, 14)
+
+[node name="Button" type="TextureButton"]
+anchors_preset = -1
+anchor_right = 0.024
+anchor_bottom = 0.058
+offset_right = -0.0799999
+offset_bottom = 0.0799999
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_583b7")
