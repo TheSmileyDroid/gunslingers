@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://buuf8jf84be44"]
 
-[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_1hd4s"]
+[ext_resource type="Theme" uid="uid://bb4uj274b8l32" path="res://assets/theme2.tres" id="1_67efa"]
 [ext_resource type="Script" path="res://scenes/ui/dialog.gd" id="1_xjvw4"]
 
 [node name="Dialog" type="Control"]
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_1hd4s")
+theme = ExtResource("1_67efa")
 script = ExtResource("1_xjvw4")
 
 [node name="TextureRect" type="TextureRect" parent="."]

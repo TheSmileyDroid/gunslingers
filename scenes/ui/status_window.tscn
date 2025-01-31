@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwk7788dlt882"]
+[gd_scene load_steps=3 format=3 uid="uid://es0nf7w78cu2"]
 
 [ext_resource type="Script" path="res://scenes/ui/status_window.gd" id="1_8j4ks"]
 
@@ -7,8 +7,8 @@ font_size = 10
 font_color = Color(0, 0, 0, 1)
 
 [node name="StatusWindow" type="PanelContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 89.0
+offset_bottom = 114.0
 script = ExtResource("1_8j4ks")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

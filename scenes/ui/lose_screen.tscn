@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bk8d1utr0ubvo"]
+[gd_scene load_steps=4 format=3 uid="uid://cejjts4l3o0tq"]
 
-[ext_resource type="Script" path="res://scenes/ui/win_screen.gd" id="1_4xa6n"]
+[ext_resource type="Script" path="res://scenes/ui/lose_screen.gd" id="1_moxq2"]
 [ext_resource type="FontFile" uid="uid://4rbvhg85gh43" path="res://assets/fonts/RootBeer.ttf" id="2_78k6b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3o7p7"]
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4xa6n")
+script = ExtResource("1_moxq2")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

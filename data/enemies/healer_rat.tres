@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://4g3cld60513r"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://ynkx3se7gnjb"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_e0a5g"]
-[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_pgx1k"]
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_ovgj7"]
 [ext_resource type="Texture2D" uid="uid://rsjovo43e2be" path="res://assets/enemies/healer_rat.png" id="2_qayv1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yblwu"]
@@ -57,9 +57,9 @@ damage = 8
 speed = 40.0
 fire_rate = 15.0
 pierce = 1
-strategy = 4
+strategy = 3
 attack_range = 100.0
 attack_type = 2
 size = 1
 reward = 15
-on_death_effects = Array[ExtResource("1_pgx1k")]([])
+on_death_effects = Array[ExtResource("1_ovgj7")]([])
