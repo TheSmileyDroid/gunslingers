@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=18 format=3 uid="uid://c0dlbvjsgd0f"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=19 format=3 uid="uid://c2ii2rsxp8mw6"]
 
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_4fami"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_vps6c"]
 [ext_resource type="Texture2D" uid="uid://cxqbh7kx32ahs" path="res://assets/enemies/base.png" id="2_jnrx0"]
 
@@ -122,7 +123,7 @@ animations = [{
 
 [resource]
 script = ExtResource("1_vps6c")
-name = "Rat"
+name = "Rato Grande"
 price = 100
 sprite_frames = SubResource("SpriteFrames_bo1nx")
 health = 40
@@ -136,3 +137,4 @@ attack_range = 15.0
 attack_type = 0
 size = 2
 reward = 10
+on_death_effects = Array[ExtResource("1_4fami")]([])

@@ -5,12 +5,12 @@ func _ready() -> void:
 	$VBoxContainer/MenuButton.pressed.connect(go_to_menu)
 
 func restart() -> void:
-	get_tree().paused = false
 	Events.reset_game.emit()
 	hide()
 
 func go_to_menu() -> void:
-	get_tree().paused = false
-	SceneManager.change_scene("res://scenes/main_menu.tscn")
+	SceneManager.change_scene("res://scenes/main_menu.tscn", {
+		"pattern": "scribbles"
+	})
 	Events.exited_game.emit()
 	hide()

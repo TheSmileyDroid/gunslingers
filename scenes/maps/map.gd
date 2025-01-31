@@ -34,6 +34,7 @@ var alive_enemies: Array[Character] = []
 var can_spawn_wave: bool = false
 
 func _ready() -> void:
+	get_tree().paused = false
 	Events.entered_game.emit()
 	cash = map_data.initial_cash
 	lives = map_data.initial_lives
@@ -65,7 +66,7 @@ func spawn_wave() -> void:
 	if wave > len(map_data.waves):
 		return
 
-	current_wave = map_data.waves[wave-1]
+	current_wave = map_data.waves[wave - 1]
 
 	Events.wave_started.emit(wave)
 
@@ -95,7 +96,7 @@ func spawn_enemy() -> void:
 func _on_enemy_death(enemy: Character):
 	alive_enemies.erase(enemy)
 	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
-		if wave >= len(map_data.waves):
+		if wave > len(map_data.waves):
 			Events.won_game.emit()
 		elif can_spawn_wave:
 			spawn_wave()
