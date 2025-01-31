@@ -14,10 +14,13 @@ func _ready():
 	Events.character_mouse_enter.connect(_on_character_mouse_enter)
 	Events.character_mouse_exit.connect(_on_character_mouse_exit)
 	Events.player_died.connect(_on_player_died)
+	Events.exited_game.connect(_on_exited_game)
 
 func _entered_game():
 	in_game = true
 
+func _on_exited_game():
+	in_game = false
 
 func load_level(level):
 	await SceneManager.change_scene(("res://scenes/maps/%s.tscn" % level), {
