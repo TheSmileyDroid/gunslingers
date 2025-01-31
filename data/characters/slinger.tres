@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=12 format=3 uid="uid://ctuaql02wr7vq"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=13 format=3 uid="uid://ctuaql02wr7vq"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_qwlfq"]
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_qxj77"]
 [ext_resource type="Texture2D" uid="uid://0ubgjv6fb7k3" path="res://assets/heroes/slinger.png" id="2_688bq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0f6rs"]
@@ -89,3 +90,4 @@ attack_range = 100.0
 attack_type = 1
 size = 2
 reward = 10
+on_death_effects = Array[ExtResource("1_qxj77")]([])
