@@ -123,7 +123,7 @@ animations = [{
 
 [resource]
 script = ExtResource("1_vps6c")
-name = "Rat"
+name = "Rato Grande"
 price = 100
 sprite_frames = SubResource("SpriteFrames_bo1nx")
 health = 40
