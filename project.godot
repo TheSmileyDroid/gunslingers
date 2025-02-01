@@ -34,6 +34,7 @@ GameInstance="*res://scripts/global/game_instance.gd"
 GameManager="*res://scenes/game_manager.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Ui="*res://scenes/ui/ui.tscn"
+Panku="*res://addons/panku_console/console.tscn"
 
 [display]
 
@@ -48,7 +49,7 @@ mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
 
 [gui]
 
@@ -100,6 +101,11 @@ skip_dialog={
 [internationalization]
 
 locale/translation_add_builtin_strings_to_pot=true
+
+[panku]
+
+disable_on_release=true
+custom_default_config="res://panku_config.cfg"
 
 [rendering]
 
