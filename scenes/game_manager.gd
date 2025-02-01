@@ -7,6 +7,7 @@ var hovering_character: Character = null
 var show_health_bars: bool = false
 
 func _ready():
+	process_mode = ProcessMode.PROCESS_MODE_ALWAYS
 	Events.character_drag.connect(on_character_selected)
 	Events.entered_game.connect(_entered_game)
 	Events.reset_game.connect(_reset_game)
@@ -21,6 +22,7 @@ func _entered_game():
 
 func _on_exited_game():
 	in_game = false
+	get_tree().paused = false
 
 func load_level(level):
 	await SceneManager.change_scene(("res://scenes/maps/%s.tscn" % level), {
