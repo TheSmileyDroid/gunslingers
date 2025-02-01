@@ -1,131 +1,90 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=19 format=3 uid="uid://c2ii2rsxp8mw6"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=14 format=3 uid="uid://c0dlbvjsgd0f"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_4fami"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_vps6c"]
-[ext_resource type="Texture2D" uid="uid://cxqbh7kx32ahs" path="res://assets/enemies/base.png" id="2_jnrx0"]
+[ext_resource type="Texture2D" uid="uid://7524irflyc0a" path="res://assets/enemies/big_rat.png" id="3_sqly1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ibwvu"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_up3wo"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(0, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kp8gr"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aifw"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(24, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6ij85"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l07y"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(48, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rp0qj"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mebxc"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(72, 48, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2g2bl"]
-atlas = ExtResource("2_jnrx0")
-region = Rect2(96, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o51s3"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7blvw"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(0, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xwjpi"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qcrp"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(24, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n4dh1"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldt4d"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(48, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jvpb6"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_w187h"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(72, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_amgch"]
-atlas = ExtResource("2_jnrx0")
+[sub_resource type="AtlasTexture" id="AtlasTexture_eblbi"]
+atlas = ExtResource("3_sqly1")
 region = Rect2(96, 24, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mkekt"]
-atlas = ExtResource("2_jnrx0")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ip5q7"]
-atlas = ExtResource("2_jnrx0")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d8iqv"]
-atlas = ExtResource("2_jnrx0")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j186v"]
-atlas = ExtResource("2_jnrx0")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_bo1nx"]
-resource_local_to_scene = true
+[sub_resource type="SpriteFrames" id="SpriteFrames_it72y"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ibwvu")
+"texture": SubResource("AtlasTexture_up3wo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kp8gr")
+"texture": SubResource("AtlasTexture_5aifw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6ij85")
+"texture": SubResource("AtlasTexture_3l07y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rp0qj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2g2bl")
+"texture": SubResource("AtlasTexture_mebxc")
 }],
 "loop": false,
 "name": &"attack",
-"speed": 11.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o51s3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xwjpi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n4dh1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jvpb6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_amgch")
-}],
-"loop": true,
-"name": &"idle",
 "speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mkekt")
+"texture": SubResource("AtlasTexture_7blvw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ip5q7")
+"texture": SubResource("AtlasTexture_6qcrp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d8iqv")
+"texture": SubResource("AtlasTexture_ldt4d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j186v")
+"texture": SubResource("AtlasTexture_w187h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eblbi")
 }],
 "loop": true,
-"name": &"stay",
-"speed": 7.0
+"name": &"idle",
+"speed": 12.0
 }]
 
 [resource]
 script = ExtResource("1_vps6c")
 name = "Rato Grande"
 price = 100
-sprite_frames = SubResource("SpriteFrames_bo1nx")
+sprite_frames = SubResource("SpriteFrames_it72y")
 health = 40
 max_health = 40
 damage = 1

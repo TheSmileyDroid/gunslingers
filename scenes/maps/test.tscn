@@ -6,10 +6,10 @@
 [ext_resource type="Script" path="res://resources/wave_data.gd" id="3_rhhou"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="4_pbno8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="5_2htoy"]
-[ext_resource type="Resource" uid="uid://chhmqcydx4btb" path="res://data/enemies/bomb_rat.tres" id="5_6ne76"]
+[ext_resource type="Resource" uid="uid://vghng00f3qat" path="res://data/enemies/bomb_rat.tres" id="5_6ne76"]
 [ext_resource type="Resource" uid="uid://cpdnwlnknlhmj" path="res://data/dialogs/example_dialog.tres" id="6_y7et7"]
-[ext_resource type="Resource" uid="uid://c2ii2rsxp8mw6" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
-[ext_resource type="Resource" uid="uid://ynkx3se7gnjb" path="res://data/enemies/healer_rat.tres" id="7_kk01n"]
+[ext_resource type="Resource" uid="uid://c0dlbvjsgd0f" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
+[ext_resource type="Resource" uid="uid://4g3cld60513r" path="res://data/enemies/healer_rat.tres" id="7_kk01n"]
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="7_r2pr6"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="8_tw6ag"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="9_4gh2v"]
@@ -149,8 +149,8 @@ lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_m5brt")])
 
 [sub_resource type="Resource" id="Resource_dn1yv"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("7_kk01n"), ExtResource("5_2htoy"), ExtResource("5_2htoy")])
-spawn_rate = 0.5
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy"), ExtResource("7_kk01n"), ExtResource("5_2htoy")])
+spawn_rate = 0.6
 count = 30
 initial_dialog = SubResource("Resource_k22qa")
 
@@ -192,7 +192,7 @@ lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_60kme")])
 [sub_resource type="Resource" id="Resource_k6tjw"]
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy"), ExtResource("7_d7ixt"), ExtResource("7_kk01n"), ExtResource("5_2htoy")])
-spawn_rate = 0.4
+spawn_rate = 0.5
 count = 40
 initial_dialog = SubResource("Resource_7jvfn")
 
@@ -200,8 +200,8 @@ initial_dialog = SubResource("Resource_7jvfn")
 script = ExtResource("2_axekq")
 name = "Teste"
 difficulty = 1
-initial_cash = 9999
-initial_lives = 30
+initial_cash = 150
+initial_lives = 50
 waves = Array[ExtResource("3_rhhou")]([SubResource("Resource_4iyqa"), SubResource("Resource_8pcce"), SubResource("Resource_xf4b7"), SubResource("Resource_5hc1l"), SubResource("Resource_b7ce6"), SubResource("Resource_rca3e"), SubResource("Resource_dn1yv"), SubResource("Resource_k6tjw")])
 
 [sub_resource type="Curve" id="Curve_gd2i5"]

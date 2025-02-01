@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bwkpiv2skvme3"]
 
-[ext_resource type="Theme" uid="uid://bb4uj274b8l32" path="res://assets/theme2.tres" id="1_rerk3"]
+[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_rerk3"]
 [ext_resource type="Script" path="res://scenes/ui/shop_button.gd" id="1_w7661"]
 [ext_resource type="Resource" uid="uid://vqqlwrvxtkq2" path="res://data/characters/brawler.tres" id="3_o8aue"]
 [ext_resource type="FontFile" uid="uid://djks0mtkg3yw6" path="res://assets/fonts/QuinqueFive.ttf" id="4_8oaym"]

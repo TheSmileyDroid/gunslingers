@@ -47,8 +47,6 @@ func _on_area_exited(_body):
 
 func _mouse_enter() -> void:
 	Events.character_mouse_enter.emit(self)
-	print("Mouse enter")
 
 func _mouse_exit() -> void:
 	Events.character_mouse_exit.emit(self)
-	print("Mouse exit")
