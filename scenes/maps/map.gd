@@ -31,7 +31,7 @@ var enemies_to_spawn: Array[CharacterData] = []
 
 var alive_enemies: Array[Character] = []
 
-var can_spawn_wave: bool = false
+var can_spawn_wave: bool = true
 
 func _ready() -> void:
 	get_tree().paused = false
@@ -64,7 +64,9 @@ func spawn_wave() -> void:
 	print("Wave ", wave, "/", len(map_data.waves))
 
 	if wave > len(map_data.waves):
+		Events.won_game.emit()
 		return
+	can_spawn_wave = false
 
 	current_wave = map_data.waves[wave - 1]
 
@@ -81,10 +83,6 @@ func spawn_wave() -> void:
 
 func spawn_enemy() -> void:
 	if enemies_to_spawn.is_empty():
-		spawn_timer.stop()
-		if current_wave.victory_dialog != null:
-			await show_dialog(current_wave.victory_dialog)
-		can_spawn_wave = true
 		return
 
 	var enemy_data = enemies_to_spawn.pop_front()
@@ -96,10 +94,15 @@ func spawn_enemy() -> void:
 func _on_enemy_death(enemy: Character):
 	alive_enemies.erase(enemy)
 	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
+		if current_wave.victory_dialog != null:
+			await show_dialog(current_wave.victory_dialog)
+		can_spawn_wave = true
+	if alive_enemies.is_empty() and enemies_to_spawn.is_empty() and can_spawn_wave:
 		if wave > len(map_data.waves):
 			Events.won_game.emit()
 		elif can_spawn_wave:
 			spawn_wave()
+
 
 
 func show_dialog(dialog_path: DialogData) -> void:
