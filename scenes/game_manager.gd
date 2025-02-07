@@ -55,8 +55,12 @@ func _unhandled_input(event):
 func _input(event: InputEvent) -> void:
 	if in_game:
 		if event.is_action_pressed("pause"):
-			get_tree().paused = true
-			Events.paused_game.emit()
+			
+			get_tree().paused = !get_tree().paused
+			if get_tree().paused:
+				Events.paused_game.emit()
+			else:
+				Events.unpaused_game.emit()
 		if event.is_action_pressed("toggle_health_bar"):
 			show_health_bars = !show_health_bars
 			Events.show_health_bars.emit(show_health_bars)
