@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cw0unu13kf6yf"]
 
-[ext_resource type="Texture2D" uid="uid://dsxxbeqwbhtcd" path="res://assets/shortcuts.png" id="1_bj1vh"]
+[ext_resource type="Texture2D" uid="uid://dsxxbeqwbhtcd" path="res://assets/shortcuts.png" id="1_hxhjj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_583b7"]
-atlas = ExtResource("1_bj1vh")
+atlas = ExtResource("1_hxhjj")
 region = Rect2(147, 49, 10, 14)
 
 [node name="Button" type="TextureButton"]
