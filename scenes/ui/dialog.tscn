@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://buuf8jf84be44"]
+[gd_scene load_steps=4 format=3 uid="uid://buuf8jf84be44"]
 
 [ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_67efa"]
 [ext_resource type="Script" path="res://scenes/ui/dialog.gd" id="1_xjvw4"]
+[ext_resource type="PackedScene" uid="uid://co88uk1d2dhje" path="res://scenes/ui/shortcut_button.tscn" id="3_2vk3m"]
 
 [node name="Dialog" type="Control"]
 layout_mode = 3
@@ -62,3 +63,23 @@ text = "Nome"
 [node name="Text" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Texto do diálogo..."
+
+[node name="SkipDialogButton" parent="." instance=ExtResource("3_2vk3m")]
+layout_mode = 1
+anchor_left = 0.784127
+anchor_top = 0.00625
+anchor_right = 0.986127
+anchor_bottom = 0.08125
+offset_left = 4.66667
+offset_top = 218.5
+offset_right = 4.66666
+offset_bottom = 218.5
+shortcut = "pular diálogo"
+
+[node name="Icon" parent="SkipDialogButton/HBoxContainer" index="0"]
+stretch_mode = 3
+
+[node name="Label" parent="SkipDialogButton/HBoxContainer" index="1"]
+text = "pular diálogo"
+
+[editable path="SkipDialogButton"]

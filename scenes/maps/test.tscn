@@ -6,17 +6,17 @@
 [ext_resource type="Script" path="res://resources/wave_data.gd" id="3_rhhou"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="4_pbno8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="5_2htoy"]
-[ext_resource type="Resource" uid="uid://vghng00f3qat" path="res://data/enemies/bomb_rat.tres" id="5_6ne76"]
+[ext_resource type="Resource" uid="uid://chhmqcydx4btb" path="res://data/enemies/bomb_rat.tres" id="5_6ne76"]
 [ext_resource type="Resource" uid="uid://cpdnwlnknlhmj" path="res://data/dialogs/example_dialog.tres" id="6_y7et7"]
-[ext_resource type="Resource" uid="uid://c0dlbvjsgd0f" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
-[ext_resource type="Resource" uid="uid://4g3cld60513r" path="res://data/enemies/healer_rat.tres" id="7_kk01n"]
+[ext_resource type="Resource" uid="uid://c2ii2rsxp8mw6" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
+[ext_resource type="Resource" uid="uid://ynkx3se7gnjb" path="res://data/enemies/healer_rat.tres" id="7_kk01n"]
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="7_r2pr6"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="8_tw6ag"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="9_4gh2v"]
 
 [sub_resource type="Resource" id="Resource_4iyqa"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy"), ExtResource("5_6ne76")])
 spawn_rate = 1.0
 count = 10
 initial_dialog = ExtResource("6_y7et7")

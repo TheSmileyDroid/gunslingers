@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=19 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
@@ -9,8 +9,10 @@
 [ext_resource type="Resource" uid="uid://ctuaql02wr7vq" path="res://data/characters/slinger.tres" id="4_ou7w5"]
 [ext_resource type="PackedScene" uid="uid://bwkpiv2skvme3" path="res://scenes/ui/shop_button.tscn" id="4_t548n"]
 [ext_resource type="Resource" uid="uid://dmooxiiicsuhc" path="res://data/characters/sheriff.tres" id="5_tnj6y"]
-[ext_resource type="PackedScene" uid="uid://dwk7788dlt882" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
-[ext_resource type="Resource" uid="uid://dob4522t4kbl2" path="res://data/characters/priest.tres" id="6_abitv"]
+[ext_resource type="PackedScene" uid="uid://es0nf7w78cu2" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
+[ext_resource type="Resource" uid="uid://cyee10tixyiea" path="res://data/characters/priest.tres" id="6_abitv"]
+[ext_resource type="PackedScene" uid="uid://co88uk1d2dhje" path="res://scenes/ui/shortcut_button.tscn" id="12_x16ju"]
+[ext_resource type="Texture2D" uid="uid://dsxxbeqwbhtcd" path="res://assets/shortcuts.png" id="13_d0jva"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rj5gv"]
 font_size = 10
@@ -32,6 +34,14 @@ region_rect = Rect2(165, 66, 32, 32)
 font = ExtResource("2_kr3al")
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dvpv"]
+atlas = ExtResource("13_d0jva")
+region = Rect2(274, 178, 11, 11)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4vee"]
+atlas = ExtResource("13_d0jva")
+region = Rect2(274, 130, 12, 11)
 
 [node name="GameHUD" type="Control"]
 layout_mode = 3
@@ -143,3 +153,37 @@ vertical_alignment = 1
 
 [node name="StatusWindow" parent="." instance=ExtResource("5_vq0pi")]
 layout_mode = 0
+
+[node name="Shortcuts" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0.482353)
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 42.0
+offset_bottom = 47.0
+
+[node name="ShiftButton" parent="Shortcuts" instance=ExtResource("12_x16ju")]
+layout_mode = 1
+anchor_left = -0.0666667
+anchor_top = 0.0125
+anchor_right = 0.135333
+anchor_bottom = 0.0875
+offset_left = 4.66667
+offset_top = 218.5
+offset_right = 4.66666
+offset_bottom = 218.5
+shortcut = "mostrar vida"
+icon = SubResource("AtlasTexture_8dvpv")
+
+[node name="EscButton" parent="Shortcuts" instance=ExtResource("12_x16ju")]
+layout_mode = 1
+anchor_left = -0.0666666
+anchor_top = -0.6125
+anchor_right = 0.135333
+anchor_bottom = -0.5375
+offset_left = 4.66667
+offset_top = 218.5
+offset_right = 4.66666
+offset_bottom = 218.5
+shortcut = "pausar jogo"
+icon = SubResource("AtlasTexture_y4vee")

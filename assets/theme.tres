@@ -284,6 +284,7 @@ HScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_u8n7e")
 HScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_1spmc")
 HScrollBar/styles/scroll = SubResource("StyleBoxFlat_gyrg5")
 HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_m4rkw")
+Label/constants/outline_size = 4
 Panel/styles/panel = SubResource("StyleBoxTexture_nnwdb")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_m1bwt")
 ProgressBar/styles/background = SubResource("StyleBoxTexture_qxqmu")

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=14 format=3 uid="uid://c0dlbvjsgd0f"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=14 format=3 uid="uid://c2ii2rsxp8mw6"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_4fami"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_vps6c"]
