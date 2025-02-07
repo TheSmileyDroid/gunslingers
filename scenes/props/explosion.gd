@@ -24,6 +24,8 @@ func _ready() -> void:
 	tween.tween_callback(queue_free)
 
 func _on_area_entered(area: Area2D) -> void:
+	if is_queued_for_deletion():
+		return
 	if area.get_parent() is Character:
 		var character: Character = area.get_parent() as Character
 		var health_component = character.get_node_or_null("HealthComponent")
