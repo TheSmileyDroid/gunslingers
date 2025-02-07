@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://c2pvjpt5f1vxb"]
 
 [ext_resource type="Script" path="res://scenes/ui/ui.gd" id="1_k3po2"]
-[ext_resource type="Theme" uid="uid://bb4uj274b8l32" path="res://assets/theme.tres" id="1_t7cj5"]
+[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_t7cj5"]
 [ext_resource type="PackedScene" uid="uid://c377mm17ckmab" path="res://scenes/ui/game_hud.tscn" id="2_mg71s"]
 [ext_resource type="PackedScene" uid="uid://buuf8jf84be44" path="res://scenes/ui/dialog.tscn" id="3_f6snl"]
 [ext_resource type="PackedScene" uid="uid://bv1x1ljsdqirf" path="res://scenes/ui/pause_menu.tscn" id="5_k2p4m"]
 [ext_resource type="PackedScene" uid="uid://cejjts4l3o0tq" path="res://scenes/ui/lose_screen.tscn" id="7_g2bjj"]
-[ext_resource type="PackedScene" path="res://scenes/ui/win_screen.tscn" id="7_l3win"]
+[ext_resource type="PackedScene" uid="uid://cyefbrywx6yyd" path="res://scenes/ui/win_screen.tscn" id="7_l3win"]
 
 [node name="Ui" type="Control"]
 process_mode = 3

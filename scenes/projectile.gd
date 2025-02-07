@@ -16,7 +16,7 @@ var hits_count: int = 0
 var direction = Vector2.ZERO
 
 func _physics_process(delta):
-	if is_instance_valid(target):
+	if is_instance_valid(target) and not target in hits:
 		direction = (target.global_position - global_position).normalized()
 		rotation = direction.angle()
 	position += direction * speed * delta
