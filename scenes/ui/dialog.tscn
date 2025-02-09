@@ -76,9 +76,6 @@ offset_right = 4.66666
 offset_bottom = 218.5
 shortcut = "pular diálogo"
 
-[node name="Icon" parent="SkipDialogButton/HBoxContainer" index="0"]
-stretch_mode = 3
-
 [node name="Label" parent="SkipDialogButton/HBoxContainer" index="1"]
 text = "pular diálogo"
 

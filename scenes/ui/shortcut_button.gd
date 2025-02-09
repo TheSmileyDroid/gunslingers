@@ -1,23 +1,24 @@
+@tool
 extends Control
 
-@export var shortcut: String = "" :
+@export var shortcut: String = "":
 	set(value):
 		shortcut = value
 		if is_node_ready() and get_node("%Label"):
 			get_node("%Label").text = value
 		else:
-			print("No label found")
+			set_deferred("%Label.text", value)
 
-@export var icon: Texture = null :
+@export var icon: Texture = null:
 	set(value):
 		icon = value
 		if is_node_ready() and get_node("%Icon"):
 			get_node("%Icon").texture = value
 		else:
-			print("No icon found")
+			set_deferred("%Icon.texture", value)
 
 func _ready() -> void:
 	if icon:
-		%Icon.texture = icon
+		get_node("%Icon").texture = icon
 	if shortcut:
-		%Label.text = shortcut 	
+		get_node("%Label").text = shortcut

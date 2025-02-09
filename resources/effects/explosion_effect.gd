@@ -13,3 +13,4 @@ func trigger_effect(character: Character) -> void:
     explosion_instance.damage = damage
     explosion_instance.team = character.team
     character.get_parent().add_child(explosion_instance)
+    SoundEvents.explosion.emit()

@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://components/health_bar.gd" id="9_4je33"]
 [ext_resource type="Script" path="res://components/collision_area.gd" id="9_mfbl3"]
 [ext_resource type="Script" path="res://components/fire_rate_component.gd" id="10_kvcg7"]
-[ext_resource type="PackedScene" path="res://components/heal_particles.tscn" id="13_on6b4"]
+[ext_resource type="PackedScene" uid="uid://ctlmsd4xgwtds" path="res://components/heal_particles.tscn" id="13_on6b4"]
 
 [sub_resource type="Resource" id="Resource_df3ar"]
 resource_local_to_scene = true

@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://4rbvhg85gh43" path="res://assets/fonts/RootBeer.ttf" id="1_hc068"]
 [ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="2_b7nox"]
-[ext_resource type="Script" path="res://scenes/go_to_maps_btn.gd" id="3_1d0bj"]
+[ext_resource type="PackedScene" uid="uid://dy33o7bp1xyod" path="res://scenes/components/scene_button.tscn" id="3_a5x0v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_urm84"]
 font = ExtResource("1_hc068")
@@ -43,18 +43,11 @@ label_settings = SubResource("LabelSettings_urm84")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -32.0
-offset_top = -40.0
-offset_right = 32.0
-offset_bottom = -16.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "Mapas"
-script = ExtResource("3_1d0bj")
+[node name="Button" parent="." instance=ExtResource("3_a5x0v")]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 184.0
+offset_right = 232.0
+offset_bottom = 208.0
+grow_horizontal = 1
+grow_vertical = 1

@@ -1,0 +1,86 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://do5dbmy4tanok"]
+
+[ext_resource type="Texture2D" uid="uid://nka6rv3lpxq0" path="res://assets/enemies/bomb_rat.png" id="1_a4pi1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpxrc"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlmqa"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cvq8"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o7fe"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqupl"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(96, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tk3fs"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16gpg"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6dqi"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ft4w"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kevi"]
+atlas = ExtResource("1_a4pi1")
+region = Rect2(96, 24, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpxrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlmqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cvq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o7fe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqupl")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tk3fs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16gpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6dqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ft4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kevi")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

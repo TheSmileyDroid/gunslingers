@@ -112,6 +112,7 @@ border_color = Color(0.8, 0.8, 0.8, 0.25098)
 [resource]
 default_font = ExtResource("1_yllg7")
 default_font_size = 10
+Button/font_sizes/font_size = 10
 Button/styles/focus = SubResource("StyleBoxEmpty_1q17k")
 Button/styles/hover = SubResource("StyleBoxFlat_j0iw5")
 Button/styles/normal = SubResource("StyleBoxFlat_2sv8t")

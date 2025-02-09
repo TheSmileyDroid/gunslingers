@@ -6,6 +6,8 @@ var loaded_level: String = ""
 var hovering_character: Character = null
 var show_health_bars: bool = false
 
+var is_playing: bool = false
+
 func _ready():
 	process_mode = ProcessMode.PROCESS_MODE_ALWAYS
 	Events.character_drag.connect(on_character_selected)
@@ -17,6 +19,7 @@ func _ready():
 	Events.player_died.connect(_on_player_died)
 	Events.exited_game.connect(_on_exited_game)
 
+
 func _entered_game():
 	in_game = true
 
@@ -25,6 +28,7 @@ func _on_exited_game():
 	get_tree().paused = false
 
 func load_level(level):
+	print("Loading level: %s" % level)
 	await SceneManager.change_scene(("res://scenes/maps/%s.tscn" % level), {
 		"pattern": "scribbles"
 	})
@@ -33,6 +37,7 @@ func load_level(level):
 	loaded_level = level
 
 func _reset_game():
+	print("Resetting game")
 	if loaded_level != "":
 		load_level(loaded_level)
 
@@ -55,7 +60,7 @@ func _unhandled_input(event):
 func _input(event: InputEvent) -> void:
 	if in_game:
 		if event.is_action_pressed("pause"):
-			
+
 			get_tree().paused = !get_tree().paused
 			if get_tree().paused:
 				Events.paused_game.emit()
@@ -65,6 +70,11 @@ func _input(event: InputEvent) -> void:
 			show_health_bars = !show_health_bars
 			Events.show_health_bars.emit(show_health_bars)
 
+	if event.is_action_pressed("fullscreen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func spawn_character(character_id: String, position: Vector2):
 	var stats: CharacterData = load("res://data/characters/%s.tres" % character_id).duplicate()

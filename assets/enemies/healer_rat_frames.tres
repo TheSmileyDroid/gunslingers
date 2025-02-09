@@ -1,0 +1,72 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://daf2f5c3sy130"]
+
+[ext_resource type="Texture2D" uid="uid://rsjovo43e2be" path="res://assets/enemies/healer_rat.png" id="1_6x4fn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwefp"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1pjp"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbj45"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x88q"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_526l0"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wsmo"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38v00"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j0afh"]
+atlas = ExtResource("1_6x4fn")
+region = Rect2(96, 24, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwefp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1pjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbj45")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x88q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_526l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wsmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38v00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j0afh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

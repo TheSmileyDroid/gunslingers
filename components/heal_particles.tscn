@@ -1,17 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctlmsd4xgwtds"]
+[gd_scene load_steps=3 format=3 uid="uid://ctlmsd4xgwtds"]
+
+[ext_resource type="Texture2D" uid="uid://de4v4skkaq1ac" path="res://assets/particles/heal_particle.png" id="1_6c2e0"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_heal"]
 particle_flag_disable_z = true
 emission_shape = 1
-emission_sphere_radius = 8.0
+emission_sphere_radius = 16.0
+direction = Vector3(0, -1, 0)
+spread = 60.0
+initial_velocity_min = 5.0
+initial_velocity_max = 15.0
 gravity = Vector3(0, -20, 0)
-scale_min = 2.0
-scale_max = 4.0
-color = Color(0.227451, 0.756863, 0.262745, 1)
+scale_max = 2.0
 
 [node name="HealParticles" type="GPUParticles2D"]
 emitting = false
-amount = 16
+amount = 12
 process_material = SubResource("ParticleProcessMaterial_heal")
+texture = ExtResource("1_6c2e0")
+lifetime = 0.5
 one_shot = true
-explosiveness = 0.8
+explosiveness = 0.6
+local_coords = true

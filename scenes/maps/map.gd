@@ -33,7 +33,9 @@ var alive_enemies: Array[Character] = []
 
 var can_spawn_wave: bool = true
 
+
 func _ready() -> void:
+	GameManager.loaded_level = map_data.name
 	get_tree().paused = false
 	Events.entered_game.emit()
 	cash = map_data.initial_cash
@@ -58,6 +60,7 @@ func _ready() -> void:
 	add_child(placer)
 
 	Events.enemy_has_reached_goal.connect(_on_enemy_reached_end)
+
 
 func spawn_wave() -> void:
 	wave += 1
@@ -102,7 +105,6 @@ func _on_enemy_death(enemy: Character):
 			Events.won_game.emit()
 		elif can_spawn_wave:
 			spawn_wave()
-
 
 
 func show_dialog(dialog_path: DialogData) -> void:

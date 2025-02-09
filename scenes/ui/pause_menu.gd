@@ -14,8 +14,10 @@ func resume() -> void:
 func restart() -> void:
 	get_tree().paused = false
 	Events.reset_game.emit()
+	hide()
 
 func go_to_menu() -> void:
 	get_tree().paused = false
 	SceneManager.change_scene("res://scenes/main_menu.tscn")
 	Events.exited_game.emit()
+	hide()

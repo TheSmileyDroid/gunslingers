@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfmvwnto4tcvv"]
+
+[ext_resource type="Script" path="res://scenes/sound_manager.gd" id="1_v4tgp"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_v4tgp")
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+max_polyphony = 10
+bus = &"SFX"

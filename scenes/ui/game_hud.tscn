@@ -9,7 +9,7 @@
 [ext_resource type="Resource" uid="uid://ctuaql02wr7vq" path="res://data/characters/slinger.tres" id="4_ou7w5"]
 [ext_resource type="PackedScene" uid="uid://bwkpiv2skvme3" path="res://scenes/ui/shop_button.tscn" id="4_t548n"]
 [ext_resource type="Resource" uid="uid://dmooxiiicsuhc" path="res://data/characters/sheriff.tres" id="5_tnj6y"]
-[ext_resource type="PackedScene" uid="uid://es0nf7w78cu2" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
+[ext_resource type="PackedScene" uid="uid://dwk7788dlt882" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
 [ext_resource type="Resource" uid="uid://cyee10tixyiea" path="res://data/characters/priest.tres" id="6_abitv"]
 [ext_resource type="PackedScene" uid="uid://co88uk1d2dhje" path="res://scenes/ui/shortcut_button.tscn" id="12_x16ju"]
 [ext_resource type="Texture2D" uid="uid://dsxxbeqwbhtcd" path="res://assets/shortcuts.png" id="13_d0jva"]
