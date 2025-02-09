@@ -75,6 +75,8 @@ func _display_strategy(t_strategy: AttackComponent.Strategy) -> String:
 			return tr("Weakest")
 		AttackComponent.Strategy.nearest:
 			return tr("Closest")
+		AttackComponent.Strategy.farthest:
+			return tr("Farthest")
 
 	return tr("Unknown")
 
@@ -95,5 +97,6 @@ static func get_character_data(character_type: String) -> CharacterData:
 	return load(_resource_path) as CharacterData
 
 
-
 @export var on_death_effects: Array[TriggerEffect] = []
+
+@export var projectile: PackedScene = null

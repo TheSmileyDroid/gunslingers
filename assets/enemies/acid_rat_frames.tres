@@ -1,0 +1,79 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://dg21m7rqsw3i2"]
+
+[ext_resource type="Texture2D" uid="uid://dhj1cw3juj1ns" path="res://assets/enemies/acid.png" id="1_vy8qc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c72a"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ilp2"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moj2w"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwaob"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3vks"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k532"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi6lv"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qi0h"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hl2vr"]
+atlas = ExtResource("1_vy8qc")
+region = Rect2(96, 24, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c72a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ilp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moj2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwaob")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3vks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k532")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi6lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qi0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hl2vr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]

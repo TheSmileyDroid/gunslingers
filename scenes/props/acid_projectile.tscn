@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://dn1121x3jjsx5"]
+
+[ext_resource type="Script" path="res://scenes/props/acid_projectile.gd" id="1_pp2p4"]
+[ext_resource type="Texture2D" uid="uid://dt1tm1xahqj3u" path="res://assets/props/acid_ball.png" id="2_8piyr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar2sl"]
+atlas = ExtResource("2_8piyr")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t610"]
+atlas = ExtResource("2_8piyr")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrq0y"]
+atlas = ExtResource("2_8piyr")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onu7l"]
+atlas = ExtResource("2_8piyr")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2t5i5"]
+atlas = ExtResource("2_8piyr")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1x3lx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar2sl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t610")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrq0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onu7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2t5i5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lju74"]
+radius = 8.0
+
+[node name="AcidProjectile" type="Node2D"]
+script = ExtResource("1_pp2p4")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1x3lx")
+frame_progress = 0.217047
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lju74")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

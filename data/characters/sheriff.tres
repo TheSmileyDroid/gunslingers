@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=13 format=3 uid="uid://dmooxiiicsuhc"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=14 format=3 uid="uid://dmooxiiicsuhc"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_fjq40"]
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_nt3u1"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_pgh2m"]
+[ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_pi73f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxpde"]
 atlas = ExtResource("2_pgh2m")
@@ -90,3 +91,4 @@ attack_type = 1
 size = 2
 reward = 10
 on_death_effects = Array[ExtResource("1_nt3u1")]([])
+projectile = ExtResource("2_pi73f")

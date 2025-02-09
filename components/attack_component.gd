@@ -1,7 +1,7 @@
 extends Node
 class_name AttackComponent
 
-enum Strategy {first, last, strongest, weakest, nearest}
+enum Strategy {first, last, strongest, weakest, nearest, farthest}
 
 var character: Character
 
@@ -56,6 +56,15 @@ func get_target():
 			if target.global_position.distance_to(get_parent().global_position) < nearest.global_position.distance_to(get_parent().global_position):
 				nearest = target
 		return nearest
+	elif character.stats.strategy == Strategy.farthest:
+		var farthest = valid_targets[0]
+		for target in valid_targets:
+			if target.global_position.distance_to(get_parent().global_position) > farthest.global_position.distance_to(get_parent().global_position):
+				farthest = target
+		return farthest
+	else:
+		print("Invalid strategy")
+		return null
 
 func attack():
 	var current_target = get_target()
@@ -68,7 +77,7 @@ func attack():
 func finish_attack(current_target: Character):
 	if is_instance_valid(current_target):
 		if character.stats.attack_type == CharacterData.AttackType.ranged:
-			var projectile_scene = preload("res://scenes/projectile.tscn")
+			var projectile_scene = character.stats.projectile
 			var projectile = projectile_scene.instantiate()
 			projectile.position = get_parent().global_position
 			projectile.source = character

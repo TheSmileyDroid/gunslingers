@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=5 format=3 uid="uid://jhh1fcklkxnd"]
+
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_po4q0"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="2_axuoe"]
+[ext_resource type="PackedScene" uid="uid://dn1121x3jjsx5" path="res://scenes/props/acid_projectile.tscn" id="2_g33rn"]
+[ext_resource type="SpriteFrames" uid="uid://dg21m7rqsw3i2" path="res://assets/enemies/acid_rat_frames.tres" id="4_euqxt"]
+
+[resource]
+script = ExtResource("2_axuoe")
+name = "Acid Rat"
+price = 100
+sprite_frames = ExtResource("4_euqxt")
+health = 8
+max_health = 8
+damage = 10
+speed = 80.0
+fire_rate = 10.0
+pierce = 1
+strategy = 5
+attack_range = 60.0
+attack_type = 1
+size = 2
+reward = 15
+on_death_effects = Array[ExtResource("1_po4q0")]([])
+projectile = ExtResource("2_g33rn")

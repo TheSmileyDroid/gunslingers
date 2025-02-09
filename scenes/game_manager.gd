@@ -76,6 +76,25 @@ func _input(event: InputEvent) -> void:
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
+	if event.is_action_pressed("printscreen"):
+		var texture := get_viewport().get_texture()
+		var screenshot := texture.get_image()
+		var resizedImage = Image.new()
+		var scaleFactor: int = int(1920 / get_viewport().size.x)
+
+		var resizedWidth: int = get_viewport().size.x * scaleFactor
+		var resizedHeight: int = get_viewport().size.y * scaleFactor
+
+		resizedImage = Image.create(resizedWidth, resizedHeight, false, Image.FORMAT_BPTC_RGBA)
+		screenshot.resize(resizedWidth, resizedHeight, Image.INTERPOLATE_NEAREST)
+		resizedImage.blit_rect(screenshot, Rect2(Vector2.ZERO, screenshot.get_size()), Vector2.ZERO)
+		var date = Time.get_datetime_string_from_system().replace(".", "_").replace(":", "_")
+		print("Saving screenshot to: %s" % OS.get_user_data_dir() + "/screenshots/screenshot_%s.png" % date)
+		DirAccess.make_dir_recursive_absolute(OS.get_user_data_dir() + "/screenshots")
+		screenshot.save_png(OS.get_user_data_dir() + "/screenshots/screenshot_%s.png" % date)
+	if event.is_action_pressed("open_user_data"):
+		OS.shell_open(OS.get_user_data_dir())
+
 func spawn_character(character_id: String, position: Vector2):
 	var stats: CharacterData = load("res://data/characters/%s.tres" % character_id).duplicate()
 	var has_money = stats.price <= get_tree().current_scene.cash
