@@ -1,6 +1,4 @@
-[gd_resource type="Theme" load_steps=27 format=3 uid="uid://bk18yfu0d77wk"]
-
-[ext_resource type="FontFile" uid="uid://c4fsf55084m0m" path="res://assets/fonts/Poco.ttf" id="1_yllg7"]
+[gd_resource type="Theme" load_steps=26 format=3 uid="uid://bk18yfu0d77wk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1q17k"]
 
@@ -110,7 +108,6 @@ border_width_bottom = 1
 border_color = Color(0.8, 0.8, 0.8, 0.25098)
 
 [resource]
-default_font = ExtResource("1_yllg7")
 default_font_size = 10
 Button/font_sizes/font_size = 10
 Button/styles/focus = SubResource("StyleBoxEmpty_1q17k")

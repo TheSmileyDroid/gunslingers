@@ -174,3 +174,4 @@ autostart = true
 script = ExtResource("10_kvcg7")
 
 [node name="HealParticles" parent="." instance=ExtResource("13_on6b4")]
+texture = null
