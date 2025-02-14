@@ -14,7 +14,6 @@ func _ready() -> void:
 	Events.wave_started.connect(update_wave)
 	Events.entered_game.connect(_on_entered_game)
 	Events.exited_game.connect(_on_exited_game)
-	$PanelContainer/MarginContainer/VBoxContainer/Button.pressed.connect(_on_flip_button_pressed)
 	_load_character_buttons()
 	visible = false
 

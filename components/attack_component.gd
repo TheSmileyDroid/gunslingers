@@ -86,6 +86,7 @@ func finish_attack(current_target: Character):
 			projectile.max_hits = character.stats.pierce
 			get_tree().current_scene.add_child(projectile)
 		elif character.stats.attack_type == CharacterData.AttackType.melee:
+			SoundEvents.melee_attack.emit()
 			current_target.get_node("HealthComponent").take_damage(character.stats.damage, character.team)
 		elif character.stats.attack_type == CharacterData.AttackType.heal:
 			current_target.get_node("HealthComponent").heal(character.stats.damage)

@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfmvwnto4tcvv"]
+[gd_scene load_steps=3 format=3 uid="uid://cfmvwnto4tcvv"]
 
 [ext_resource type="Script" path="res://scenes/sound_manager.gd" id="1_v4tgp"]
+[ext_resource type="AudioStream" uid="uid://byxitqx65sbpf" path="res://assets/sfx/explosion-2.ogg" id="2_cxodl"]
 
 [node name="SoundManager" type="Node"]
 script = ExtResource("1_v4tgp")
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
+stream = ExtResource("2_cxodl")
+volume_db = -10.0
 max_polyphony = 10
+bus = &"SFX"
+
+[node name="UI" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+volume_db = 2.0
+max_polyphony = 5
 bus = &"SFX"

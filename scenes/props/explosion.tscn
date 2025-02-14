@@ -13,8 +13,8 @@ particles_anim_loop = false
 
 [sub_resource type="Gradient" id="Gradient_tu6gc"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.54375, 0.860417)
-colors = PackedColorArray(1, 0.784314, 0.145098, 1, 1, 0.313726, 0, 1, 0.341176, 0.109804, 0.152941, 1)
+offsets = PackedFloat32Array(0, 0.314371, 0.643713, 0.853293)
+colors = PackedColorArray(0.933333, 0.792157, 0.517647, 1, 0.898039, 0.447059, 0.168627, 1, 0.635294, 0.243137, 0.278431, 1, 0.262745, 0.133333, 0.403922, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_ssnua"]
 gradient = SubResource("Gradient_tu6gc")

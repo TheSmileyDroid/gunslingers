@@ -1,10 +1,21 @@
-[gd_resource type="AudioBusLayout" format=3 uid="uid://dh7qp21usucsn"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dh7qp21usucsn"]
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_20eu4"]
+resource_name = "Compressor"
+
+[sub_resource type="AudioEffectHardLimiter" id="AudioEffectHardLimiter_bv0gx"]
+resource_name = "HardLimiter"
+ceiling_db = -18.0
 
 [resource]
-bus/0/volume_db = -5.04224
+bus/0/volume_db = -0.459353
+bus/0/effect/0/effect = SubResource("AudioEffectCompressor_20eu4")
+bus/0/effect/0/enabled = true
 bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -5.04224
+bus/1/volume_db = -0.990412
 bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectHardLimiter_bv0gx")
+bus/1/effect/0/enabled = true

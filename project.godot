@@ -46,7 +46,7 @@ window/size/initial_position_type=3
 window/size/window_width_override=840
 window/size/window_height_override=480
 window/stretch/mode="viewport"
-mouse_cursor/custom_image="res://assets/mouse/hand_point.png"
+mouse_cursor/custom_image="res://assets/pointer.png"
 mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
@@ -58,6 +58,21 @@ enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons
 theme/custom="res://assets/theme.tres"
 theme/default_font_hinting=0
 theme/default_font_subpixel_positioning=0
+
+[importer_defaults]
+
+wav={
+"compress/mode": 0,
+"edit/loop_begin": 0,
+"edit/loop_end": -1,
+"edit/loop_mode": 0,
+"edit/normalize": true,
+"edit/trim": false,
+"force/8_bit": false,
+"force/max_rate": false,
+"force/max_rate_hz": 44100,
+"force/mono": false
+}
 
 [input]
 

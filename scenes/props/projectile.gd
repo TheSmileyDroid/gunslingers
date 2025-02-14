@@ -23,6 +23,7 @@ func _physics_process(delta):
 
 
 func _ready():
+	SoundEvents.shoot.emit()
 	direction = (target.global_position - global_position).normalized()
 	rotation = direction.angle()
 	await get_tree().create_timer(lifetime).timeout
