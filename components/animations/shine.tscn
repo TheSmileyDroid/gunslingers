@@ -22,7 +22,6 @@ script/source = "extends ColorRect
 class_name ShineRect
 
 func shine():
-	print(\"Shine\")
 	$AnimationPlayer.play(\"shine\")
 "
 
