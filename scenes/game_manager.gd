@@ -1,8 +1,16 @@
 extends Node
 
 var selected_character: String = ""
-var in_game: bool = false
-var loaded_level: String = ""
+var in_game: bool = false:
+	set(value):
+		in_game = value
+		if value == false:
+			SoundEvents.play_music.emit("tema")
+var loaded_level: String = "":
+	set(value):
+		loaded_level = value
+		if loaded_level == "test":
+			SoundEvents.play_music.emit("tema2")
 var hovering_character: Character = null
 var show_health_bars: bool = false
 
@@ -18,6 +26,9 @@ func _ready():
 	Events.character_mouse_exit.connect(_on_character_mouse_exit)
 	Events.player_died.connect(_on_player_died)
 	Events.exited_game.connect(_on_exited_game)
+
+	await get_tree().create_timer(0.0).timeout
+	SoundEvents.play_music.emit("tema")
 
 
 func _entered_game():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=23 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
@@ -11,12 +11,15 @@
 [ext_resource type="Resource" uid="uid://dmooxiiicsuhc" path="res://data/characters/sheriff.tres" id="5_tnj6y"]
 [ext_resource type="PackedScene" uid="uid://dwk7788dlt882" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
 [ext_resource type="Resource" uid="uid://cyee10tixyiea" path="res://data/characters/priest.tres" id="6_abitv"]
+[ext_resource type="Texture2D" uid="uid://cpv5psdxy5nvq" path="res://assets/shortcuts/enter_shortcut.png" id="11_5v7pn"]
+[ext_resource type="Script" path="res://scenes/ui/next_wave.gd" id="11_a0g7w"]
 [ext_resource type="PackedScene" uid="uid://co88uk1d2dhje" path="res://scenes/ui/shortcut_button.tscn" id="12_x16ju"]
 [ext_resource type="Texture2D" uid="uid://dsxxbeqwbhtcd" path="res://assets/shortcuts.png" id="13_d0jva"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rj5gv"]
 font_size = 10
-font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0.286275, 0.152941, 0.427451, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0vm52"]
 content_margin_left = 8.0
@@ -30,10 +33,17 @@ texture_margin_right = 14.0
 texture_margin_bottom = 16.0
 region_rect = Rect2(165, 66, 32, 32)
 
+[sub_resource type="InputEventKey" id="InputEventKey_s57y6"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_uttnx"]
+events = [SubResource("InputEventKey_s57y6")]
+
 [sub_resource type="LabelSettings" id="LabelSettings_v1jck"]
 font = ExtResource("2_kr3al")
 outline_size = 4
-outline_color = Color(0, 0, 0, 1)
+outline_color = Color(0.286275, 0.152941, 0.427451, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8dvpv"]
 atlas = ExtResource("13_d0jva")
@@ -54,7 +64,7 @@ mouse_filter = 1
 script = ExtResource("1_ixvhd")
 characters = Array[ExtResource("2_tvdrb")]([ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("5_tnj6y"), ExtResource("6_abitv")])
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Shop" type="PanelContainer" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 11
@@ -65,13 +75,13 @@ offset_left = -71.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Shop"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Shop/MarginContainer"]
 layout_mode = 2
 
-[node name="Cash" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Cash" type="Label" parent="Shop/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "1000 $"
@@ -79,7 +89,7 @@ label_settings = SubResource("LabelSettings_rj5gv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="Shop/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_styles/fill = SubResource("StyleBoxTexture_0vm52")
@@ -89,11 +99,11 @@ text = " "
 fit_content = true
 script = ExtResource("3_hmyc8")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Shop/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Shop/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -102,7 +112,7 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="CharacterList" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+[node name="CharacterList" type="VBoxContainer" parent="Shop/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -110,27 +120,45 @@ size_flags_vertical = 2
 theme_override_constants/separation = 5
 alignment = 1
 
-[node name="ShopButton" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+[node name="ShopButton" parent="Shop/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
 layout_mode = 2
 
-[node name="ShopButton2" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+[node name="ShopButton2" parent="Shop/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
 layout_mode = 2
 
-[node name="ShopButton3" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+[node name="ShopButton3" parent="Shop/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
 layout_mode = 2
 
-[node name="ShopButton4" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
+[node name="ShopButton4" parent="Shop/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/CharacterList" instance=ExtResource("4_t548n")]
 layout_mode = 2
+
+[node name="NextWave" type="Button" parent="Shop/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+light_mask = 65537
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.286275, 0.152941, 0.427451, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/h_separation = 0
+shortcut = SubResource("Shortcut_uttnx")
+text = "Iniciar onda"
+icon = ExtResource("11_5v7pn")
+autowrap_mode = 3
+script = ExtResource("11_a0g7w")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -37.0
-offset_right = 37.0
+offset_left = -47.0
+offset_right = 47.0
 offset_bottom = 16.0
 grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+alignment = 1
 
 [node name="Wave" type="Label" parent="HBoxContainer"]
 unique_name_in_owner = true
@@ -156,6 +184,7 @@ offset_left = 2.0
 offset_top = 7.0
 offset_right = 42.0
 offset_bottom = 47.0
+mouse_filter = 1
 
 [node name="ShiftButton" parent="Shortcuts" instance=ExtResource("12_x16ju")]
 layout_mode = 1
@@ -167,6 +196,7 @@ offset_left = 4.66667
 offset_top = 218.5
 offset_right = 4.66666
 offset_bottom = 218.5
+mouse_filter = 1
 shortcut = "mostrar vida"
 icon = SubResource("AtlasTexture_8dvpv")
 
@@ -180,5 +210,6 @@ offset_left = 4.66667
 offset_top = 218.5
 offset_right = 4.66666
 offset_bottom = 218.5
+mouse_filter = 1
 shortcut = "pausar jogo"
 icon = SubResource("AtlasTexture_y4vee")

@@ -1,7 +1,7 @@
 extends Control
 
 @onready var character_list_container: VBoxContainer = %CharacterList
-@onready var panel_container: PanelContainer = %PanelContainer
+@onready var panel_container: PanelContainer = %Shop
 @onready var cash_label: Label = %Cash
 @onready var lives_label: Label = %Lives
 @onready var wave_label: Label = %Wave

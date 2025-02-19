@@ -70,3 +70,9 @@ signal show_health_bars(isHealthBarVisible: bool)
 
 @warning_ignore("unused_signal")
 signal is_playing_game(isPlaying: bool)
+
+@warning_ignore("unused_signal")
+signal is_wave_spawnable(canStart: bool)
+
+@warning_ignore("unused_signal")
+signal next_wave()

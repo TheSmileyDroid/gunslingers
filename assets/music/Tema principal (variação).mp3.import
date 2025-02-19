@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x6v4tx2xww7u"
+path="res://.godot/imported/Tema principal (variação).mp3-86c90de1b4700009df2230272db72e22.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Tema principal (variação).mp3"
+dest_files=["res://.godot/imported/Tema principal (variação).mp3-86c90de1b4700009df2230272db72e22.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

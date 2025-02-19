@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://d31xs0oj8cfud"]
+
+[ext_resource type="Shader" path="res://assets/shaders/canvas_highlight.gdshader" id="1_abrct"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_811xk"]
+resource_local_to_scene = true
+shader = ExtResource("1_abrct")
+shader_parameter/Line_Smoothness = 0.004
+shader_parameter/Line_Width = 0.101
+shader_parameter/Brightness = 3.0
+shader_parameter/Rotation_deg = 30.0
+shader_parameter/Distortion = 1.8
+shader_parameter/Speed = 0.7
+shader_parameter/Position = 0.0
+shader_parameter/Position_Min = 0.25
+shader_parameter/Position_Max = 0.5
+shader_parameter/Alpha = 0.8
+shader_parameter/progress = -0.1
+
+[sub_resource type="GDScript" id="GDScript_60qsg"]
+script/source = "extends ColorRect
+class_name ShineRect
+
+func shine():
+	print(\"Shine\")
+	$AnimationPlayer.play(\"shine\")
+"
+
+[sub_resource type="Animation" id="Animation_32aia"]
+resource_name = "shine"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.1, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_6k5ox"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hivq6"]
+_data = {
+"RESET": SubResource("Animation_6k5ox"),
+"shine": SubResource("Animation_32aia")
+}
+
+[node name="ColorRect" type="ColorRect"]
+material = SubResource("ShaderMaterial_811xk")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = SubResource("GDScript_60qsg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hivq6")
+}

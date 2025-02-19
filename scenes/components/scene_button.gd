@@ -1,9 +1,7 @@
-extends Button
+extends GameButton
 
 @export_file var go_to_scene: String = "res://scenes/maps.tscn"
 
-func _ready() -> void:
-	pressed.connect(_on_pressed)
 
 func _on_pressed() -> void:
 	SoundEvents.select_button.emit()
@@ -12,3 +10,4 @@ func _on_pressed() -> void:
 		"transition": "fade",
 		"duration": 1.0
 	})
+	super._on_pressed()

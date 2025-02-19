@@ -50,11 +50,12 @@ func _ready() -> void:
 		await show_dialog(map_data.initial_dialog)
 
 	_play_cutscene()
-	spawn_wave()
+	Events.is_wave_spawnable.emit(true)
 	Events.received_reward.connect(on_received_reward)
 	Events.character_drag.connect(on_character_drag)
 	Events.buy_character.connect(on_buy_character)
 	Events.character_died.connect(_on_enemy_death)
+	Events.next_wave.connect(spawn_wave)
 	placer = preload("res://scenes/placer.tscn").instantiate()
 	placer.visible = false
 	add_child(placer)
@@ -99,12 +100,11 @@ func _on_enemy_death(enemy: Character):
 	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
 		if current_wave.victory_dialog != null:
 			await show_dialog(current_wave.victory_dialog)
-		can_spawn_wave = true
-	if alive_enemies.is_empty() and enemies_to_spawn.is_empty() and can_spawn_wave:
+	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
 		if wave > len(map_data.waves):
 			Events.won_game.emit()
-		elif can_spawn_wave:
-			spawn_wave()
+		else:
+			Events.is_wave_spawnable.emit(true)
 
 
 func show_dialog(dialog_path: DialogData) -> void:

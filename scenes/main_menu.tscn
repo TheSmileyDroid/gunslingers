@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4sjsihv8hsyh"]
+[gd_scene load_steps=6 format=3 uid="uid://b4sjsihv8hsyh"]
 
-[ext_resource type="FontFile" uid="uid://4rbvhg85gh43" path="res://assets/fonts/RootBeer.ttf" id="1_hc068"]
 [ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="2_b7nox"]
 [ext_resource type="PackedScene" uid="uid://dy33o7bp1xyod" path="res://scenes/components/scene_button.tscn" id="3_a5x0v"]
+[ext_resource type="Texture2D" uid="uid://bkf8dejc00mmj" path="res://assets/logo.png" id="3_hq8c8"]
+[ext_resource type="Script" path="res://scenes/random_splash.gd" id="4_uer5r"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_urm84"]
-font = ExtResource("1_hc068")
-font_size = 32
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 9
-shadow_color = Color(0, 0, 0, 0.614)
+[sub_resource type="GDScript" id="GDScript_g7n2r"]
+script/source = "extends VBoxContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$Button.grab_focus()
+"
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -31,23 +34,92 @@ texture = ExtResource("2_b7nox")
 expand_mode = 3
 stretch_mode = 6
 
-[node name="Label" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 67.0
-grow_horizontal = 2
-text = "Frontier Plague
-A Western Tower Defense"
-label_settings = SubResource("LabelSettings_urm84")
-horizontal_alignment = 1
-vertical_alignment = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 120.0
+offset_right = 96.0
+offset_bottom = -16.0
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = SubResource("GDScript_g7n2r")
 
-[node name="Button" parent="." instance=ExtResource("3_a5x0v")]
-layout_mode = 0
-offset_left = 168.0
-offset_top = 184.0
-offset_right = 232.0
-offset_bottom = 208.0
-grow_horizontal = 1
-grow_vertical = 1
+[node name="Button" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_left = NodePath("../Button4")
+focus_neighbor_top = NodePath("../Button4")
+focus_neighbor_right = NodePath("../Button2")
+focus_neighbor_bottom = NodePath("../Button2")
+focus_next = NodePath("../Button2")
+focus_previous = NodePath("../Button4")
+text = "Jogar"
+alignment = 0
+
+[node name="Button2" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_left = NodePath("../Button")
+focus_neighbor_top = NodePath("../Button")
+focus_neighbor_right = NodePath("../Button3")
+focus_neighbor_bottom = NodePath("../Button3")
+focus_next = NodePath("../Button3")
+focus_previous = NodePath("../Button")
+text = "Opções"
+alignment = 0
+
+[node name="Button3" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_left = NodePath("../Button2")
+focus_neighbor_top = NodePath("../Button2")
+focus_neighbor_right = NodePath("../Button5")
+focus_neighbor_bottom = NodePath("../Button5")
+focus_next = NodePath("../Button5")
+focus_previous = NodePath("../Button2")
+text = "Placar"
+alignment = 0
+
+[node name="Button5" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_left = NodePath("../Button3")
+focus_neighbor_top = NodePath("../Button3")
+focus_neighbor_right = NodePath("../Button4")
+focus_neighbor_bottom = NodePath("../Button4")
+focus_next = NodePath("../Button4")
+focus_previous = NodePath("../Button3")
+text = "Créditos"
+alignment = 0
+
+[node name="Button4" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_neighbor_left = NodePath("../Button5")
+focus_neighbor_top = NodePath("../Button5")
+focus_neighbor_right = NodePath("../Button")
+focus_neighbor_bottom = NodePath("../Button")
+focus_next = NodePath("../Button")
+focus_previous = NodePath("../Button5")
+text = "Sair"
+alignment = 0
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 134.0
+offset_bottom = 94.0
+texture = ExtResource("3_hq8c8")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="Logo"]
+layout_mode = 2
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.22222
+text = "Procura-se um Salvador!"
+script = ExtResource("4_uer5r")
+metadata/_edit_use_anchors_ = true

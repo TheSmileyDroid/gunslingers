@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://p0ga6ejcpb2s"]
+[gd_scene load_steps=3 format=3 uid="uid://p0ga6ejcpb2s"]
 
+[ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="1_aeeoj"]
 [ext_resource type="Script" path="res://scenes/got_to_test_btn.gd" id="1_k7x6l"]
 
 [node name="Maps" type="Control"]
@@ -10,14 +11,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.48, 0.48, 0.48, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("1_aeeoj")
+expand_mode = 3
+stretch_mode = 6
 
 [node name="SceneButton" type="Button" parent="."]
 custom_minimum_size = Vector2(64, 0)
