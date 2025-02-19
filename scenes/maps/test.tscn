@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=44 format=4 uid="uid://gwvy523xl01f"]
 
 [ext_resource type="Script" path="res://scenes/maps/test.gd" id="1_kkgel"]
 [ext_resource type="Script" path="res://resources/map_data.gd" id="2_axekq"]
@@ -214,6 +214,18 @@ _data = {
 }
 point_count = 19
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8s1lr"]
+radius = 23.0
+height = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l50yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku16k"]
+size = Vector2(59, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vltt0"]
+size = Vector2(95.5, 77.5)
+
 [node name="Test" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_kkgel")
@@ -232,5 +244,39 @@ tile_map_data = PackedByteArray("AAD+/wYAAQAEAC4AAAD//wYAAQAFAC4AAAAAAAYAAQAFAC4
 tile_set = ExtResource("13_lk2oe")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAEAAQAbABkAAAACAAIAAQAbABoAAAACAAMAAQAbABsAAAADAAEAAQAcABkAAAADAAIAAQAcABoAAAADAAMAAQAcABsAAAAEAAEAAQAdABkAAAAEAAIAAQAdABoAAAAEAAMAAQAdABsAAAAFAAEAAQAeABkAAAAFAAIAAQAeABoAAAAFAAMAAQAeABsAAAAGAAMAAQAaABcAAAAYAAUAAQAeABcAAAAZAAUAAQAeABcAAAAaAAUAAQAfABcAAAAWAAUAAQAdABcAAAAXAAUAAQAeABcAAAAEAPj/AQAPAAsAAAAEAPn/AQAPAAwAAAAEAPr/AQAPAA0AAAAEAPv/AQAPAA4AAAAEAPz/AQAPAA8AAAAEAP3/AQAPABAAAAAEAP7/AQAPABEAAAAEAP//AQAPABIAAAAEAAAAAQAPABMAAAAFAPj/AQAQAAsAAAAFAPn/AQAQAAwAAAAFAPr/AQAQAA0AAAAFAPv/AQAQAA4AAAAFAPz/AQAQAA8AAAAFAP3/AQAQABAAAAAFAP7/AQAQABEAAAAFAP//AQAQABIAAAAFAAAAAQAQABMAAAAGAPj/AQARAAsAAAAGAPn/AQARAAwAAAAGAPr/AQARAA0AAAAGAPv/AQARAA4AAAAGAPz/AQARAA8AAAAGAP3/AQARABAAAAAGAP7/AQARABEAAAAGAP//AQARABIAAAAGAAAAAQARABMAAAAHAPj/AQASAAsAAAAHAPn/AQASAAwAAAAHAPr/AQASAA0AAAAHAPv/AQASAA4AAAAHAPz/AQASAA8AAAAHAP3/AQASABAAAAAHAP7/AQASABEAAAAHAP//AQASABIAAAAHAAAAAQASABMAAAAIAPj/AQATAAsAAAAIAPn/AQATAAwAAAAIAPr/AQATAA0AAAAIAPv/AQATAA4AAAAIAPz/AQATAA8AAAAIAP3/AQATABAAAAAIAP7/AQATABEAAAAIAP//AQATABIAAAAIAAAAAQATABMAAAAJAPj/AQAUAAsAAAAJAPn/AQAUAAwAAAAJAPr/AQAUAA0AAAAJAPv/AQAUAA4AAAAJAPz/AQAUAA8AAAAJAP3/AQAUABAAAAAJAP7/AQAUABEAAAAJAP//AQAUABIAAAAJAAAAAQAUABMAAAAPAAcAAQAhAB4AAAAPAAgAAQAhAB8AAAAPAAkAAQAhACAAAAAPAAoAAQAhACEAAAAQAAYAAQAiAB0AAAAQAAcAAQAiAB4AAAAQAAgAAQAiAB8AAAAQAAkAAQAiACAAAAAQAAoAAQAiACEAAAAQAAsAAQAiACIAAAARAAYAAQAjAB0AAAARAAcAAQAjAB4AAAARAAgAAQAjAB8AAAARAAkAAQAjACAAAAARAAoAAQAjACEAAAARAAsAAQAjACIAAAASAAcAAQAkAB4AAAASAAgAAQAkAB8AAAASAAkAAQAkACAAAAASAAoAAQAkACEAAAA=")
 tile_set = ExtResource("13_lk2oe")
+y_sort_origin = 5
+
+[node name="Area2D" type="Area2D" parent="." groups=["Objects"]]
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(271, 153)
+shape = SubResource("CapsuleShape2D_8s1lr")
+
+[node name="Area2D4" type="Area2D" parent="." groups=["Objects"]]
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(105, 58)
+shape = SubResource("CircleShape2D_l50yv")
+
+[node name="Area2D2" type="Area2D" parent="." groups=["Objects"]]
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(63.5, 43.5)
+shape = SubResource("RectangleShape2D_ku16k")
+
+[node name="Area2D3" type="Area2D" parent="." groups=["Objects"]]
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(111.25, -23.25)
+shape = SubResource("RectangleShape2D_vltt0")

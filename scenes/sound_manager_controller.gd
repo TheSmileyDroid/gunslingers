@@ -1,18 +1,5 @@
 extends Node
 
-@onready
-var SFX: AudioStreamPlayer = get_node("%SFX")
-@onready
-var UI: AudioStreamPlayer = get_node("%UI")
-@onready
-var Music1: AudioStreamPlayer = get_node("%Music1")
-@onready
-var Music2: AudioStreamPlayer = get_node("%Music2")
-@onready
-var current_music: AudioStreamPlayer = Music1
-
-var is_transitioning: bool = false
-
 var explosion_sounds: Array[AudioStream] = [
 	preload("res://assets/sfx/explosion-1.ogg"),
 	preload("res://assets/sfx/explosion-2.ogg"),
@@ -51,6 +38,7 @@ var is_writting: bool = false
 
 var pentatonic_semitones: Array[int] = [0, 2, 4, 7, 9]
 
+var changing_music: bool = false
 
 func _ready():
 	SoundEvents.explosion.connect(_on_explode)
@@ -60,77 +48,56 @@ func _ready():
 	SoundEvents.writting.connect(start_writting)
 	SoundEvents.stop_writting.connect(func(): is_writting = false)
 	SoundEvents.play_music.connect(_on_play_music)
-
 	pass
 
 func _on_shoot():
-	SFX.stream = shoot_sounds[randi() % shoot_sounds.size()]
-	_modify_pitch_scale()
-	SFX.play()
+	var stream = shoot_sounds[randi() % shoot_sounds.size()]
+	var pitch = _modify_pitch_scale()
+	SoundManager.play_sound_with_pitch(stream, pitch)
 	pass
 
 func _on_melee_attack():
-	SFX.stream = melee_attack_sounds[randi() % melee_attack_sounds.size()]
-	_modify_pitch_scale()
-	SFX.play()
+	var stream = melee_attack_sounds[randi() % melee_attack_sounds.size()]
+	var pitch = _modify_pitch_scale()
+	SoundManager.play_sound_with_pitch(stream, pitch)
 	pass
 
 func _modify_pitch_scale():
-	SFX.pitch_scale = 1.0
+	var pitch_scale = 1.0
 	var x: int = pentatonic_semitones[randi() % pentatonic_semitones.size()]
 	for i in range(0, x):
-		SFX.pitch_scale *= 1.0594630943592953
-	pass
+		pitch_scale *= 1.0594630943592953
+	return pitch_scale
 
 func _on_explode():
-	SFX.stream = explosion_sounds[randi() % explosion_sounds.size()]
-	SFX.pitch_scale = 0.8 + randf() * 0.4
-	SFX.play()
+	var stream = explosion_sounds[randi() % explosion_sounds.size()]
+	var pitch = 0.8 + randf() * 0.4
+	SoundManager.play_sound_with_pitch(stream, pitch)
 	pass
 
 func _on_select_button():
-	UI.stream = select_button_sounds[randi() % select_button_sounds.size()]
-	UI.play()
+	var stream = select_button_sounds[randi() % select_button_sounds.size()]
+	SoundManager.play_ui_sound(stream)
 	pass
 
 func start_writting():
 	if is_writting:
 		return
 	is_writting = true
-	UI.stream = writting_sfx[randi() % writting_sfx.size()]
-	UI.play()
+	var stream = writting_sfx[randi() % writting_sfx.size()]
+	SoundManager.play_ui_sound(stream)
 	pass
 
-func _process(_delta):
-	if is_writting and not UI.is_playing():
-		UI.stream = writting_sfx[randi() % writting_sfx.size()]
-		UI.play()
-
 func _on_play_music(music_name: String):
+	changing_music = true
 	print("play music: ", music_name)
 	await get_tree().create_timer(0.0).timeout
 	if not musics.has(music_name):
 		print("Music not found: ", music_name)
 		return
-	if is_transitioning:
-		print("Music is transitioning")
-		return
-	if current_music.stream == musics[music_name] and current_music.playing:
-		return
-	is_transitioning = true
-	var next_music: AudioStreamPlayer = Music1 if current_music == Music2 else Music2
-	next_music.stream = musics[music_name]
-	var volume = current_music.volume_db
-	next_music.volume_db = -80
-	next_music.play()
-	var tween: Tween = get_tree().create_tween()
-	tween.tween_property(current_music, "volume_db", -80,
-		1.0).set_ease(Tween.EASE_IN_OUT)
-	tween.parallel().tween_property(next_music, "volume_db",
-		volume, 2.0).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_callback(_on_music_transition_finished).set_delay(1)
-
-func _on_music_transition_finished():
-	current_music.stop()
-	current_music = Music1 if current_music == Music2 else Music2
-	is_transitioning = false
+	var player := SoundManager.play_music(musics[music_name], 2.0)
+	changing_music = false
+	await player.finished
+	if not changing_music:
+		_on_play_music(music_name)
+	pass

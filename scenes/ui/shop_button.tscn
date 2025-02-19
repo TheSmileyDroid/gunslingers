@@ -16,6 +16,7 @@ anchor_bottom = 0.2
 offset_right = 0.079998
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 0
 theme = ExtResource("1_rerk3")
 theme_type_variation = &"wanted"
 script = ExtResource("1_w7661")

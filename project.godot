@@ -34,9 +34,10 @@ GameInstance="*res://scripts/global/game_instance.gd"
 GameManager="*res://scenes/game_manager.gd"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Ui="*res://scenes/ui/ui.tscn"
-SoundManager="*res://scenes/SoundManager.tscn"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 SoundEvents="*res://scenes/sound_events.gd"
 Panku="*res://addons/panku_console/console.tscn"
+SoundManagerController="*res://scenes/SoundManager.tscn"
 
 [display]
 
@@ -51,7 +52,11 @@ mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+
+[global_group]
+
+Objects=""
 
 [gui]
 
@@ -134,6 +139,11 @@ open_user_data={
 [internationalization]
 
 locale/translation_add_builtin_strings_to_pot=true
+
+[layer_names]
+
+2d_physics/layer_1="Entidades"
+2d_physics/layer_3="Objetos"
 
 [panku]
 
