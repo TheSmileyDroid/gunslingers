@@ -1,0 +1,130 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=18 format=3 uid="uid://b81a66liov8h8"]
+
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_su0pv"]
+[ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_v1202"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="3_g8mln"]
+[ext_resource type="Texture2D" uid="uid://0ubgjv6fb7k3" path="res://assets/heroes/slinger.png" id="4_p61jj"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_3237y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f6rs"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc318"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc458"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eust5"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0tya"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofc5a"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23p6n"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la8q8"]
+atlas = ExtResource("4_p61jj")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2bxd"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f6rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc318")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc458")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eust5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0tya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofc5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23p6n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la8q8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Resource" id="Resource_512c1"]
+script = ExtResource("5_3237y")
+name = "Balas rapidas"
+description = "Aumenta a taxa de disparo"
+cost = 50
+health_bonus = 0
+damage_bonus = 0
+speed_bonus = 0.0
+fire_rate_bonus = 10.0
+range_bonus = 0.0
+
+[sub_resource type="Resource" id="Resource_a8rtl"]
+script = ExtResource("5_3237y")
+name = "Tiros precisos"
+description = "Aumenta o dano de cada tiro"
+cost = 100
+health_bonus = 0
+damage_bonus = 4
+speed_bonus = 0.0
+fire_rate_bonus = 0.0
+range_bonus = 0.0
+
+[sub_resource type="Resource" id="Resource_pyv2k"]
+script = ExtResource("5_3237y")
+name = "Durão"
+description = "Aumenta levemente a vida"
+cost = 100
+health_bonus = 5
+damage_bonus = 0
+speed_bonus = 0.0
+fire_rate_bonus = 0.0
+range_bonus = 0.0
+
+[resource]
+script = ExtResource("3_g8mln")
+name = "Slinger"
+price = 100
+sprite_frames = SubResource("SpriteFrames_g2bxd")
+health = 50
+max_health = 50
+damage = 3
+speed = 100.0
+fire_rate = 20.0
+pierce = 1
+strategy = 0
+attack_range = 60.0
+attack_type = 1
+size = 2
+reward = 10
+upgrades = Array[ExtResource("5_3237y")]([SubResource("Resource_512c1"), SubResource("Resource_a8rtl"), SubResource("Resource_pyv2k")])
+on_death_effects = Array[ExtResource("1_su0pv")]([])
+projectile = ExtResource("2_v1202")

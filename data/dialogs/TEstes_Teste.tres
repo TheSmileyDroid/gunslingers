@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=4 format=3 uid="uid://dng3lm5fw8uba"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_ij0v1"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_xmbn6"]
+
+[sub_resource type="Resource" id="Resource_p1t42"]
+script = ExtResource("1_ij0v1")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[resource]
+script = ExtResource("2_xmbn6")
+lines = Array[ExtResource("1_ij0v1")]([SubResource("Resource_p1t42")])
