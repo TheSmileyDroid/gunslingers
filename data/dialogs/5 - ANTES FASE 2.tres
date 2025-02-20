@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=9 format=3 uid="uid://bvng21fyu6l70"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_s6e24"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_pawli"]
+
+[sub_resource type="Resource" id="Resource_4bufu"]
+script = ExtResource("1_s6e24")
+character_name = "Xerife "
+text = "Nós fomos. O caminho foi longo, mas quando chegamos, ficou claro: os ratos estavamos por toda parte."
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_tmubq"]
+script = ExtResource("1_s6e24")
+character_name = "Xerife "
+text = "Mas esses não eram civís indefensos. Eram guerreiros"
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_losxf"]
+script = ExtResource("1_s6e24")
+character_name = "Hakan"
+text = "Homens brancos... sempre trazendo destruição. Mas desta vez, vocês lutam ao nosso lado. Eu irei ajudar a defender meu vilarejo."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_tl7al"]
+script = ExtResource("1_s6e24")
+character_name = "Xerife Harlan"
+text = "Toda ajuda é bem vinda e necessária"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_kp76k"]
+script = ExtResource("1_s6e24")
+character_name = "Big Clay"
+text = "Parece que eles tem ajuda também, Chefe!"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_ij4k3"]
+script = ExtResource("1_s6e24")
+character_name = "Blackjack"
+text = "Mas que p*#@% é aquilo? Eles tem um curandeiro agora?"
+position = 1
+animation = "talk"
+
+[resource]
+script = ExtResource("2_pawli")
+lines = Array[ExtResource("1_s6e24")]([SubResource("Resource_4bufu"), SubResource("Resource_tmubq"), SubResource("Resource_losxf"), SubResource("Resource_tl7al"), SubResource("Resource_kp76k"), SubResource("Resource_ij4k3")])

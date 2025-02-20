@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=3 format=3 uid="uid://bife58tslgcad"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_ix8l5"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_msin1"]
+
+[resource]
+script = ExtResource("2_msin1")
+lines = Array[ExtResource("1_ix8l5")]([])

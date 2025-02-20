@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=12 format=3 uid="uid://bmpji3ystxtqk"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_qjoka"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_f1wax"]
+
+[sub_resource type="Resource" id="Resource_nyunh"]
+script = ExtResource("1_qjoka")
+character_name = "Xerife Harlan"
+text = "A cidade ainda está de pé. Por pouco"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_jvr24"]
+script = ExtResource("1_qjoka")
+character_name = "Prefeito Jennings"
+text = "Oh céus! eu já estava preparando meu testamento! Mas... sobrevivemos!"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_ytov6"]
+script = ExtResource("1_qjoka")
+character_name = "Xerife Harlan"
+text = "Não teria conseguido sem essa... ajuda inesperada"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_sr8jk"]
+script = ExtResource("1_qjoka")
+character_name = "Oficial Frank"
+text = "Chefe, você não pode tá pensando no que eu acho eu acho que tá pensando"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_d17e0"]
+script = ExtResource("1_qjoka")
+character_name = "Xerife Harlan"
+text = "Ei! Calloway! Se quiser andar com a gente, tem uma condição: Lá na frente quando isso acabar, você está livre"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_lqcfd"]
+script = ExtResource("1_qjoka")
+character_name = "Xerife Harlan"
+text = "Sem cárcere, sem forca."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_54uos"]
+script = ExtResource("1_qjoka")
+character_name = "Blackjack"
+text = "Hmm... um perdão completo? Parece um bom negócio. Tá fechado, Xerife."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_rkqaj"]
+script = ExtResource("1_qjoka")
+character_name = ""
+text = "(Um mensageiro indígena chega apressado)"
+position = 0
+animation = "NARRAÇÃO"
+
+[sub_resource type="Resource" id="Resource_1i6pa"]
+script = ExtResource("1_qjoka")
+character_name = "Mensageiro"
+text = "Vocês querem lutas? Temos uma. Meu povo precisa de ajuda! Se não vierem, eles morrerão!"
+position = 0
+animation = "talk"
+
+[resource]
+script = ExtResource("2_f1wax")
+lines = Array[ExtResource("1_qjoka")]([SubResource("Resource_nyunh"), SubResource("Resource_jvr24"), SubResource("Resource_ytov6"), SubResource("Resource_sr8jk"), SubResource("Resource_d17e0"), SubResource("Resource_lqcfd"), SubResource("Resource_54uos"), SubResource("Resource_rkqaj"), SubResource("Resource_1i6pa")])

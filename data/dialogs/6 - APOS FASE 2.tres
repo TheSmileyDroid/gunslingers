@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=12 format=3 uid="uid://tfpa2o2oynfx"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_njh4q"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_ds2q4"]
+
+[sub_resource type="Resource" id="Resource_k7g21"]
+script = ExtResource("1_njh4q")
+character_name = "Cacique Wakiza"
+text = "Agradecemos a luta. Mas não se esquecam: Foi o homem branco que trouxe isso."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_vfq6x"]
+script = ExtResource("1_njh4q")
+character_name = "Cacique Wakiza"
+text = "Seu desejo insáciavel por ouro e terra condenou a todos."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_2g82g"]
+script = ExtResource("1_njh4q")
+character_name = "Xerife Harlan"
+text = "Acredite, nós vamos acabar com isso."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_dh2r7"]
+script = ExtResource("1_njh4q")
+character_name = "Cacique Wakiza"
+text = "Então levem nosso melhor arqueiro. Ele seberá onde a luta precisa ser travada"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_01fya"]
+script = ExtResource("1_njh4q")
+character_name = "Hakan"
+text = "Eu irei"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_hudqr"]
+script = ExtResource("1_njh4q")
+character_name = ""
+text = "(O grupo encontra um uniforme velho e sujo no chão "
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_42v74"]
+script = ExtResource("1_njh4q")
+character_name = "Blackjack"
+text = "Ora, ora... isso é um uniforme da mineradora. Acho que temos uma trilha pra seguir"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_bbx7j"]
+script = ExtResource("1_njh4q")
+character_name = "Xerife"
+text = "Se a pista estava certa ou não, a resposta estava num antigo vilarejo "
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_ahroi"]
+script = ExtResource("1_njh4q")
+character_name = "Xerife"
+text = "Mas pra chegar lá... teríamos que cruzar o deserto. E aí, a noite não era nossa aliada."
+position = 0
+animation = "NARRADOR"
+
+[resource]
+script = ExtResource("2_ds2q4")
+lines = Array[ExtResource("1_njh4q")]([SubResource("Resource_k7g21"), SubResource("Resource_vfq6x"), SubResource("Resource_2g82g"), SubResource("Resource_dh2r7"), SubResource("Resource_01fya"), SubResource("Resource_hudqr"), SubResource("Resource_42v74"), SubResource("Resource_bbx7j"), SubResource("Resource_ahroi")])

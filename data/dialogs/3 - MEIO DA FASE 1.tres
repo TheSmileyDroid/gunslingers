@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=10 format=3 uid="uid://c4yif6v3ap067"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_xbobc"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_s4uej"]
+
+[sub_resource type="Resource" id="Resource_cprog"]
+script = ExtResource("1_xbobc")
+character_name = "Xerife"
+text = "Enquanto a briga pegava fogo, um velho conhecido nosso tava ocupado"
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_cg6yk"]
+script = ExtResource("1_xbobc")
+character_name = "Xerife "
+text = "O Fora da Lei Jack Calloway, conhecido como Blackjack, aproveitava a confusão pra saquear a cidade."
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_d1gtm"]
+script = ExtResource("1_xbobc")
+character_name = "Xerife "
+text = "Mas, por algum motivo, decidiu fazer a coisa certa. Talvez orgulho, talvez loucura."
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_valb3"]
+script = ExtResource("1_xbobc")
+character_name = "Blackjack"
+text = "Tsc tsc... Que desperdício de um bom saque. Mas que seja, não sou homem de ver minha própria cidade virar comida de rato."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_nwfap"]
+script = ExtResource("1_xbobc")
+character_name = "Xerife Harlan"
+text = "Vai atirar ou vai continuar falando?"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_07vy4"]
+script = ExtResource("1_xbobc")
+character_name = "Big Clay"
+text = "Chefe, isso é uma péssima ideia."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_dqg33"]
+script = ExtResource("1_xbobc")
+character_name = "Blackjack"
+text = "Eu atiro melhor que vocês três juntos. Agora para de chiar e me dá uma arma!"
+position = 1
+animation = "talk"
+
+[resource]
+script = ExtResource("2_s4uej")
+lines = Array[ExtResource("1_xbobc")]([SubResource("Resource_cprog"), SubResource("Resource_cg6yk"), SubResource("Resource_d1gtm"), SubResource("Resource_valb3"), SubResource("Resource_nwfap"), SubResource("Resource_07vy4"), SubResource("Resource_dqg33")])
