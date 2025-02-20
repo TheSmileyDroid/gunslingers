@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://bqtk3lt48lwhx"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://bw36c8nymsxx1"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_g1n2a"]
 [ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_yy5v6"]

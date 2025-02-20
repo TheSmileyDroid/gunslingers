@@ -111,6 +111,8 @@ func show_dialog(dialog_path: DialogData) -> void:
 	await Ui.start_dialog(dialog_path)
 
 func _input(event: InputEvent) -> void:
+	if !is_instance_valid(placer):
+		return
 	if placer.visible and event is InputEventMouseMotion:
 		placer.position = event.position
 

@@ -1,13 +1,13 @@
 [gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://dh7qp21usucsn"]
 
+[sub_resource type="AudioEffectHardLimiter" id="AudioEffectHardLimiter_cbcvd"]
+resource_name = "HardLimiter"
+ceiling_db = -15.0
+
 [sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_20eu4"]
 resource_name = "Compressor"
 
 [sub_resource type="AudioEffectHardLimiter" id="AudioEffectHardLimiter_bv0gx"]
-resource_name = "HardLimiter"
-ceiling_db = -18.0
-
-[sub_resource type="AudioEffectHardLimiter" id="AudioEffectHardLimiter_cbcvd"]
 resource_name = "HardLimiter"
 ceiling_db = -18.0
 
@@ -16,8 +16,10 @@ resource_name = "StereoEnhance"
 pan_pullout = 0.4
 
 [resource]
-bus/0/effect/0/effect = SubResource("AudioEffectCompressor_20eu4")
+bus/0/effect/0/effect = SubResource("AudioEffectHardLimiter_cbcvd")
 bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectCompressor_20eu4")
+bus/0/effect/1/enabled = true
 bus/1/name = &"SFX"
 bus/1/solo = false
 bus/1/mute = false
@@ -32,7 +34,5 @@ bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
 bus/2/send = &"Master"
-bus/2/effect/0/effect = SubResource("AudioEffectHardLimiter_cbcvd")
+bus/2/effect/0/effect = SubResource("AudioEffectStereoEnhance_maxyq")
 bus/2/effect/0/enabled = true
-bus/2/effect/1/effect = SubResource("AudioEffectStereoEnhance_maxyq")
-bus/2/effect/1/enabled = true
