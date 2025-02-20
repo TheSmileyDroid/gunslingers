@@ -5,7 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_lk2yv"]
 script = ExtResource("1_1q4n7")
-character_name = "Xerife"
+character_name = "Harlan Earp"
 text = "A viagem foi longa. Com a cidade indígena atrás de nós e um vilarejo abandonado à frente, não tivemos escolha: montamos acampamento no deserto. Mas descanso? Isso nunca foi uma opção."
 position = 0
 animation = "NARRADOR"

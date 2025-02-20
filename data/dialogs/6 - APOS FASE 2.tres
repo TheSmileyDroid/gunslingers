@@ -54,14 +54,14 @@ animation = "talk"
 
 [sub_resource type="Resource" id="Resource_bbx7j"]
 script = ExtResource("1_njh4q")
-character_name = "Xerife"
+character_name = "Harlan Earp"
 text = "Se a pista estava certa ou não, a resposta estava num antigo vilarejo "
 position = 0
 animation = "NARRADOR"
 
 [sub_resource type="Resource" id="Resource_ahroi"]
 script = ExtResource("1_njh4q")
-character_name = "Xerife"
+character_name = "Harlan Earp"
 text = "Mas pra chegar lá... teríamos que cruzar o deserto. E aí, a noite não era nossa aliada."
 position = 0
 animation = "NARRADOR"

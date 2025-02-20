@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=11 format=3 uid="uid://vtnntjiaf8us"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_vxobw"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_7fy2n"]
+
+[sub_resource type="Resource" id="Resource_nc7ra"]
+script = ExtResource("1_vxobw")
+character_name = ""
+text = "(Xerife e o grupo estão cercados, a munição começa a escassear. De repente, um tiro certeiro atravessa o crânio de um dos ratos, e depois outro. Um atirador oculto está ajudando à distância)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_c51vp"]
+script = ExtResource("1_vxobw")
+character_name = "Blackjack"
+text = "Quem diabos...?"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_vacr2"]
+script = ExtResource("1_vxobw")
+character_name = ""
+text = "(Um homem solitário se aproxima calmamente, rifle nas costas e olhar indiferente)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_61br8"]
+script = ExtResource("1_vxobw")
+character_name = "Andarilho"
+text = "Vocês fazem muito barulho."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_nvpmx"]
+script = ExtResource("1_vxobw")
+character_name = "Xerife Harlan"
+text = "E você atira bem. Se quiser continuar atirando, ficamos gratos."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_sd4im"]
+script = ExtResource("1_vxobw")
+character_name = "Andarilho"
+text = "Talvez... "
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_eh2ox"]
+script = ExtResource("1_vxobw")
+character_name = ""
+text = "(Recarrega o rifle e continua atirando nos ratos.)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_xn7kn"]
+script = ExtResource("1_vxobw")
+character_name = "Big Clay"
+text = "Parece que essas pestes tem um rifle também, me cuspiram algo verde!"
+position = 1
+animation = "talk"
+
+[resource]
+script = ExtResource("2_7fy2n")
+lines = Array[ExtResource("1_vxobw")]([SubResource("Resource_nc7ra"), SubResource("Resource_c51vp"), SubResource("Resource_vacr2"), SubResource("Resource_61br8"), SubResource("Resource_nvpmx"), SubResource("Resource_sd4im"), SubResource("Resource_eh2ox"), SubResource("Resource_xn7kn")])

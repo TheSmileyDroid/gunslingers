@@ -57,7 +57,7 @@ script = ExtResource("1_qjoka")
 character_name = ""
 text = "(Um mensageiro indígena chega apressado)"
 position = 0
-animation = "NARRAÇÃO"
+animation = "DESCRIÇÃO"
 
 [sub_resource type="Resource" id="Resource_1i6pa"]
 script = ExtResource("1_qjoka")

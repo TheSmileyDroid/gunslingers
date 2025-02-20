@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=11 format=3 uid="uid://76v3mm6tmg60"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_cnjmy"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_sedrc"]
+
+[sub_resource type="Resource" id="Resource_v464g"]
+script = ExtResource("1_cnjmy")
+character_name = ""
+text = "(Um sobrevivente, fraco e machucado, se aproxima do grupo. Suas roupas rasgadas mostram um uniforme de minerador)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_hvihr"]
+script = ExtResource("1_cnjmy")
+character_name = "Dusty Sam"
+text = "Eu... eu sei de onde veio essa maldição."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_5jlgn"]
+script = ExtResource("1_cnjmy")
+character_name = "Xerife Harlan"
+text = "Então é melhor falar."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_aibxf"]
+script = ExtResource("1_cnjmy")
+character_name = "Dusty Sam"
+text = "A mina... nós cavamos fundo demais. Encontramos algo... uma pedra verde, brilhante. Nunca vimos nada igual."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_pmlmi"]
+script = ExtResource("1_cnjmy")
+character_name = "Hakan"
+text = "A terra avisa, e a natureza esconde o perigo. Mas o homem branco nunca escuta."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_k3pak"]
+script = ExtResource("1_cnjmy")
+character_name = "Dusty Sam"
+text = "Achamos que era um tesouro. Mas era uma praga. Nos intoxicou... e os ratos vieram. Eles mudaram... ficaram maiores, mais ferozes. Agora, a mina... é o ninho deles."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_phg4c"]
+script = ExtResource("1_cnjmy")
+character_name = "Blackjack"
+text = "“Eles vem das mina ahn… Isso explica aquela aberração carregando dinamites"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_1eqmd"]
+script = ExtResource("1_cnjmy")
+character_name = "Harlan Earp"
+text = "Era isso. A origem da praga. O coração da infestação. E se queríamos acabar com aquilo... só havia um lugar para ir."
+position = 0
+animation = "NARRADOR"
+
+[resource]
+script = ExtResource("2_sedrc")
+lines = Array[ExtResource("1_cnjmy")]([SubResource("Resource_v464g"), SubResource("Resource_hvihr"), SubResource("Resource_5jlgn"), SubResource("Resource_aibxf"), SubResource("Resource_pmlmi"), SubResource("Resource_k3pak"), SubResource("Resource_phg4c"), SubResource("Resource_1eqmd")])

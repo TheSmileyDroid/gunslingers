@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=9 format=3 uid="uid://b2yvn8if52d42"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_hh0ud"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_e73qp"]
+
+[sub_resource type="Resource" id="Resource_q0irj"]
+script = ExtResource("1_hh0ud")
+character_name = "Xerife Harlan"
+text = "Você sabe lutar. Pode ser útil."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_7owg4"]
+script = ExtResource("1_hh0ud")
+character_name = "Andarilho"
+text = "Não luto por ninguém."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_tsdft"]
+script = ExtResource("1_hh0ud")
+character_name = "Xerife Harlan"
+text = "Não estamos pedindo lealdade. Só tiros certeiros."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_dp3ep"]
+script = ExtResource("1_hh0ud")
+character_name = ""
+text = "(O Andarilho observa o grupo por um momento, depois dá um leve aceno.)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_wlyyi"]
+script = ExtResource("1_hh0ud")
+character_name = "Andarilho"
+text = "Pode ser.."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_8ejl3"]
+script = ExtResource("1_hh0ud")
+character_name = "Harlan Earp"
+text = "Nosso grupo crescia. Mas o perigo também. O vilarejo perto da mina estava próximo... e alguma coisa me dizia que ali, encontraríamos o pior."
+position = 0
+animation = "NARRADOR"
+
+[resource]
+script = ExtResource("2_e73qp")
+lines = Array[ExtResource("1_hh0ud")]([SubResource("Resource_q0irj"), SubResource("Resource_7owg4"), SubResource("Resource_tsdft"), SubResource("Resource_dp3ep"), SubResource("Resource_wlyyi"), SubResource("Resource_8ejl3")])

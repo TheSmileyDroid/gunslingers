@@ -1,8 +1,57 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=3 format=3 uid="uid://bife58tslgcad"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=10 format=3 uid="uid://bife58tslgcad"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_ix8l5"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_msin1"]
 
+[sub_resource type="Resource" id="Resource_0olng"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_nqwme"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_yrcku"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_ffiq0"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_h2777"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_2vm6t"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_lqyks"]
+script = ExtResource("1_ix8l5")
+character_name = ""
+text = ""
+position = 0
+animation = "talk"
+
 [resource]
 script = ExtResource("2_msin1")
-lines = Array[ExtResource("1_ix8l5")]([])
+lines = Array[ExtResource("1_ix8l5")]([SubResource("Resource_0olng"), SubResource("Resource_nqwme"), SubResource("Resource_yrcku"), SubResource("Resource_ffiq0"), SubResource("Resource_h2777"), SubResource("Resource_2vm6t"), SubResource("Resource_lqyks")])

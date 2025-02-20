@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=11 format=3 uid="uid://bo58dayq8l2xi"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_21jif"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_plsyk"]
+
+[sub_resource type="Resource" id="Resource_hfmxr"]
+script = ExtResource("1_21jif")
+character_name = "Harlan Earp"
+text = "Chegamos e... A cidade era um túmulo. Casas destruídas, ruas vazias, ratos por todos os cantos. Mas havia um lugar ainda de pé: a igreja. Barricada, protegida, abrigando o que restava dos vivos."
+position = 0
+animation = "NARRADOR"
+
+[sub_resource type="Resource" id="Resource_v2nv4"]
+script = ExtResource("1_21jif")
+character_name = ""
+text = "(O grupo se aproxima da igreja, onde um padre desesperado os recebe)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_srou1"]
+script = ExtResource("1_21jif")
+character_name = "Padre Collins"
+text = "Pela graça divina! Vocês foram enviados pelos céus?"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_qg8yh"]
+script = ExtResource("1_21jif")
+character_name = "Blackjack"
+text = "\"Haha! Esse céu tá meio desesperado então."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_325dl"]
+script = ExtResource("1_21jif")
+character_name = "Padre Collins"
+text = "O Senhor trabalha de maneiras misteriosas. Mas se foi Ele que os trouxe, então louvado seja! Pois precisamos de ajuda… e eu ajudarei como puder!"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_486vc"]
+script = ExtResource("1_21jif")
+character_name = "Oficial Jack"
+text = "Não se preocupe padre, iremos ajudar vocês"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_uqb8d"]
+script = ExtResource("1_21jif")
+character_name = "Louvado seja o senhor! Cuidado, eu ouvi até mesmo explosões!"
+text = ""
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_7j8o0"]
+script = ExtResource("1_21jif")
+character_name = "Blackjack"
+text = "Explosões? Haha! Parece que o padre andou bebendo vinho de mais..."
+position = 0
+animation = "talk"
+
+[resource]
+script = ExtResource("2_plsyk")
+lines = Array[ExtResource("1_21jif")]([SubResource("Resource_hfmxr"), SubResource("Resource_v2nv4"), SubResource("Resource_srou1"), SubResource("Resource_qg8yh"), SubResource("Resource_325dl"), SubResource("Resource_486vc"), SubResource("Resource_uqb8d"), SubResource("Resource_7j8o0")])

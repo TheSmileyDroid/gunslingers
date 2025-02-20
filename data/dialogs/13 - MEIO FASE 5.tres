@@ -1,0 +1,85 @@
+[gd_resource type="Resource" script_class="DialogData" load_steps=14 format=3 uid="uid://110o1smqlvuf"]
+
+[ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_si2j4"]
+[ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_1d5em"]
+
+[sub_resource type="Resource" id="Resource_0olng"]
+script = ExtResource("1_si2j4")
+character_name = ""
+text = "(O grupo avança pelos túneis escuros da mina. O som de garras arranhando pedra ecoa ao redor. Os olhos vermelhos dos ratos brilham na escuridão..."
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_nqwme"]
+script = ExtResource("1_si2j4")
+character_name = ""
+text = "mas eles não atacam imediatamente, como se estivessem esperando algo)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_yrcku"]
+script = ExtResource("1_si2j4")
+character_name = "Blackjack"
+text = "Tá quieto demais... isso nunca é bom."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_ffiq0"]
+script = ExtResource("1_si2j4")
+character_name = ""
+text = "(O silêncio é quebrado por um rugido profundo. A terra treme. Das sombras, uma silhueta monstruosa emerge – maior que qualquer outro rato enfrentado antes."
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_h2777"]
+script = ExtResource("1_si2j4")
+character_name = ""
+text = "Sua pele é grotescamente deformada, pulsando com a mesma energia verde do minério)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_2vm6t"]
+script = ExtResource("1_si2j4")
+character_name = "Dusty Sam (sussurando aparvorado)"
+text = "A gente... a gente nunca devia ter aberto esse lugar"
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_lqyks"]
+script = ExtResource("1_si2j4")
+character_name = "Hakan"
+text = "Esse não é um rato qualquer... ele é o primeiro!"
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_b20bt"]
+script = ExtResource("1_si2j4")
+character_name = ""
+text = "(O monstro ruge novamente, e os outros ratos, antes hesitantes, começam a avançar com fúria renovada.)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[sub_resource type="Resource" id="Resource_f1xjs"]
+script = ExtResource("1_si2j4")
+character_name = "Xerife Harlan"
+text = "\"Então é ele... o líder dessa praga. O primeiro a ser corrompido."
+position = 0
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_luavw"]
+script = ExtResource("1_si2j4")
+character_name = "Andarilho"
+text = "Se quisermos sair daqui, temos que derrubar ele primeiro."
+position = 1
+animation = "talk"
+
+[sub_resource type="Resource" id="Resource_cfofg"]
+script = ExtResource("1_si2j4")
+character_name = ""
+text = "(O grupo se posiciona, armas em punho, enquanto o Rato Primordial avança, trazendo o verdadeiro pesadelo da infestação para a batalha)"
+position = 0
+animation = "DESCRIÇÃO"
+
+[resource]
+script = ExtResource("2_1d5em")
+lines = Array[ExtResource("1_si2j4")]([SubResource("Resource_0olng"), SubResource("Resource_nqwme"), SubResource("Resource_yrcku"), SubResource("Resource_ffiq0"), SubResource("Resource_h2777"), SubResource("Resource_2vm6t"), SubResource("Resource_lqyks"), SubResource("Resource_b20bt"), SubResource("Resource_f1xjs"), SubResource("Resource_luavw"), SubResource("Resource_cfofg")])

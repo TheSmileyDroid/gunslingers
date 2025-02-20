@@ -5,21 +5,21 @@
 
 [sub_resource type="Resource" id="Resource_rdegl"]
 script = ExtResource("1_7bpi3")
-character_name = "Xerife"
+character_name = "Harlan Earp"
 text = "O Velho Oeste sempre foi uma terra de desafios. Bandidos, tempestades de areia e falta de água... Mas nada nos preparou pro que veio depois"
 position = 0
 animation = "NARRADOR"
 
 [sub_resource type="Resource" id="Resource_43cr7"]
 script = ExtResource("1_7bpi3")
-character_name = "Xerife "
+character_name = "Harlan Earp"
 text = "Primeiro, eram boatos. Depois pequenas cidades sumindo do mapa. Quando os ratos chegaram em Goldridge Canyon nós entedemos..."
 position = 0
 animation = "NARRADOR"
 
 [sub_resource type="Resource" id="Resource_bg0yn"]
 script = ExtResource("1_7bpi3")
-character_name = "Xerife "
+character_name = "Harlan Earp"
 text = "Era lutar ou morrer!"
 position = 0
 animation = "NARRADOR"
