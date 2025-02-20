@@ -36,8 +36,8 @@ SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Ui="*res://scenes/ui/ui.tscn"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
 SoundEvents="*res://scenes/sound_events.gd"
-Panku="*res://addons/panku_console/console.tscn"
 SoundManagerController="*res://scenes/SoundManager.tscn"
+Panku="*res://addons/panku_console/console.tscn"
 
 [display]
 

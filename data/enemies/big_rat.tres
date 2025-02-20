@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=14 format=3 uid="uid://c2ii2rsxp8mw6"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=15 format=3 uid="uid://c2ii2rsxp8mw6"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_4fami"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_vps6c"]
 [ext_resource type="Texture2D" uid="uid://7524irflyc0a" path="res://assets/enemies/big_rat.png" id="3_sqly1"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_kt1ob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_up3wo"]
 atlas = ExtResource("3_sqly1")
@@ -95,5 +96,6 @@ strategy = 4
 attack_range = 15.0
 attack_type = 0
 size = 2
-reward = 10
+reward = 20
+upgrades = Array[ExtResource("4_kt1ob")]([])
 on_death_effects = Array[ExtResource("1_4fami")]([])
