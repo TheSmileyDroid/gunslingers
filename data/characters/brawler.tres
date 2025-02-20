@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=15 format=3 uid="uid://vqqlwrvxtkq2"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://vqqlwrvxtkq2"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_3grpn"]
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_6n38s"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_ynk8c"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_w2rwc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bdbhb"]
 atlas = ExtResource("2_ynk8c")
@@ -88,6 +89,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Resource" id="Resource_1bltn"]
+script = ExtResource("4_w2rwc")
+name = "Upgrade"
+description = ""
+cost = 100
+health_bonus = 0
+damage_bonus = 0
+speed_bonus = 0.0
+fire_rate_bonus = 0.0
+range_bonus = 0.0
+
 [resource]
 script = ExtResource("1_3grpn")
 name = "Brawler"
@@ -104,4 +116,5 @@ attack_range = 30.0
 attack_type = 0
 size = 2
 reward = 10
+upgrades = Array[ExtResource("4_w2rwc")]([SubResource("Resource_1bltn")])
 on_death_effects = Array[ExtResource("1_6n38s")]([])
