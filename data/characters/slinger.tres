@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=18 format=3 uid="uid://ctuaql02wr7vq"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://ctuaql02wr7vq"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_qwlfq"]
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_w07di"]
@@ -76,35 +76,24 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Resource" id="Resource_512c1"]
+[sub_resource type="Resource" id="Resource_emk4n"]
 script = ExtResource("5_khrt3")
-name = "Balas rapidas"
-description = "Aumenta a taxa de disparo"
+name = "Fanning the Hammer"
+description = "Aumenta a cadência"
 cost = 50
 health_bonus = 0
 damage_bonus = 0
 speed_bonus = 0.0
-fire_rate_bonus = 10.0
+fire_rate_bonus = 15.0
 range_bonus = 0.0
 
-[sub_resource type="Resource" id="Resource_a8rtl"]
+[sub_resource type="Resource" id="Resource_05rlm"]
 script = ExtResource("5_khrt3")
-name = "Tiros precisos"
-description = "Aumenta o dano de cada tiro"
+name = "Deadeye"
+description = "Aumenta o dano dos disparos"
 cost = 100
 health_bonus = 0
-damage_bonus = 4
-speed_bonus = 0.0
-fire_rate_bonus = 0.0
-range_bonus = 0.0
-
-[sub_resource type="Resource" id="Resource_pyv2k"]
-script = ExtResource("5_khrt3")
-name = "Durão"
-description = "Aumenta levemente a vida"
-cost = 100
-health_bonus = 5
-damage_bonus = 0
+damage_bonus = 10
 speed_bonus = 0.0
 fire_rate_bonus = 0.0
 range_bonus = 0.0
@@ -125,6 +114,6 @@ attack_range = 60.0
 attack_type = 1
 size = 2
 reward = 10
-upgrades = Array[ExtResource("5_khrt3")]([SubResource("Resource_512c1"), SubResource("Resource_a8rtl"), SubResource("Resource_pyv2k")])
+upgrades = Array[ExtResource("5_khrt3")]([SubResource("Resource_emk4n"), SubResource("Resource_05rlm")])
 on_death_effects = Array[ExtResource("1_w07di")]([])
 projectile = ExtResource("2_1q8fg")

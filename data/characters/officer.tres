@@ -1,41 +1,41 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://dmooxiiicsuhc"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://bqtk3lt48lwhx"]
 
-[ext_resource type="Script" path="res://resources/character_stats.gd" id="1_fjq40"]
-[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_nt3u1"]
-[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_pgh2m"]
-[ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_pi73f"]
-[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_6j00w"]
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_g1n2a"]
+[ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_yy5v6"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="3_uwbvm"]
+[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="4_vhaqg"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_8i5v8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bxpde"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(0, 48, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aue3c"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(24, 48, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs6hh"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(48, 48, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qf2a"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5wwsv"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(24, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1nxwj"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(48, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afxfh"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cv22g"]
-atlas = ExtResource("2_pgh2m")
+atlas = ExtResource("4_vhaqg")
 region = Rect2(96, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5fljd"]
@@ -76,7 +76,7 @@ animations = [{
 }]
 
 [sub_resource type="Resource" id="Resource_klvxv"]
-script = ExtResource("5_6j00w")
+script = ExtResource("5_8i5v8")
 name = "Dedos Rápidos"
 description = "Aumenta a cadência de disparos"
 cost = 100
@@ -87,7 +87,7 @@ fire_rate_bonus = 0.0
 range_bonus = 0.0
 
 [sub_resource type="Resource" id="Resource_rr6o4"]
-script = ExtResource("5_6j00w")
+script = ExtResource("5_8i5v8")
 name = "Homem da Lei"
 description = "Aumenta a resistência"
 cost = 100
@@ -98,7 +98,7 @@ fire_rate_bonus = 0.0
 range_bonus = 0.0
 
 [resource]
-script = ExtResource("1_fjq40")
+script = ExtResource("3_uwbvm")
 name = "Sheriff"
 price = 300
 sprite_frames = SubResource("SpriteFrames_5fljd")
@@ -113,6 +113,6 @@ attack_range = 80.0
 attack_type = 1
 size = 2
 reward = 10
-upgrades = Array[ExtResource("5_6j00w")]([SubResource("Resource_klvxv"), SubResource("Resource_rr6o4")])
-on_death_effects = Array[ExtResource("1_nt3u1")]([])
-projectile = ExtResource("2_pi73f")
+upgrades = Array[ExtResource("5_8i5v8")]([SubResource("Resource_klvxv"), SubResource("Resource_rr6o4")])
+on_death_effects = Array[ExtResource("1_g1n2a")]([])
+projectile = ExtResource("2_yy5v6")

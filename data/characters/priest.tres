@@ -1,8 +1,31 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=4 format=3 uid="uid://cyee10tixyiea"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://cyee10tixyiea"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_3jrw0"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_7tetd"]
 [ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="3_7m2tb"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_lyv00"]
+
+[sub_resource type="Resource" id="Resource_iu8tf"]
+script = ExtResource("4_lyv00")
+name = "Aura Divina"
+description = "Aumenta o alcance"
+cost = 100
+health_bonus = 0
+damage_bonus = 0
+speed_bonus = 0.0
+fire_rate_bonus = 0.0
+range_bonus = 10.0
+
+[sub_resource type="Resource" id="Resource_3bmfc"]
+script = ExtResource("4_lyv00")
+name = "Fúria Sagrada"
+description = "Pode buffar aliados ao curar"
+cost = 100
+health_bonus = 0
+damage_bonus = 0
+speed_bonus = 0.0
+fire_rate_bonus = 0.0
+range_bonus = 0.0
 
 [resource]
 script = ExtResource("2_7tetd")
@@ -20,4 +43,5 @@ attack_range = 60.0
 attack_type = 2
 size = 2
 reward = 10
+upgrades = Array[ExtResource("4_lyv00")]([SubResource("Resource_iu8tf"), SubResource("Resource_3bmfc")])
 on_death_effects = Array[ExtResource("1_3jrw0")]([])
