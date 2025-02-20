@@ -1,26 +1,99 @@
-[gd_scene load_steps=3 format=3 uid="uid://es0nf7w78cu2"]
+[gd_scene load_steps=9 format=3 uid="uid://dwk7788dlt882"]
 
-[ext_resource type="Script" path="res://scenes/ui/status_window.gd" id="1_8j4ks"]
+[ext_resource type="Script" path="res://scenes/ui/status_window.gd" id="1_3g2j8"]
+[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_t7cj5"]
+[ext_resource type="Texture2D" uid="uid://db1ujwpde2wjp" path="res://assets/shortcuts/arrows.png" id="3_u2t5y"]
+[ext_resource type="FontFile" uid="uid://c4fsf55084m0m" path="res://assets/fonts/Poco.ttf" id="3_ypjqk"]
+[ext_resource type="Script" path="res://scenes/components/game_button.gd" id="4_k75a2"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_meg6d"]
-font_size = 10
-font_color = Color(0, 0, 0, 1)
+[sub_resource type="InputEventKey" id="InputEventKey_ei2vo"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="InputEventKey" id="InputEventKey_2nl76"]
+device = -1
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_8fq1d"]
+events = [SubResource("InputEventKey_ei2vo"), SubResource("InputEventKey_2nl76")]
 
 [node name="StatusWindow" type="PanelContainer"]
-offset_right = 89.0
-offset_bottom = 114.0
-script = ExtResource("1_8j4ks")
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -75.0
+offset_right = -67.0
+offset_bottom = -54.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("1_t7cj5")
+script = ExtResource("1_3g2j8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="StatsLabel" type="Label" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 1
+
+[node name="Name" type="Label" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+theme_override_fonts/font = ExtResource("3_ypjqk")
+theme_override_font_sizes/font_size = 10
+text = "Character Name"
+horizontal_alignment = 1
+
+[node name="Stats" type="Label" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ypjqk")
+theme_override_font_sizes/font_size = 10
 text = "Stats"
-label_settings = SubResource("LabelSettings_meg6d")
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ypjqk")
+theme_override_font_sizes/font_size = 10
+text = "Upgrades"
+
+[node name="UpgradeList" type="VBoxContainer" parent="MarginContainer/ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="TogglePosition" type="TextureButton" parent="."]
+unique_name_in_owner = true
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+shortcut = SubResource("Shortcut_8fq1d")
+texture_normal = ExtResource("3_u2t5y")
+script = ExtResource("4_k75a2")

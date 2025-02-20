@@ -1,5 +1,5 @@
 @tool
-extends Button
+extends BaseButton
 class_name GameButton
 
 @onready
@@ -17,6 +17,8 @@ func _on_pressed() -> void:
 
 
 func _on_mouse_entered() -> void:
+	if disabled:
+		return
 	button_shader.shine()
 
 

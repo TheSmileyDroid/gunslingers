@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="1_4s1db"]
 [ext_resource type="Texture2D" uid="uid://bste2bldo8nrd" path="res://assets/button.png" id="2_88hpt"]
-[ext_resource type="FontFile" uid="uid://c8bdxshy6pqqr" path="res://assets/fonts/Microserif.ttf" id="2_abkw3"]
 [ext_resource type="Texture2D" uid="uid://bcrucswwc3gm5" path="res://assets/ui.png" id="3_dhqds"]
+[ext_resource type="FontFile" uid="uid://c4fsf55084m0m" path="res://assets/fonts/Poco.ttf" id="4_s7itg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ec2ha"]
 
@@ -39,9 +39,9 @@ modulate_color = Color(1, 1, 1, 0.705882)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a4dhu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4q70c"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
 content_margin_bottom = 4.0
 texture = ExtResource("2_88hpt")
 texture_margin_left = 5.0
@@ -247,10 +247,11 @@ region_rect = Rect2(187, 17, 16, 16)
 modulate_color = Color(1.1, 1.1, 1.1, 1)
 
 [resource]
-default_font = ExtResource("2_abkw3")
+default_font = ExtResource("4_s7itg")
 default_font_size = 10
 Button/colors/font_color = Color(0.988235, 0.921569, 1, 1)
 Button/colors/font_outline_color = Color(0.262745, 0.133333, 0.403922, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 Button/constants/align_to_largest_stylebox = 1
 Button/constants/outline_size = 4
 Button/styles/disabled = SubResource("StyleBoxEmpty_ec2ha")

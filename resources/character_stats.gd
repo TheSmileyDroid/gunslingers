@@ -32,6 +32,26 @@ enum AttackType {melee, ranged, heal}
 		reward = max(0, value)
 		changed.emit()
 
+@export var upgrades: Array[CharacterUpgrade] = []
+var applied_upgrades: Array[CharacterUpgrade] = []
+
+func apply_upgrade(upgrade: CharacterUpgrade) -> void:
+	if upgrade in applied_upgrades:
+		return
+
+	health += upgrade.health_bonus
+	max_health += upgrade.health_bonus
+	damage += upgrade.damage_bonus
+	speed += upgrade.speed_bonus
+	fire_rate += upgrade.fire_rate_bonus
+	attack_range += upgrade.range_bonus
+
+	applied_upgrades.append(upgrade)
+	changed.emit()
+
+func has_upgrade(upgrade: CharacterUpgrade) -> bool:
+	return upgrade in applied_upgrades
+
 func set_health(value: int) -> void:
 	health = value
 	changed.emit()

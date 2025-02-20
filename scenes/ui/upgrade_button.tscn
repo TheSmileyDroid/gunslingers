@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg6315nv4qgjp"]
+
+[ext_resource type="Script" path="res://scenes/ui/upgrade_button.gd" id="1_r6v8g"]
+[ext_resource type="Theme" uid="uid://bu6y881xurn0l" path="res://assets/theme.tres" id="1_t7cj5"]
+
+[node name="UpgradeButton" type="Button"]
+custom_minimum_size = Vector2(120, 48)
+anchors_preset = -1
+anchor_right = 0.286
+anchor_bottom = 0.2
+offset_right = -0.120003
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_t7cj5")
+script = ExtResource("1_r6v8g")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.017
+anchor_bottom = 1.0
+offset_right = -0.0400085
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_right = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Name" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Upgrade Name"
+
+[node name="Description" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.690196, 0.690196, 0.690196, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 10
+text = "Upgrade description"
+autowrap_mode = 3
+
+[node name="Cost" type="Label" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(42, 0)
+layout_mode = 2
+text = "Esgotado"
