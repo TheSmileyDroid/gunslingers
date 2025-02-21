@@ -40,7 +40,7 @@ offset_right = -91.0
 offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Goldridge Canyon"
+text = "O Cerco a Goldridge Canyon"
 script = ExtResource("1_k7x6l")
 
 [node name="TextureRect" type="TextureRect" parent="map1"]
@@ -67,7 +67,7 @@ offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 2
 disabled = true
-text = "Vilarejo Indígena"
+text = " A Ira da Terra"
 script = ExtResource("1_k7x6l")
 
 [node name="TextureRect2" type="TextureRect" parent="map2"]
@@ -108,7 +108,7 @@ offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 2
 disabled = true
-text = "Deserto
+text = "Areia e Sangue
 "
 script = ExtResource("1_k7x6l")
 
@@ -145,7 +145,7 @@ offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 disabled = true
-text = "Cidade em Ruínas"
+text = "Intervenção Divina"
 script = ExtResource("1_k7x6l")
 
 [node name="TextureRect" type="TextureRect" parent="map4"]
@@ -181,7 +181,7 @@ offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 disabled = true
-text = "Mina Abandonada"
+text = "O Coração da Escuridão"
 script = ExtResource("1_k7x6l")
 
 [node name="TextureRect2" type="TextureRect" parent="map5"]
@@ -199,42 +199,6 @@ scale = Vector2(0.126336, 0.126336)
 texture = ExtResource("4_k6kk3")
 
 [node name="ColorRect" type="ColorRect" parent="map5/TextureRect2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="map6" type="Button" parent="."]
-custom_minimum_size = Vector2(64, 0)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 105.0
-offset_top = 11.0
-offset_right = 169.0
-offset_bottom = 35.0
-grow_horizontal = 2
-grow_vertical = 2
-disabled = true
-text = "..."
-script = ExtResource("1_k7x6l")
-
-[node name="TextureRect3" type="TextureRect" parent="map6"]
-layout_mode = 0
-offset_left = -24.0
-offset_top = 25.0
-offset_right = 856.0
-offset_bottom = 485.0
-scale = Vector2(0.126336, 0.126336)
-texture = ExtResource("5_o2ifc")
-
-[node name="ColorRect" type="ColorRect" parent="map6/TextureRect3"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
