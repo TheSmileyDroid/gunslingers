@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=25 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
@@ -11,6 +11,8 @@
 [ext_resource type="Resource" uid="uid://dmooxiiicsuhc" path="res://data/characters/sheriff.tres" id="5_tnj6y"]
 [ext_resource type="PackedScene" uid="uid://dwk7788dlt882" path="res://scenes/ui/status_window.tscn" id="5_vq0pi"]
 [ext_resource type="Resource" uid="uid://cyee10tixyiea" path="res://data/characters/priest.tres" id="6_abitv"]
+[ext_resource type="Resource" uid="uid://cipm7oinbvrhi" path="res://data/characters/strider.tres" id="7_g5ub6"]
+[ext_resource type="Resource" uid="uid://b81a66liov8h8" path="res://data/characters/indian.tres" id="8_0gkkv"]
 [ext_resource type="Texture2D" uid="uid://cpv5psdxy5nvq" path="res://assets/shortcuts/enter_shortcut.png" id="11_5v7pn"]
 [ext_resource type="Script" path="res://scenes/ui/next_wave.gd" id="11_a0g7w"]
 [ext_resource type="PackedScene" uid="uid://co88uk1d2dhje" path="res://scenes/ui/shortcut_button.tscn" id="12_x16ju"]
@@ -62,7 +64,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_ixvhd")
-characters = Array[ExtResource("2_tvdrb")]([ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("5_tnj6y"), ExtResource("6_abitv")])
+characters = Array[ExtResource("2_tvdrb")]([ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("5_tnj6y"), ExtResource("6_abitv"), ExtResource("7_g5ub6"), ExtResource("8_0gkkv")])
 
 [node name="Shop" type="PanelContainer" parent="."]
 unique_name_in_owner = true
