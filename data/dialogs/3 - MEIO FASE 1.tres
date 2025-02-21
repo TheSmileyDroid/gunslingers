@@ -41,7 +41,7 @@ character_name = "Xerife Harlan"
 text = "Vai atirar ou vai continuar falando?"
 sprite_frames = ExtResource("3_ynutc")
 position = 1
-animation = "idle"
+animation = "attack"
 
 [sub_resource type="Resource" id="Resource_07vy4"]
 script = ExtResource("1_1xfub")
@@ -49,7 +49,7 @@ character_name = "Big Clay"
 text = "Chefe, isso é uma péssima ideia."
 sprite_frames = ExtResource("4_njrns")
 position = 0
-animation = "idle"
+animation = "attack"
 
 [sub_resource type="Resource" id="Resource_dqg33"]
 script = ExtResource("1_1xfub")

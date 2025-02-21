@@ -1,49 +1,55 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=9 format=3 uid="uid://b2yvn8if52d42"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=11 format=3 uid="uid://b2yvn8if52d42"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_hh0ud"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_e73qp"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="2_sds8r"]
+[ext_resource type="SpriteFrames" uid="uid://cjt5h4bplfh1m" path="res://assets/heroes/strider.tres" id="3_1t413"]
 
 [sub_resource type="Resource" id="Resource_q0irj"]
 script = ExtResource("1_hh0ud")
 character_name = "Xerife Harlan"
 text = "Você sabe lutar. Pode ser útil."
+sprite_frames = ExtResource("2_sds8r")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_7owg4"]
 script = ExtResource("1_hh0ud")
 character_name = "Andarilho"
 text = "Não luto por ninguém."
+sprite_frames = ExtResource("3_1t413")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_tsdft"]
 script = ExtResource("1_hh0ud")
 character_name = "Xerife Harlan"
 text = "Não estamos pedindo lealdade. Só tiros certeiros."
+sprite_frames = ExtResource("2_sds8r")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_dp3ep"]
 script = ExtResource("1_hh0ud")
 character_name = ""
 text = "(O Andarilho observa o grupo por um momento, depois dá um leve aceno.)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_wlyyi"]
 script = ExtResource("1_hh0ud")
 character_name = "Andarilho"
 text = "Pode ser.."
+sprite_frames = ExtResource("3_1t413")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_8ejl3"]
 script = ExtResource("1_hh0ud")
 character_name = "Harlan Earp"
 text = "Nosso grupo crescia. Mas o perigo também. O vilarejo perto da mina estava próximo... e alguma coisa me dizia que ali, encontraríamos o pior."
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [resource]
 script = ExtResource("2_e73qp")
