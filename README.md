@@ -13,14 +13,17 @@ Para baixar a última versão do jogo para windows, clique [aqui](
 
 #### Game Design
 Eduardo de Oliveira Motta
+
 Gabriel Henrique Silva
+
 Matheus de Souza Meire da Silva
+
 
 #### Música
 Eduardo de Oliveira Motta
 
-#### Programação
+#### Arte
 Gabriel Henrique Silva
 
-#### Arte
+#### Programação
 Gabriel Henrique Silva
