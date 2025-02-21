@@ -9,6 +9,7 @@ var in_game: bool = false:
 var loaded_level: String = "":
 	set(value):
 		loaded_level = value
+		loaded_level_changed.emit(value)
 		if loaded_level == "test":
 			SoundEvents.play_music.emit("tema1")
 		if loaded_level == "02_village_map":
@@ -23,6 +24,8 @@ var hovering_character: Character = null
 var show_health_bars: bool = false
 
 var is_playing: bool = false
+
+signal loaded_level_changed(level: String)
 
 func _ready():
 	process_mode = ProcessMode.PROCESS_MODE_ALWAYS

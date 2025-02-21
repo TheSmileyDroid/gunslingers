@@ -70,6 +70,14 @@ func spawn_wave() -> void:
 		SoundEvents.play_music.emit("tema5")
 
 	if wave > len(map_data.waves):
+		if map_data.name == "05_abandoned_mine_map":
+			SoundEvents.play_music.emit("tema6")
+			await show_dialog(map_data.victory_dialog)
+			Events.exited_game.emit()
+			SceneManager.change_scene("res://scenes/credits.tscn")
+			return
+		if map_data.victory_dialog != null:
+			await show_dialog(map_data.victory_dialog)
 		Events.won_game.emit()
 		return
 	can_spawn_wave = false
@@ -100,10 +108,15 @@ func spawn_enemy() -> void:
 func _on_enemy_death(enemy: Character):
 	alive_enemies.erase(enemy)
 	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
+		if map_data.name == "05_abandoned_mine_map":
+				SoundEvents.play_music.emit("tema6")
 		if current_wave.victory_dialog != null:
 			await show_dialog(current_wave.victory_dialog)
 	if alive_enemies.is_empty() and enemies_to_spawn.is_empty():
 		if wave > len(map_data.waves):
+			if map_data.name == "05_abandoned_mine_map":
+				SoundEvents.play_music.emit("tema6")
+				SceneManager.change_scene("res://scenes/credits.tscn")
 			Events.won_game.emit()
 		else:
 			Events.is_wave_spawnable.emit(true)

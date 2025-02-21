@@ -23,11 +23,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="LeftCharacter" type="AnimatedSprite2D" parent="."]
-position = Vector2(72, 152)
+position = Vector2(80, 104)
 scale = Vector2(6, 6)
 
 [node name="RightCharacter" type="AnimatedSprite2D" parent="."]
-position = Vector2(328, 152)
+position = Vector2(336, 104)
 scale = Vector2(6, 6)
 flip_h = true
 
@@ -37,7 +37,7 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -54.0
+offset_top = -87.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -63,6 +63,7 @@ text = "Nome"
 [node name="Text" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Texto do diálogo..."
+autowrap_mode = 3
 
 [node name="SkipDialogButton" parent="." instance=ExtResource("3_2vk3m")]
 layout_mode = 1

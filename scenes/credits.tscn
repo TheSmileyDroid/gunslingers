@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqa66xhhaf5oc"]
+[gd_scene load_steps=4 format=3 uid="uid://dva5sie6balma"]
 
 [ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="1_aeeoj"]
 [ext_resource type="PackedScene" uid="uid://dy33o7bp1xyod" path="res://scenes/components/scene_button.tscn" id="2_m5k3v"]
@@ -8,6 +8,7 @@ script/source = "extends Control
 
 func _ready():
 	$BackButton.grab_focus()
+	SoundEvents.play_music.emit(\"tema2\")
 "
 
 [node name="Credits" type="Control"]

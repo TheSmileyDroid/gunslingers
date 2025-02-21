@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://q17myclko64t"]
+[gd_scene load_steps=26 format=4 uid="uid://q17myclko64t"]
 
 [ext_resource type="Script" path="res://scenes/maps/test.gd" id="1_168gq"]
 [ext_resource type="Resource" uid="uid://7jsohqcc2aeb" path="res://data/dialogs/12 - ANTES FASE 5.tres" id="2_3kddy"]
@@ -14,6 +14,7 @@
 [ext_resource type="Resource" path="res://data/enemies/acid_rat.tres" id="9_vnvbm"]
 [ext_resource type="Resource" uid="uid://chhmqcydx4btb" path="res://data/enemies/bomb_rat.tres" id="12_im1ow"]
 [ext_resource type="TileSet" uid="uid://cn3v15vd7ld7k" path="res://assets/map/western.tres" id="13_142tp"]
+[ext_resource type="SpriteFrames" uid="uid://cr6y2s3o2e83f" path="res://assets/heroes/sam.tres" id="15_bjn4k"]
 
 [sub_resource type="Resource" id="Resource_ee5sb"]
 script = ExtResource("4_bclqx")
@@ -63,6 +64,9 @@ radius = 19.3132
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku16k"]
 size = Vector2(25.25, 17.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3ksh"]
+size = Vector2(16.625, 23.875)
 
 [node name="Test" type="Node2D"]
 y_sort_enabled = true
@@ -199,3 +203,17 @@ shape = SubResource("RectangleShape2D_ku16k")
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(128, 217)
 shape = SubResource("RectangleShape2D_ku16k")
+
+[node name="Area2D3" type="Area2D" parent="." groups=["Objects"]]
+collision_layer = 5
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(321, 50)
+shape = SubResource("RectangleShape2D_l3ksh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(322, 47)
+sprite_frames = ExtResource("15_bjn4k")
+animation = &"idle"
+autoplay = "idle"

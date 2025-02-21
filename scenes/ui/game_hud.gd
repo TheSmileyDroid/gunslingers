@@ -7,6 +7,12 @@ extends Control
 @onready var wave_label: Label = %Wave
 
 @export var characters: Array[CharacterData] = []
+@export var test_characters: Array[CharacterData] = []
+@export var village_characters: Array[CharacterData] = []
+@export var desert_characters: Array[CharacterData] = []
+@export var ruins_city_characters: Array[CharacterData] = []
+@export var abandoned_mine_characters: Array[CharacterData] = []
+
 
 func _ready() -> void:
 	Events.cash_changed.connect(update_cash)
@@ -14,8 +20,20 @@ func _ready() -> void:
 	Events.wave_started.connect(update_wave)
 	Events.entered_game.connect(_on_entered_game)
 	Events.exited_game.connect(_on_exited_game)
+	GameManager.loaded_level_changed.connect(_changed_level)
 	_load_character_buttons()
 	visible = false
+
+func _changed_level(level: String) -> void:
+	var characters_per_level: Dictionary = {
+		"test": test_characters,
+		"02_village_map": village_characters,
+		"03_desert_map": desert_characters,
+		"04_ruins_city_map": ruins_city_characters,
+		"05_abandoned_mine_map": abandoned_mine_characters
+	}
+	characters = characters_per_level[level]
+	_load_character_buttons()
 
 func _process(_delta: float) -> void:
 	pass

@@ -35,6 +35,7 @@ var musics = {
 	"tema3": preload("res://assets/music/Tema 2 - variação.mp3"),
 	"tema4": preload("res://assets/music/Tema 3.mp3"),
 	"tema5": preload("res://assets/music/Tema 4.mp3"),
+	"tema6": preload("res://assets/music/Tema outro.mp3"),
 }
 
 var is_writting: bool = false

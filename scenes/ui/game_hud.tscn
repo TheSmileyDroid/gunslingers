@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c377mm17ckmab"]
+[gd_scene load_steps=26 format=3 uid="uid://c377mm17ckmab"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_hud.gd" id="1_ixvhd"]
 [ext_resource type="Texture2D" uid="uid://b26jeahjmix7u" path="res://assets/large_ui.png" id="2_3qmpj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://cyee10tixyiea" path="res://data/characters/priest.tres" id="6_abitv"]
 [ext_resource type="Resource" uid="uid://3qaclj3f47yb" path="res://data/characters/strider.tres" id="7_g5ub6"]
 [ext_resource type="Resource" uid="uid://d274g1f8uok4t" path="res://data/characters/indian.tres" id="8_0gkkv"]
+[ext_resource type="Resource" uid="uid://b78gfyr7l3r02" path="res://data/characters/officer.tres" id="9_1kiap"]
 [ext_resource type="Texture2D" uid="uid://cpv5psdxy5nvq" path="res://assets/shortcuts/enter_shortcut.png" id="11_5v7pn"]
 [ext_resource type="Script" path="res://scenes/ui/next_wave.gd" id="11_a0g7w"]
 [ext_resource type="PackedScene" uid="uid://co88uk1d2dhje" path="res://scenes/ui/shortcut_button.tscn" id="12_x16ju"]
@@ -65,6 +66,11 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_ixvhd")
 characters = Array[ExtResource("2_tvdrb")]([ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("5_tnj6y"), ExtResource("6_abitv"), ExtResource("7_g5ub6"), ExtResource("8_0gkkv")])
+test_characters = Array[ExtResource("2_tvdrb")]([ExtResource("5_tnj6y"), ExtResource("9_1kiap"), ExtResource("3_54lv0"), ExtResource("4_ou7w5")])
+village_characters = Array[ExtResource("2_tvdrb")]([ExtResource("5_tnj6y"), ExtResource("9_1kiap"), ExtResource("3_54lv0"), ExtResource("8_0gkkv"), ExtResource("4_ou7w5")])
+desert_characters = Array[ExtResource("2_tvdrb")]([ExtResource("5_tnj6y"), ExtResource("9_1kiap"), ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("8_0gkkv"), ExtResource("7_g5ub6")])
+ruins_city_characters = Array[ExtResource("2_tvdrb")]([ExtResource("5_tnj6y"), ExtResource("9_1kiap"), ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("8_0gkkv"), ExtResource("7_g5ub6"), ExtResource("6_abitv")])
+abandoned_mine_characters = Array[ExtResource("2_tvdrb")]([ExtResource("5_tnj6y"), ExtResource("9_1kiap"), ExtResource("3_54lv0"), ExtResource("4_ou7w5"), ExtResource("8_0gkkv"), ExtResource("7_g5ub6"), ExtResource("6_abitv")])
 
 [node name="Shop" type="PanelContainer" parent="."]
 unique_name_in_owner = true
