@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvhvmbifijujp" path="res://assets/props/arrow.png" id="2_v7tmn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lju74"]
-radius = 4.0
+radius = 2.0
 
 [node name="Projectile" type="Node2D"]
 script = ExtResource("1_l5den")
