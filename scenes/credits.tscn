@@ -65,17 +65,17 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 columns = 2
 
-[node name="Programming" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+[node name="Game Design" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/Programming"]
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/Game Design"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Game Design"
 horizontal_alignment = 1
 
-[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Programming"]
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Game Design"]
 layout_mode = 2
 text = "Eduardo de Oliveira Motta
 Gabriel Henrique Silva
@@ -111,6 +111,21 @@ horizontal_alignment = 1
 [node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Music"]
 layout_mode = 2
 text = "Eduardo de Oliveira Motta"
+horizontal_alignment = 1
+
+[node name="Programming" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/Programming"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Programação"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Programming"]
+layout_mode = 2
+text = "Gabriel Henrique Silva"
 horizontal_alignment = 1
 
 [node name="BackButton" parent="." instance=ExtResource("2_m5k3v")]

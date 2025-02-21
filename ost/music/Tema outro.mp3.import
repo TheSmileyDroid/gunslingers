@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d0d35ytjbdgsu"
-path="res://.godot/imported/Tema outro.mp3-421c2a1db9f935c7c79ddc57c4dc270a.mp3str"
+path="res://.godot/imported/Tema outro.mp3-22cae82cd465803999ee4b4dd4e2b3bd.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Tema outro.mp3"
-dest_files=["res://.godot/imported/Tema outro.mp3-421c2a1db9f935c7c79ddc57c4dc270a.mp3str"]
+source_file="res://ost/music/Tema outro.mp3"
+dest_files=["res://.godot/imported/Tema outro.mp3-22cae82cd465803999ee4b4dd4e2b3bd.mp3str"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=27 format=4 uid="uid://gwvy523xl01f"]
 
 [ext_resource type="Script" path="res://scenes/maps/test.gd" id="1_kkgel"]
 [ext_resource type="Resource" uid="uid://cvm4xxqpqk506" path="res://data/dialogs/1 - Antes fase 1.tres" id="2_5ujmp"]
@@ -7,7 +7,6 @@
 [ext_resource type="Resource" uid="uid://dj1m344k61nlg" path="res://data/dialogs/4 - APOS FASE 1.tres" id="4_bkkd3"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="4_pbno8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="5_2htoy"]
-[ext_resource type="Resource" uid="uid://chhmqcydx4btb" path="res://data/enemies/bomb_rat.tres" id="5_6ne76"]
 [ext_resource type="Resource" uid="uid://c2ii2rsxp8mw6" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
 [ext_resource type="Resource" uid="uid://dekgj5k43t28t" path="res://data/dialogs/2 - ANTES FASE 1.tres" id="7_qktgq"]
 [ext_resource type="Resource" uid="uid://dakaqmw1ksta7" path="res://data/dialogs/3 - MEIO FASE 1.tres" id="9_k4asf"]
@@ -47,7 +46,7 @@ initial_dialog = ExtResource("9_k4asf")
 
 [sub_resource type="Resource" id="Resource_rca3e"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy"), ExtResource("5_6ne76")])
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy")])
 spawn_rate = 0.6
 count = 25
 

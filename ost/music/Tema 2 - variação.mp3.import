@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://mucv6cnysgup"
-path="res://.godot/imported/Tema 2 - variação.mp3-af54a2d85cac4b5e80735b5787e6216c.mp3str"
+path="res://.godot/imported/Tema 2 - variação.mp3-9808f541a069529f5420a96d56c863f7.mp3str"
 
 [deps]
 
-source_file="res://assets/music/Tema 2 - variação.mp3"
-dest_files=["res://.godot/imported/Tema 2 - variação.mp3-af54a2d85cac4b5e80735b5787e6216c.mp3str"]
+source_file="res://ost/music/Tema 2 - variação.mp3"
+dest_files=["res://.godot/imported/Tema 2 - variação.mp3-9808f541a069529f5420a96d56c863f7.mp3str"]
 
 [params]
 
