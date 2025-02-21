@@ -1,77 +1,86 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=13 format=3 uid="uid://3e20h1w8j54c"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=17 format=3 uid="uid://3e20h1w8j54c"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_fwdse"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_2wsm6"]
+[ext_resource type="SpriteFrames" uid="uid://bdy12qbhoxr72" path="res://assets/heroes/sam.tres" id="2_mof1d"]
+[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="3_xcdy2"]
+[ext_resource type="SpriteFrames" uid="uid://c6ytklltxlhdx" path="res://assets/heroes/officer.tres" id="4_naki5"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="5_rivl7"]
 
 [sub_resource type="Resource" id="Resource_0olng"]
 script = ExtResource("1_fwdse")
 character_name = "Harlan Earp"
 text = "A mina era nosso destino final. O coração da praga. Mas se queríamos entrar e sair vivos, precisaríamos de alguém que conhecesse cada túnel, cada caminho. Foi aí que nos voltamos a ele"
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_nqwme"]
 script = ExtResource("1_fwdse")
 character_name = ""
 text = "(O funcionário da mineradora, encara o grupo com olhos arregalados)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_yrcku"]
 script = ExtResource("1_fwdse")
 character_name = "Dusty Sam"
 text = "Eu... eu vi tudo. Meus amigos foram mortos. Transformados. Mas eu sei onde tudo começou. Eu posso levar vocês lá."
+sprite_frames = ExtResource("2_mof1d")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_ffiq0"]
 script = ExtResource("1_fwdse")
 character_name = "Blackjack"
 text = "Ótimo. Mas sabe atirar?"
+sprite_frames = ExtResource("3_xcdy2")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_h2777"]
 script = ExtResource("1_fwdse")
 character_name = ""
 text = "(O funcionário engole seco e balança a cabeça negativamente.)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_2vm6t"]
 script = ExtResource("1_fwdse")
 character_name = "Oficial Frank"
 text = "Chefe, isso vai ser um problema..."
+sprite_frames = ExtResource("4_naki5")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_lqyks"]
 script = ExtResource("1_fwdse")
 character_name = "Xerife Harlan"
 text = "\"Não se preocupe. Vamos manter você vivo. Mas se mentir pra gente, eu mesmo te jogo pros ratos."
+sprite_frames = ExtResource("5_rivl7")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_am5hc"]
 script = ExtResource("1_fwdse")
 character_name = "Dusty Sam"
 text = "Juro! Só quero acabar com isso..."
+sprite_frames = ExtResource("2_mof1d")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_v1v7u"]
 script = ExtResource("1_fwdse")
 character_name = "Harlan Earp"
 text = "Não demorou muito pra gente perceber... esse ia ser o pior inferno de todos. A cada passo mais fundo na mina, os olhos brilhantes na escuridão aumentavam. Eles sabiam que estávamos ali."
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_0pgew"]
 script = ExtResource("1_fwdse")
 character_name = "Harlan Earp"
 text = "E no fim daquele túnel... algo muito maior nos esperava."
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [resource]
 script = ExtResource("2_2wsm6")

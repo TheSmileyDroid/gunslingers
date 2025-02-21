@@ -1,49 +1,58 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=9 format=3 uid="uid://sld3wqbqen55"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=12 format=3 uid="uid://sld3wqbqen55"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_fhx5l"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_7c4o7"]
+[ext_resource type="SpriteFrames" uid="uid://dw5a74lijf25l" path="res://assets/heroes/prefeito.tres" id="2_jbf1f"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="3_llfg1"]
+[ext_resource type="SpriteFrames" uid="uid://c6ytklltxlhdx" path="res://assets/heroes/officer.tres" id="4_15xcb"]
 
 [sub_resource type="Resource" id="Resource_la6e8"]
 script = ExtResource("1_fhx5l")
 character_name = "Prefeito Jennings"
 text = "Xerife! Xerife! Estamos condenados! Essas praga vão devorar nossa cidade!"
+sprite_frames = ExtResource("2_jbf1f")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_8silf"]
 script = ExtResource("1_fhx5l")
 character_name = "Prefeito Jennings"
 text = "Eu não consigo dormir, não consigo comer, não consigo..."
+sprite_frames = ExtResource("2_jbf1f")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_nmyh5"]
 script = ExtResource("1_fhx5l")
 character_name = "Xerife Harlan"
 text = "Prefeito, feche essa boca e me diga: Quantos homens temos para lutar?"
+sprite_frames = ExtResource("3_llfg1")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_4r35t"]
 script = ExtResource("1_fhx5l")
 character_name = "Oficial Frank"
 text = "Não o suficiente, chefe. Não para essa quantidade de ratos."
+sprite_frames = ExtResource("4_15xcb")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_c66ad"]
 script = ExtResource("1_fhx5l")
 character_name = "Prefeito Jennings"
 text = "E se fuj..."
+sprite_frames = ExtResource("2_jbf1f")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_eddyo"]
 script = ExtResource("1_fhx5l")
 character_name = "Xerife Harlan"
 text = "Ninguém vai fugir! Vamos defender essa cidade!"
+sprite_frames = ExtResource("3_llfg1")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [resource]
 script = ExtResource("2_7c4o7")

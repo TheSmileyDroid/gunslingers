@@ -1,70 +1,80 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=12 format=3 uid="uid://tfpa2o2oynfx"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=16 format=3 uid="uid://tfpa2o2oynfx"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_njh4q"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_ds2q4"]
+[ext_resource type="SpriteFrames" uid="uid://c626u3vjdkj2b" path="res://assets/heroes/cacique.tres" id="2_nb753"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="3_q0c0r"]
+[ext_resource type="SpriteFrames" uid="uid://fctp5v5050op" path="res://assets/heroes/archer.tres" id="4_rfn11"]
+[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="5_2cs43"]
 
 [sub_resource type="Resource" id="Resource_k7g21"]
 script = ExtResource("1_njh4q")
 character_name = "Cacique Wakiza"
 text = "Agradecemos a luta. Mas não se esquecam: Foi o homem branco que trouxe isso."
+sprite_frames = ExtResource("2_nb753")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_vfq6x"]
 script = ExtResource("1_njh4q")
 character_name = "Cacique Wakiza"
 text = "Seu desejo insáciavel por ouro e terra condenou a todos."
+sprite_frames = ExtResource("2_nb753")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_2g82g"]
 script = ExtResource("1_njh4q")
 character_name = "Xerife Harlan"
 text = "Acredite, nós vamos acabar com isso."
+sprite_frames = ExtResource("3_q0c0r")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_dh2r7"]
 script = ExtResource("1_njh4q")
 character_name = "Cacique Wakiza"
 text = "Então levem nosso melhor arqueiro. Ele seberá onde a luta precisa ser travada"
+sprite_frames = ExtResource("2_nb753")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_01fya"]
 script = ExtResource("1_njh4q")
 character_name = "Hakan"
 text = "Eu irei"
+sprite_frames = ExtResource("4_rfn11")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_hudqr"]
 script = ExtResource("1_njh4q")
 character_name = ""
 text = "(O grupo encontra um uniforme velho e sujo no chão "
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_42v74"]
 script = ExtResource("1_njh4q")
 character_name = "Blackjack"
 text = "Ora, ora... isso é um uniforme da mineradora. Acho que temos uma trilha pra seguir"
+sprite_frames = ExtResource("5_2cs43")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_bbx7j"]
 script = ExtResource("1_njh4q")
 character_name = "Harlan Earp"
 text = "Se a pista estava certa ou não, a resposta estava num antigo vilarejo "
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_ahroi"]
 script = ExtResource("1_njh4q")
 character_name = "Harlan Earp"
 text = "Mas pra chegar lá... teríamos que cruzar o deserto. E aí, a noite não era nossa aliada."
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [resource]
 script = ExtResource("2_ds2q4")
