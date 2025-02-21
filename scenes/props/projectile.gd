@@ -34,6 +34,9 @@ func _on_area_2d_area_exited(_area: Area2D) -> void:
 	pass
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if not area is CollisionArea:
+		queue_free()
+		return
 	if area is CollisionArea and !is_queued_for_deletion():
 		var character: Character = area.get_parent()
 		if !is_instance_valid(character):

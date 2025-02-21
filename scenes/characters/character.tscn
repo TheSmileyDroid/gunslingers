@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bxe0x3i1mt8pr"]
+[gd_scene load_steps=30 format=3 uid="uid://bxe0x3i1mt8pr"]
 
 [ext_resource type="Shader" path="res://assets/shaders/damage_shader.gdshader" id="1_dw0yc"]
 [ext_resource type="Script" path="res://scenes/tower.gd" id="1_gqhet"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="2_nbc56"]
 [ext_resource type="Script" path="res://components/health_component.gd" id="4_jpjhx"]
 [ext_resource type="Script" path="res://components/attack_component.gd" id="5_5l51v"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_26xg2"]
 [ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="6_nda5c"]
 [ext_resource type="Script" path="res://components/character_sprite.gd" id="7_51r4x"]
 [ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="7_e78r7"]
@@ -32,6 +33,7 @@ attack_range = 100.0
 attack_type = 0
 size = 1
 reward = 10
+upgrades = Array[ExtResource("5_26xg2")]([])
 on_death_effects = Array[ExtResource("2_nbc56")]([])
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ii0nc"]
@@ -137,7 +139,7 @@ stats = SubResource("Resource_df3ar")
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("4_jpjhx")
 
-[node name="AttackComponent" type="Node" parent="."]
+[node name="AttackComponent" type="Node2D" parent="."]
 script = ExtResource("5_5l51v")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
@@ -163,10 +165,12 @@ script = ExtResource("9_mfbl3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea"]
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -16.0
-offset_top = -24.0
-offset_right = 16.0
-offset_bottom = -12.0
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = -8.0
+value = 50.0
+show_percentage = false
 script = ExtResource("9_4je33")
 
 [node name="FireRateComponent" type="Timer" parent="."]

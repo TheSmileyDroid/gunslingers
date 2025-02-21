@@ -49,18 +49,19 @@ animations = [{
 script = ExtResource("1_vxfr8")
 team = 1
 
-[node name="AttackComponent" type="Node" parent="."]
+[node name="AttackComponent" type="Node2D" parent="."]
 script = ExtResource("4_wlxog")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("5_x8ulw")
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-offset_left = -16.0
-offset_top = -32.0
-offset_right = 16.0
-offset_bottom = -17.0
+offset_left = -12.0
+offset_top = -16.0
+offset_right = 12.0
+offset_bottom = -12.0
 theme_override_font_sizes/font_size = 12
+show_percentage = false
 script = ExtResource("6_5168f")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]

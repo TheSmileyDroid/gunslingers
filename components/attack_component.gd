@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 class_name AttackComponent
 
 enum Strategy {first, last, strongest, weakest, nearest, farthest}
@@ -10,10 +10,23 @@ signal attack_started(character: Character)
 func _ready():
 	character = get_parent()
 
+func has_line_of_sight(target: Character) -> bool:
+	var space_state = get_world_2d().direct_space_state
+	var query = PhysicsRayQueryParameters2D.create(
+		character.global_position,
+		target.global_position,
+		1 << 2 # Layer 3
+	)
+	query.collide_with_areas = true
+	var result = space_state.intersect_ray(query)
+	return result.is_empty()
 
 func get_target():
 	var valid_targets = []
 	for target in character.get_node("DetectionArea").targets:
+		if !is_instance_valid(target) or !has_line_of_sight(target):
+			continue
+
 		# Se for um curador, só pega alvos da mesma equipe que precisam de cura
 		if character.stats.attack_type == CharacterData.AttackType.heal:
 			if target.team == character.team and target.stats.health < target.stats.max_health:
