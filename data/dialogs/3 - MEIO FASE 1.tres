@@ -1,56 +1,63 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=10 format=3 uid="uid://c4yif6v3ap067"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=13 format=3 uid="uid://c4yif6v3ap067"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_1xfub"]
+[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="2_og0a0"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_uabuy"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="3_ynutc"]
+[ext_resource type="SpriteFrames" uid="uid://cmr4p17it1g86" path="res://assets/heroes/brawler.tres" id="4_njrns"]
 
 [sub_resource type="Resource" id="Resource_cprog"]
 script = ExtResource("1_1xfub")
 character_name = "Harlan Earp"
 text = "Enquanto a briga pegava fogo, um velho conhecido nosso tava ocupado"
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_cg6yk"]
 script = ExtResource("1_1xfub")
 character_name = "Harlan Earp"
 text = "O Fora da Lei Jack Calloway, conhecido como Blackjack, aproveitava a confusão pra saquear a cidade."
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_d1gtm"]
 script = ExtResource("1_1xfub")
 character_name = "Harlan Earp"
 text = "Mas, por algum motivo, decidiu fazer a coisa certa. Talvez orgulho, talvez loucura."
 position = 0
-animation = "NARRADOR"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_valb3"]
 script = ExtResource("1_1xfub")
 character_name = "Blackjack"
 text = "Tsc tsc... Que desperdício de um bom saque. Mas que seja, não sou homem de ver minha própria cidade virar comida de rato."
+sprite_frames = ExtResource("2_og0a0")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_nwfap"]
 script = ExtResource("1_1xfub")
 character_name = "Xerife Harlan"
 text = "Vai atirar ou vai continuar falando?"
+sprite_frames = ExtResource("3_ynutc")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_07vy4"]
 script = ExtResource("1_1xfub")
 character_name = "Big Clay"
 text = "Chefe, isso é uma péssima ideia."
+sprite_frames = ExtResource("4_njrns")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_dqg33"]
 script = ExtResource("1_1xfub")
 character_name = "Blackjack"
 text = "Eu atiro melhor que vocês três juntos. Agora para de chiar e me dá uma arma!"
+sprite_frames = ExtResource("2_og0a0")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [resource]
 script = ExtResource("2_uabuy")
