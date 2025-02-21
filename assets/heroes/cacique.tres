@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack",
-"speed": 8.0
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -77,5 +77,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 11.0
+"speed": 5.0
 }]
