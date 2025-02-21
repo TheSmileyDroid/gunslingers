@@ -37,6 +37,7 @@ Ui="*res://scenes/ui/ui.tscn"
 SoundEvents="*res://scenes/sound_events.gd"
 SoundManagerController="*res://scenes/SoundManager.tscn"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
+Panku="*res://addons/panku_console/console.tscn"
 
 [display]
 
@@ -51,7 +52,7 @@ mouse_cursor/custom_image_hotspot=Vector2(8, 8)
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/panku_console/plugin.cfg", "res://addons/scene_manager/plugin.cfg", "res://addons/sound_manager/plugin.cfg")
 
 [global_group]
 
