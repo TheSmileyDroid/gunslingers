@@ -217,8 +217,8 @@ initial_dialog = ExtResource("2_4xvox")
 passive_income = 10
 
 [sub_resource type="Curve" id="Curve_gd2i5"]
-_data = [Vector2(0, 0.076033), 0.0, 0.0, 0, 0, Vector2(0.249254, 0.570248), 0.0, 0.0, 0, 0, Vector2(0.497015, 0.23719), 0.0, 0.0, 0, 0, Vector2(0.971642, 0.924793), 0.0, 0.0, 0, 0]
-point_count = 4
+_data = [Vector2(0, 0.076033), 0.0, 0.0, 0, 0, Vector2(0.249254, 0.570248), 0.0, 0.0, 0, 0, Vector2(0.4, 0.571429), 0.0, 0.0, 0, 0, Vector2(0.571429, 0.818182), 0.0, 0.0, 0, 0, Vector2(0.774026, 0.792208), 0.0, 0.0, 0, 0, Vector2(0.979221, 1), 0.0, 0.0, 0, 0]
+point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_xcw55"]
 _data = {
@@ -272,7 +272,6 @@ tile_set = ExtResource("13_e13x6")
 y_sort_origin = 5
 
 [node name="Area2D" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -285,7 +284,6 @@ position = Vector2(264, 73)
 shape = SubResource("CapsuleShape2D_8s1lr")
 
 [node name="Area2D5" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -295,7 +293,6 @@ rotation = 1.5739
 shape = SubResource("CapsuleShape2D_rbjlp")
 
 [node name="Area2D6" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -335,7 +332,6 @@ rotation = 3.12316
 shape = SubResource("CapsuleShape2D_hntfe")
 
 [node name="Area2D4" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -388,7 +384,6 @@ position = Vector2(408, 59)
 shape = SubResource("CircleShape2D_l50yv")
 
 [node name="Area2D2" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -421,7 +416,6 @@ position = Vector2(-8, 165)
 shape = SubResource("RectangleShape2D_ku16k")
 
 [node name="Area2D3" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -430,7 +424,6 @@ position = Vector2(160, 241)
 shape = SubResource("RectangleShape2D_vltt0")
 
 [node name="Area2D7" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 

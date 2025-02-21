@@ -368,7 +368,6 @@ position = Vector2(312, 41)
 shape = SubResource("CircleShape2D_l50yv")
 
 [node name="Area2D2" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
@@ -377,7 +376,6 @@ position = Vector2(100, 104)
 shape = SubResource("RectangleShape2D_ku16k")
 
 [node name="Area2D3" type="Area2D" parent="." groups=["Objects"]]
-visible = false
 collision_layer = 5
 collision_mask = 0
 
