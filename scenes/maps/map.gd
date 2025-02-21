@@ -66,6 +66,8 @@ func _ready() -> void:
 func spawn_wave() -> void:
 	wave += 1
 	print("Wave ", wave, "/", len(map_data.waves))
+	if map_data.name == "05_abandoned_mine_map" and wave == 4:
+		SoundEvents.play_music.emit("tema5")
 
 	if wave > len(map_data.waves):
 		Events.won_game.emit()

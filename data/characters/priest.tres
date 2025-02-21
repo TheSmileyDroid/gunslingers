@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_3jrw0"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_7tetd"]
-[ext_resource type="SpriteFrames" uid="uid://qpgymf6rjvr" path="res://assets/heroes/priest.tres" id="3_1selv"]
+[ext_resource type="SpriteFrames" uid="uid://dgcktljumpdan" path="res://assets/heroes/priest.tres" id="3_1selv"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_lyv00"]
 
 [sub_resource type="Resource" id="Resource_iu8tf"]

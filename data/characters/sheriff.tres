@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_fjq40"]
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_nt3u1"]
 [ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_pi73f"]
-[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="4_4rna3"]
+[ext_resource type="SpriteFrames" uid="uid://doilfoaxjuogi" path="res://assets/heroes/sheriff.tres" id="4_4rna3"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_6j00w"]
 
 [sub_resource type="Resource" id="Resource_klvxv"]

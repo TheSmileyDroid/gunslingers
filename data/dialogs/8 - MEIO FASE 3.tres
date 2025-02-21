@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=15 format=3 uid="uid://vtnntjiaf8us"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=15 format=3 uid="uid://b30wp73jvrn3s"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_vxobw"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_7fy2n"]
-[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="2_amg5q"]
-[ext_resource type="SpriteFrames" uid="uid://cjt5h4bplfh1m" path="res://assets/heroes/strider.tres" id="3_pxhpm"]
-[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="4_uu1lv"]
-[ext_resource type="SpriteFrames" uid="uid://cmr4p17it1g86" path="res://assets/heroes/brawler.tres" id="5_bvy7n"]
+[ext_resource type="SpriteFrames" uid="uid://bo8l662lp8cbs" path="res://assets/heroes/slinger.tres" id="2_amg5q"]
+[ext_resource type="SpriteFrames" uid="uid://b8uqpd0y3hagi" path="res://assets/heroes/strider.tres" id="3_pxhpm"]
+[ext_resource type="SpriteFrames" uid="uid://doilfoaxjuogi" path="res://assets/heroes/sheriff.tres" id="4_uu1lv"]
+[ext_resource type="SpriteFrames" uid="uid://bapdnev5082wm" path="res://assets/heroes/brawler.tres" id="5_bvy7n"]
 
 [sub_resource type="Resource" id="Resource_nc7ra"]
 script = ExtResource("1_vxobw")

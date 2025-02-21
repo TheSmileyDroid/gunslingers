@@ -45,9 +45,9 @@ script = ExtResource("1_k7x6l")
 
 [node name="TextureRect" type="TextureRect" parent="map1"]
 layout_mode = 0
-offset_left = -16.0
+offset_left = 6.0
 offset_top = 25.0
-offset_right = 864.0
+offset_right = 886.0
 offset_bottom = 485.0
 scale = Vector2(0.126336, 0.126336)
 texture = ExtResource("3_qbavc")
@@ -66,7 +66,6 @@ offset_right = 43.0
 offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 2
-disabled = true
 text = " A Ira da Terra"
 script = ExtResource("1_k7x6l")
 
@@ -85,6 +84,7 @@ scale = Vector2(0.126336, 0.126336)
 texture = ExtResource("4_k6kk3")
 
 [node name="ColorRect" type="ColorRect" parent="map2/TextureRect2"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -107,7 +107,6 @@ offset_right = 169.0
 offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 2
-disabled = true
 text = "Areia e Sangue
 "
 script = ExtResource("1_k7x6l")
@@ -122,6 +121,7 @@ scale = Vector2(0.126336, 0.126336)
 texture = ExtResource("5_o2ifc")
 
 [node name="ColorRect" type="ColorRect" parent="map3/TextureRect3"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -144,7 +144,6 @@ offset_right = -91.0
 offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-disabled = true
 text = "Intervenção Divina"
 script = ExtResource("1_k7x6l")
 
@@ -180,7 +179,6 @@ offset_right = 43.0
 offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-disabled = true
 text = "O Coração da Escuridão"
 script = ExtResource("1_k7x6l")
 

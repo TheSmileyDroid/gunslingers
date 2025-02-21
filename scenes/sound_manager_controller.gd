@@ -30,8 +30,11 @@ var writting_sfx: Array[AudioStream] = [
 
 var musics = {
 	"tema": preload("res://assets/music/Tema principal.mp3"),
+	"tema1": preload("res://assets/music/Tema principal (variação).mp3"),
 	"tema2": preload("res://assets/music/Tema 2.mp3"),
-	"tema3": preload("res://assets/music/Tema 3.mp3"),
+	"tema3": preload("res://assets/music/Tema 2 - variação.mp3"),
+	"tema4": preload("res://assets/music/Tema 3.mp3"),
+	"tema5": preload("res://assets/music/Tema 4.mp3"),
 }
 
 var is_writting: bool = false

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_4pp6x"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_6qepv"]
 [ext_resource type="Script" path="res://resources/effects/explosion_effect.gd" id="2_fq474"]
-[ext_resource type="SpriteFrames" uid="uid://do5dbmy4tanok" path="res://assets/enemies/bomb_rat.tres" id="4_php85"]
+[ext_resource type="SpriteFrames" uid="uid://c05xcr2b3ogii" path="res://assets/enemies/bomb_rat.tres" id="4_php85"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_otnv6"]
 
 [sub_resource type="Resource" id="Resource_ek62v"]

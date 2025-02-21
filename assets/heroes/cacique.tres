@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://c626u3vjdkj2b"]
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://favbhkyqs0q8"]
 
 [ext_resource type="Texture2D" uid="uid://c1ksaurcexqpj" path="res://assets/heroes/brawler.png" id="1_7pb7k"]
 [ext_resource type="Texture2D" uid="uid://c52dj7s7qugm7" path="res://assets/heroes/cacique.png" id="2_7l7p5"]

@@ -10,7 +10,15 @@ var loaded_level: String = "":
 	set(value):
 		loaded_level = value
 		if loaded_level == "test":
+			SoundEvents.play_music.emit("tema1")
+		if loaded_level == "02_village_map":
+			SoundEvents.play_music.emit("tema3")
+		if loaded_level == "03_desert_map":
 			SoundEvents.play_music.emit("tema2")
+		if loaded_level == "04_ruins_city_map":
+			SoundEvents.play_music.emit("tema1")
+		if loaded_level == "05_abandoned_mine_map":
+			SoundEvents.play_music.emit("tema3")
 var hovering_character: Character = null
 var show_health_bars: bool = false
 

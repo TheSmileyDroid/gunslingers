@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=14 format=3 uid="uid://bo58dayq8l2xi"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=14 format=3 uid="uid://c857r15l6fy5g"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_21jif"]
-[ext_resource type="SpriteFrames" uid="uid://qpgymf6rjvr" path="res://assets/heroes/priest.tres" id="2_dqfp6"]
+[ext_resource type="SpriteFrames" uid="uid://dgcktljumpdan" path="res://assets/heroes/priest.tres" id="2_dqfp6"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_plsyk"]
-[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="3_4182l"]
-[ext_resource type="SpriteFrames" uid="uid://c6ytklltxlhdx" path="res://assets/heroes/officer.tres" id="4_14qj0"]
+[ext_resource type="SpriteFrames" uid="uid://bo8l662lp8cbs" path="res://assets/heroes/slinger.tres" id="3_4182l"]
+[ext_resource type="SpriteFrames" uid="uid://dh8v5e1h4evrw" path="res://assets/heroes/officer.tres" id="4_14qj0"]
 
 [sub_resource type="Resource" id="Resource_hfmxr"]
 script = ExtResource("1_21jif")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_3grpn"]
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_6n38s"]
-[ext_resource type="SpriteFrames" uid="uid://cmr4p17it1g86" path="res://assets/heroes/brawler.tres" id="3_o1yxx"]
+[ext_resource type="SpriteFrames" uid="uid://bapdnev5082wm" path="res://assets/heroes/brawler.tres" id="3_o1yxx"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_w2rwc"]
 
 [sub_resource type="Resource" id="Resource_y7adr"]

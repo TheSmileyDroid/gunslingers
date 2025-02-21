@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=8 format=3 uid="uid://b81a66liov8h8"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=8 format=3 uid="uid://d274g1f8uok4t"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_su0pv"]
-[ext_resource type="PackedScene" uid="uid://dacv0ibhgikda" path="res://scenes/props/arrow.tscn" id="2_s51qb"]
+[ext_resource type="PackedScene" path="res://scenes/props/arrow.tscn" id="2_s51qb"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="3_g8mln"]
-[ext_resource type="SpriteFrames" uid="uid://fctp5v5050op" path="res://assets/heroes/archer.tres" id="4_modp5"]
+[ext_resource type="SpriteFrames" uid="uid://2ewud6y4o24r" path="res://assets/heroes/archer.tres" id="4_modp5"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_3237y"]
 
 [sub_resource type="Resource" id="Resource_tnbtn"]

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=5 format=3 uid="uid://fd6kynaenkcp"]
+
+[ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_2lbny"]
+[ext_resource type="Script" path="res://resources/character_stats.gd" id="2_5eb0h"]
+[ext_resource type="SpriteFrames" uid="uid://b61p7nwdh5318" path="res://assets/enemies/prime_rat.tres" id="3_ie48i"]
+[ext_resource type="Script" path="res://resources/character_upgrade.gd" id="3_yuml1"]
+
+[resource]
+script = ExtResource("2_5eb0h")
+name = "Prime Rat"
+price = 100
+sprite_frames = ExtResource("3_ie48i")
+health = 750
+max_health = 750
+damage = 200
+speed = 2.0
+fire_rate = 5.0
+pierce = 1
+strategy = 2
+attack_range = 50.0
+attack_type = 0
+size = 6
+reward = 10000
+upgrades = Array[ExtResource("3_yuml1")]([])
+on_death_effects = Array[ExtResource("1_2lbny")]([])

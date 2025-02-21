@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=17 format=3 uid="uid://3e20h1w8j54c"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=17 format=3 uid="uid://7jsohqcc2aeb"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_fwdse"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_2wsm6"]
-[ext_resource type="SpriteFrames" uid="uid://bdy12qbhoxr72" path="res://assets/heroes/sam.tres" id="2_mof1d"]
-[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="3_xcdy2"]
-[ext_resource type="SpriteFrames" uid="uid://c6ytklltxlhdx" path="res://assets/heroes/officer.tres" id="4_naki5"]
-[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="5_rivl7"]
+[ext_resource type="SpriteFrames" uid="uid://cr6y2s3o2e83f" path="res://assets/heroes/sam.tres" id="2_mof1d"]
+[ext_resource type="SpriteFrames" uid="uid://bo8l662lp8cbs" path="res://assets/heroes/slinger.tres" id="3_xcdy2"]
+[ext_resource type="SpriteFrames" uid="uid://dh8v5e1h4evrw" path="res://assets/heroes/officer.tres" id="4_naki5"]
+[ext_resource type="SpriteFrames" uid="uid://doilfoaxjuogi" path="res://assets/heroes/sheriff.tres" id="5_rivl7"]
 
 [sub_resource type="Resource" id="Resource_0olng"]
 script = ExtResource("1_fwdse")

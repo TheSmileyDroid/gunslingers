@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=8 format=3 uid="uid://cipm7oinbvrhi"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=8 format=3 uid="uid://3qaclj3f47yb"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_6epqw"]
 [ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_np316"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="3_7iltt"]
-[ext_resource type="SpriteFrames" uid="uid://cjt5h4bplfh1m" path="res://assets/heroes/strider.tres" id="4_uhx75"]
+[ext_resource type="SpriteFrames" uid="uid://b8uqpd0y3hagi" path="res://assets/heroes/strider.tres" id="4_uhx75"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_ke78k"]
 
 [sub_resource type="Resource" id="Resource_oplp0"]

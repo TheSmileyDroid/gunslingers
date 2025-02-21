@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=18 format=3 uid="uid://dlerexkhjsf68"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=19 format=3 uid="uid://cc0jw3uyu0104"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_obhhc"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_2rfqf"]
-[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="2_eu6e3"]
-[ext_resource type="SpriteFrames" uid="uid://fctp5v5050op" path="res://assets/heroes/archer.tres" id="3_u6f5m"]
-[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="4_6kr4g"]
-[ext_resource type="SpriteFrames" uid="uid://bdy12qbhoxr72" path="res://assets/heroes/sam.tres" id="5_67ub2"]
-[ext_resource type="SpriteFrames" uid="uid://cjt5h4bplfh1m" path="res://assets/heroes/strider.tres" id="6_mwwih"]
+[ext_resource type="SpriteFrames" uid="uid://bo8l662lp8cbs" path="res://assets/heroes/slinger.tres" id="2_eu6e3"]
+[ext_resource type="SpriteFrames" uid="uid://2ewud6y4o24r" path="res://assets/heroes/archer.tres" id="3_u6f5m"]
+[ext_resource type="SpriteFrames" uid="uid://doilfoaxjuogi" path="res://assets/heroes/sheriff.tres" id="4_6kr4g"]
+[ext_resource type="SpriteFrames" uid="uid://cr6y2s3o2e83f" path="res://assets/heroes/sam.tres" id="5_67ub2"]
+[ext_resource type="SpriteFrames" uid="uid://b8uqpd0y3hagi" path="res://assets/heroes/strider.tres" id="6_mwwih"]
+[ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="7_6qqe2"]
 
 [sub_resource type="Resource" id="Resource_0olng"]
 script = ExtResource("1_obhhc")
@@ -76,13 +77,16 @@ text = "E foi assim que terminou. A mina selada, o minério esquecido, os ratos 
 sprite_frames = ExtResource("4_6kr4g")
 position = 0
 animation = "idle"
+background = ExtResource("7_6qqe2")
 
 [sub_resource type="Resource" id="Resource_cfofg"]
 script = ExtResource("1_obhhc")
 character_name = ""
 text = "(O agora aposentado, Xerife Harlan Earp termina de escrever sua história, e fecha seu diário)"
+sprite_frames = ExtResource("4_6kr4g")
 position = 0
-animation = ""
+animation = "idle"
+background = ExtResource("7_6qqe2")
 
 [resource]
 script = ExtResource("2_2rfqf")

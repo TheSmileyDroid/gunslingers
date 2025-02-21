@@ -1,28 +1,28 @@
-[gd_scene load_steps=44 format=4 uid="uid://gwvy523xl01f"]
+[gd_scene load_steps=28 format=4 uid="uid://gwvy523xl01f"]
 
 [ext_resource type="Script" path="res://scenes/maps/test.gd" id="1_kkgel"]
+[ext_resource type="Resource" uid="uid://cvm4xxqpqk506" path="res://data/dialogs/1 - Antes fase 1.tres" id="2_5ujmp"]
 [ext_resource type="Script" path="res://resources/map_data.gd" id="2_axekq"]
-[ext_resource type="Resource" uid="uid://cpdnwlnknlhmj" path="res://data/dialogs/example_dialog.tres" id="2_ayvn5"]
 [ext_resource type="Script" path="res://resources/wave_data.gd" id="3_rhhou"]
+[ext_resource type="Resource" uid="uid://dj1m344k61nlg" path="res://data/dialogs/4 - APOS FASE 1.tres" id="4_bkkd3"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="4_pbno8"]
 [ext_resource type="Resource" uid="uid://cto82k0emlha5" path="res://data/enemies/rat.tres" id="5_2htoy"]
 [ext_resource type="Resource" uid="uid://chhmqcydx4btb" path="res://data/enemies/bomb_rat.tres" id="5_6ne76"]
 [ext_resource type="Resource" uid="uid://c2ii2rsxp8mw6" path="res://data/enemies/big_rat.tres" id="7_d7ixt"]
-[ext_resource type="Resource" uid="uid://ynkx3se7gnjb" path="res://data/enemies/healer_rat.tres" id="7_kk01n"]
-[ext_resource type="Script" path="res://resources/dialog_line.gd" id="7_r2pr6"]
-[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="8_tw6ag"]
-[ext_resource type="Script" path="res://resources/dialog_data.gd" id="9_4gh2v"]
-[ext_resource type="TileSet" uid="uid://cb62g15m1hnk6" path="res://assets/map/western.tres" id="13_lk2oe"]
+[ext_resource type="Resource" uid="uid://dekgj5k43t28t" path="res://data/dialogs/2 - ANTES FASE 1.tres" id="7_qktgq"]
+[ext_resource type="Resource" uid="uid://dakaqmw1ksta7" path="res://data/dialogs/3 - MEIO FASE 1.tres" id="9_k4asf"]
+[ext_resource type="TileSet" uid="uid://cn3v15vd7ld7k" path="res://assets/map/western.tres" id="13_lk2oe"]
 
 [sub_resource type="Resource" id="Resource_4iyqa"]
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
 spawn_rate = 1.0
 count = 10
+initial_dialog = ExtResource("7_qktgq")
 
 [sub_resource type="Resource" id="Resource_8pcce"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy"), ExtResource("7_kk01n")])
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
 spawn_rate = 1.0
 count = 20
 
@@ -36,164 +36,32 @@ count = 30
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy")])
 spawn_rate = 0.8
-count = 15
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ck7aq"]
-atlas = ExtResource("8_tw6ag")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_makka"]
-atlas = ExtResource("8_tw6ag")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_35lkx"]
-atlas = ExtResource("8_tw6ag")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_grfbb"]
-atlas = ExtResource("8_tw6ag")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tg8gh"]
-atlas = ExtResource("8_tw6ag")
-region = Rect2(96, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_yrine"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ck7aq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_makka")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_35lkx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_grfbb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tg8gh")
-}],
-"loop": true,
-"name": &"talk",
-"speed": 5.0
-}]
-
-[sub_resource type="Resource" id="Resource_brbm7"]
-script = ExtResource("7_r2pr6")
-character_name = "Prefeito"
-text = "Pela bota do meu vô! Aquilo são ratos gigantes? O que eles andaram comendo?"
-sprite_frames = SubResource("SpriteFrames_yrine")
-position = 1
-animation = "talk"
-
-[sub_resource type="Resource" id="Resource_gp02m"]
-script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_brbm7")])
+count = 40
 
 [sub_resource type="Resource" id="Resource_b7ce6"]
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy")])
 spawn_rate = 0.7
-count = 30
-initial_dialog = SubResource("Resource_gp02m")
-
-[sub_resource type="Resource" id="Resource_c4irw"]
-script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_brbm7")])
+count = 25
+initial_dialog = ExtResource("9_k4asf")
 
 [sub_resource type="Resource" id="Resource_rca3e"]
 script = ExtResource("3_rhhou")
 enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy"), ExtResource("5_6ne76")])
 spawn_rate = 0.6
 count = 25
-initial_dialog = SubResource("Resource_c4irw")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_w4pee"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ck7aq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_makka")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_35lkx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_grfbb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tg8gh")
-}],
-"loop": true,
-"name": &"talk",
-"speed": 5.0
-}]
-
-[sub_resource type="Resource" id="Resource_m5brt"]
-script = ExtResource("7_r2pr6")
-character_name = "Prefeito"
-text = "Aquele rato... Aquele rato está de pé! E ele está fazendo algo com os outros ratos"
-sprite_frames = SubResource("SpriteFrames_w4pee")
-position = 1
-animation = "talk"
-
-[sub_resource type="Resource" id="Resource_k22qa"]
-script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_m5brt")])
 
 [sub_resource type="Resource" id="Resource_dn1yv"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy"), ExtResource("7_kk01n"), ExtResource("5_2htoy")])
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy"), ExtResource("7_d7ixt")])
 spawn_rate = 0.6
 count = 30
-initial_dialog = SubResource("Resource_k22qa")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1e48l"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ck7aq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_makka")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_35lkx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_grfbb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tg8gh")
-}],
-"loop": true,
-"name": &"talk",
-"speed": 5.0
-}]
-
-[sub_resource type="Resource" id="Resource_60kme"]
-script = ExtResource("7_r2pr6")
-character_name = "Prefeito"
-text = "Ratos me mordam... Quero dizer... ELES NÃO PARAM DE VIR!"
-sprite_frames = SubResource("SpriteFrames_1e48l")
-position = 1
-animation = "talk"
-
-[sub_resource type="Resource" id="Resource_7jvfn"]
-script = ExtResource("9_4gh2v")
-lines = Array[ExtResource("7_r2pr6")]([SubResource("Resource_60kme")])
 
 [sub_resource type="Resource" id="Resource_k6tjw"]
 script = ExtResource("3_rhhou")
-enemies = Array[ExtResource("4_pbno8")]([ExtResource("5_2htoy"), ExtResource("7_d7ixt"), ExtResource("7_kk01n"), ExtResource("5_2htoy")])
+enemies = Array[ExtResource("4_pbno8")]([ExtResource("7_d7ixt"), ExtResource("5_2htoy")])
 spawn_rate = 0.5
 count = 40
-initial_dialog = SubResource("Resource_7jvfn")
 
 [sub_resource type="Resource" id="Resource_sbvrk"]
 script = ExtResource("2_axekq")
@@ -202,7 +70,8 @@ difficulty = 5
 initial_cash = 150
 initial_lives = 50
 waves = Array[ExtResource("3_rhhou")]([SubResource("Resource_4iyqa"), SubResource("Resource_8pcce"), SubResource("Resource_xf4b7"), SubResource("Resource_5hc1l"), SubResource("Resource_b7ce6"), SubResource("Resource_rca3e"), SubResource("Resource_dn1yv"), SubResource("Resource_k6tjw")])
-initial_dialog = ExtResource("2_ayvn5")
+initial_dialog = ExtResource("2_5ujmp")
+victory_dialog = ExtResource("4_bkkd3")
 passive_income = 10
 
 [sub_resource type="Curve" id="Curve_gd2i5"]
