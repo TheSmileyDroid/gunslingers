@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://cjt5h4bplfh1m"]
+
+[ext_resource type="Texture2D" uid="uid://dgcg1wipxl1cm" path="res://assets/heroes/strider.png" id="1_eu7o4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj5y0"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(0, 23, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmyp7"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(18, 23, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbb67"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(36, 23, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c62o2"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(0, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj50m"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(18, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vu4tr"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(36, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x8kk"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(54, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su2vs"]
+atlas = ExtResource("1_eu7o4")
+region = Rect2(72, 0, 18, 23)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj5y0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmyp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbb67")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c62o2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj50m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vu4tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x8kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su2vs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

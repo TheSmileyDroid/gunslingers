@@ -1,0 +1,126 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqa66xhhaf5oc"]
+
+[ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="1_aeeoj"]
+[ext_resource type="PackedScene" uid="uid://dy33o7bp1xyod" path="res://scenes/components/scene_button.tscn" id="2_m5k3v"]
+
+[sub_resource type="GDScript" id="GDScript_v2n4r"]
+script/source = "extends Control
+
+func _ready():
+	$BackButton.grab_focus()
+"
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_v2n4r")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.48, 0.48, 0.48, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_aeeoj")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.5
+offset_top = 32.0
+offset_right = 31.5
+offset_bottom = 58.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Créditos"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -56.0
+offset_right = 150.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Programming" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/Programming"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Game Design"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Programming"]
+layout_mode = 2
+text = "Eduardo de Oliveira Motta
+Gabriel Henrique Silva
+Matheus de Souza Meire da Silva
+"
+horizontal_alignment = 1
+
+[node name="Art" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/Art"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Arte"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Art"]
+layout_mode = 2
+text = "Gabriel Henrique Silva"
+horizontal_alignment = 1
+
+[node name="Music" type="VBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="ScrollContainer/VBoxContainer/Music"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Música"
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="ScrollContainer/VBoxContainer/Music"]
+layout_mode = 2
+text = "Eduardo de Oliveira Motta"
+horizontal_alignment = 1
+
+[node name="BackButton" parent="." instance=ExtResource("2_m5k3v")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -48.0
+offset_right = 32.0
+offset_bottom = -16.0
+text = "Voltar"

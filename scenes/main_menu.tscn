@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4sjsihv8hsyh"]
+[gd_scene load_steps=7 format=3 uid="uid://b4sjsihv8hsyh"]
 
 [ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="2_b7nox"]
 [ext_resource type="PackedScene" uid="uid://dy33o7bp1xyod" path="res://scenes/components/scene_button.tscn" id="3_a5x0v"]
 [ext_resource type="Texture2D" uid="uid://bkf8dejc00mmj" path="res://assets/logo.png" id="3_hq8c8"]
 [ext_resource type="Script" path="res://scenes/random_splash.gd" id="4_uer5r"]
+[ext_resource type="Script" path="res://scenes/quit_button.gd" id="quit_button"]
 
 [sub_resource type="GDScript" id="GDScript_g7n2r"]
 script/source = "extends VBoxContainer
@@ -57,42 +58,27 @@ focus_next = NodePath("../Button2")
 focus_previous = NodePath("../Button4")
 text = "Jogar"
 alignment = 0
+go_to_scene = "res://scenes/maps.tscn"
 
 [node name="Button2" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
 layout_mode = 2
 size_flags_horizontal = 0
 focus_neighbor_left = NodePath("../Button")
 focus_neighbor_top = NodePath("../Button")
-focus_neighbor_right = NodePath("../Button3")
-focus_neighbor_bottom = NodePath("../Button3")
-focus_next = NodePath("../Button3")
 focus_previous = NodePath("../Button")
 text = "Opções"
 alignment = 0
-
-[node name="Button3" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
-layout_mode = 2
-size_flags_horizontal = 0
-focus_neighbor_left = NodePath("../Button2")
-focus_neighbor_top = NodePath("../Button2")
-focus_neighbor_right = NodePath("../Button5")
-focus_neighbor_bottom = NodePath("../Button5")
-focus_next = NodePath("../Button5")
-focus_previous = NodePath("../Button2")
-text = "Placar"
-alignment = 0
+go_to_scene = "res://scenes/options.tscn"
 
 [node name="Button5" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
 layout_mode = 2
 size_flags_horizontal = 0
-focus_neighbor_left = NodePath("../Button3")
-focus_neighbor_top = NodePath("../Button3")
 focus_neighbor_right = NodePath("../Button4")
 focus_neighbor_bottom = NodePath("../Button4")
 focus_next = NodePath("../Button4")
-focus_previous = NodePath("../Button3")
 text = "Créditos"
 alignment = 0
+go_to_scene = "res://scenes/credits.tscn"
 
 [node name="Button4" parent="VBoxContainer" instance=ExtResource("3_a5x0v")]
 layout_mode = 2
@@ -105,6 +91,7 @@ focus_next = NodePath("../Button")
 focus_previous = NodePath("../Button5")
 text = "Sair"
 alignment = 0
+script = ExtResource("quit_button")
 
 [node name="Logo" type="TextureRect" parent="."]
 layout_mode = 2

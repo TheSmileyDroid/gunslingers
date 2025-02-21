@@ -1,93 +1,9 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=18 format=3 uid="uid://vqqlwrvxtkq2"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://vqqlwrvxtkq2"]
 
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="1_3grpn"]
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_6n38s"]
-[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="2_ynk8c"]
+[ext_resource type="SpriteFrames" uid="uid://cmr4p17it1g86" path="res://assets/heroes/brawler.tres" id="3_o1yxx"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_w2rwc"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bdbhb"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(24, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8pag4"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(48, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_50lfm"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(72, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7u83d"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(96, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iefn4"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(120, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lry4k"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7yq7n"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lkfgn"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwdrs"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yknpx"]
-atlas = ExtResource("2_ynk8c")
-region = Rect2(96, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_su8w5"]
-resource_local_to_scene = true
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bdbhb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8pag4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_50lfm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7u83d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iefn4")
-}],
-"loop": false,
-"name": &"attack",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lry4k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7yq7n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lkfgn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vwdrs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yknpx")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
 
 [sub_resource type="Resource" id="Resource_y7adr"]
 script = ExtResource("4_w2rwc")
@@ -115,7 +31,7 @@ range_bonus = 0.0
 script = ExtResource("1_3grpn")
 name = "Brawler"
 price = 50
-sprite_frames = SubResource("SpriteFrames_su8w5")
+sprite_frames = ExtResource("3_o1yxx")
 health = 150
 max_health = 150
 damage = 5

@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://cq36nesqo3ici"]
+
+[ext_resource type="Texture2D" uid="uid://bhn75hpjyywcd" path="res://assets/heroes/sheriff.png" id="1_5lo84"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jupfx"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(0, 46, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgy4f"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(18, 46, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8heuh"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(36, 46, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pepvk"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(0, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mccn"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(18, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jamq6"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(36, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w1qy"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(54, 0, 18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m66wb"]
+atlas = ExtResource("1_5lo84")
+region = Rect2(72, 0, 18, 23)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jupfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dgy4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8heuh")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pepvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mccn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jamq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w1qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m66wb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_3jrw0"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="2_7tetd"]
-[ext_resource type="SpriteFrames" uid="uid://c348gyd4lwjrv" path="res://assets/heroes/base_melee.tres" id="3_7m2tb"]
+[ext_resource type="SpriteFrames" uid="uid://qpgymf6rjvr" path="res://assets/heroes/priest.tres" id="3_1selv"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="4_lyv00"]
 
 [sub_resource type="Resource" id="Resource_iu8tf"]
@@ -31,7 +31,7 @@ range_bonus = 0.0
 script = ExtResource("2_7tetd")
 name = "Priest"
 price = 200
-sprite_frames = ExtResource("3_7m2tb")
+sprite_frames = ExtResource("3_1selv")
 health = 50
 max_health = 50
 damage = 3

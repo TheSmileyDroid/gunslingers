@@ -1,10 +1,9 @@
 extends GameButton
 
-@export_file var go_to_scene: String = "res://scenes/maps.tscn"
+@export_file var go_to_scene: String = "res://scenes/main_menu.tscn"
 
 
 func _on_pressed() -> void:
-	SoundEvents.select_button.emit()
 	SceneManager.change_scene(go_to_scene, {
 		"pattern": "scribbles",
 		"transition": "fade",

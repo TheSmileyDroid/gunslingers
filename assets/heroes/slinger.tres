@@ -1,0 +1,73 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://bnt540j3s6n7n"]
+
+[ext_resource type="Texture2D" uid="uid://0ubgjv6fb7k3" path="res://assets/heroes/slinger.png" id="1_o2dt5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ffk7"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujtf3"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tsj6"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxjc0"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt7cp"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3yv7"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2srr"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj4j6"]
+atlas = ExtResource("1_o2dt5")
+region = Rect2(96, 0, 24, 24)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ffk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujtf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tsj6")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxjc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt7cp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3yv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2srr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj4j6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

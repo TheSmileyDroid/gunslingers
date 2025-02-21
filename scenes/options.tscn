@@ -1,0 +1,86 @@
+[gd_scene load_steps=4 format=3 uid="uid://tdlhtt4kvucg"]
+
+[ext_resource type="Texture2D" uid="uid://cwy7800y17dcb" path="res://assets/banner.png" id="1_aeeoj"]
+[ext_resource type="Script" path="res://scenes/options.gd" id="1_mqb06"]
+[ext_resource type="PackedScene" uid="uid://dy33o7bp1xyod" path="res://scenes/components/scene_button.tscn" id="2_m5k3v"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mqb06")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.48, 0.48, 0.48, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_aeeoj")
+expand_mode = 3
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.5
+offset_top = 32.0
+offset_right = 31.5
+offset_bottom = 58.0
+grow_horizontal = 2
+text = "Opções"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -61.0
+offset_right = 128.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MusicLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volume Música"
+
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="SoundLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volume Música"
+
+[node name="SoundSlider" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 0.5
+
+[node name="FullscreenLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Tela Cheia"
+
+[node name="FullscreenCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BackButton" parent="VBoxContainer" instance=ExtResource("2_m5k3v")]
+layout_mode = 2
+text = "Voltar"

@@ -1,0 +1,66 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://c6ytklltxlhdx"]
+
+[ext_resource type="Texture2D" uid="uid://bnx8nod3dnnyk" path="res://assets/heroes/officer.png" id="1_6pp44"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3wg6"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(0, 44, 15, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8iml"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(15, 44, 15, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owlu8"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(30, 44, 15, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wcyi"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(0, 0, 15, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv0jw"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(15, 0, 15, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kspev"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(30, 0, 15, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opxpy"]
+atlas = ExtResource("1_6pp44")
+region = Rect2(45, 0, 15, 22)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3wg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8iml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owlu8")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wcyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv0jw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kspev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opxpy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

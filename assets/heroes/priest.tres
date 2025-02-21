@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://qpgymf6rjvr"]
+
+[ext_resource type="Texture2D" uid="uid://bf0m3sjxf5ljb" path="res://assets/heroes/priest.png" id="1_hf3qg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlf4f"]
+atlas = ExtResource("1_hf3qg")
+region = Rect2(0, 20, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2fy1"]
+atlas = ExtResource("1_hf3qg")
+region = Rect2(16, 20, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyqkp"]
+atlas = ExtResource("1_hf3qg")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4roo"]
+atlas = ExtResource("1_hf3qg")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax741"]
+atlas = ExtResource("1_hf3qg")
+region = Rect2(32, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcnij"]
+atlas = ExtResource("1_hf3qg")
+region = Rect2(48, 0, 16, 20)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlf4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2fy1")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyqkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4roo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax741")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcnij")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

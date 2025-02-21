@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://dw5a74lijf25l"]
+
+[ext_resource type="Texture2D" uid="uid://veyhkftj4e0d" path="res://assets/heroes/prefeito.png" id="2_331s0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fse2"]
+atlas = ExtResource("2_331s0")
+region = Rect2(0, 0, 12, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnqrt"]
+atlas = ExtResource("2_331s0")
+region = Rect2(12, 0, 12, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdsyy"]
+atlas = ExtResource("2_331s0")
+region = Rect2(24, 0, 12, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26dli"]
+atlas = ExtResource("2_331s0")
+region = Rect2(36, 0, 12, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_st8b1"]
+atlas = ExtResource("2_331s0")
+region = Rect2(48, 0, 12, 21)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fse2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnqrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdsyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26dli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_st8b1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

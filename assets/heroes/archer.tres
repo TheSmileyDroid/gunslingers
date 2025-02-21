@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://fctp5v5050op"]
+
+[ext_resource type="Texture2D" uid="uid://opcdmnxc6iau" path="res://assets/heroes/archer.png" id="1_lry6p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d511d"]
+atlas = ExtResource("1_lry6p")
+region = Rect2(0, 23, 21, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sae3y"]
+atlas = ExtResource("1_lry6p")
+region = Rect2(21, 23, 21, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6q5i"]
+atlas = ExtResource("1_lry6p")
+region = Rect2(0, 0, 21, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i701v"]
+atlas = ExtResource("1_lry6p")
+region = Rect2(21, 0, 21, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk8kg"]
+atlas = ExtResource("1_lry6p")
+region = Rect2(42, 0, 21, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o60f"]
+atlas = ExtResource("1_lry6p")
+region = Rect2(63, 0, 21, 23)
+
+[resource]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d511d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sae3y")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6q5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i701v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk8kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o60f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 11.0
+}]

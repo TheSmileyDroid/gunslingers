@@ -1,79 +1,10 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=17 format=3 uid="uid://bw36c8nymsxx1"]
+[gd_resource type="Resource" script_class="CharacterData" load_steps=8 format=3 uid="uid://bw36c8nymsxx1"]
 
 [ext_resource type="Script" path="res://resources/effects/trigger_effect.gd" id="1_g1n2a"]
 [ext_resource type="PackedScene" uid="uid://6wc5jxoxtrys" path="res://scenes/props/projectile.tscn" id="2_yy5v6"]
 [ext_resource type="Script" path="res://resources/character_stats.gd" id="3_uwbvm"]
-[ext_resource type="Texture2D" uid="uid://suybrf3ift1b" path="res://assets/heroes/base.png" id="4_vhaqg"]
+[ext_resource type="SpriteFrames" uid="uid://c6ytklltxlhdx" path="res://assets/heroes/officer.tres" id="4_8tdmp"]
 [ext_resource type="Script" path="res://resources/character_upgrade.gd" id="5_8i5v8"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bxpde"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(0, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_aue3c"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(24, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bs6hh"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(48, 48, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6qf2a"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5wwsv"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1nxwj"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_afxfh"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cv22g"]
-atlas = ExtResource("4_vhaqg")
-region = Rect2(96, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5fljd"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bxpde")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_aue3c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bs6hh")
-}],
-"loop": false,
-"name": &"attack",
-"speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6qf2a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5wwsv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1nxwj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_afxfh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cv22g")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 14.0
-}]
 
 [sub_resource type="Resource" id="Resource_klvxv"]
 script = ExtResource("5_8i5v8")
@@ -101,7 +32,7 @@ range_bonus = 0.0
 script = ExtResource("3_uwbvm")
 name = "Sheriff"
 price = 300
-sprite_frames = SubResource("SpriteFrames_5fljd")
+sprite_frames = ExtResource("4_8tdmp")
 health = 80
 max_health = 80
 damage = 4
