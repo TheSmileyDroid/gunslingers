@@ -1,84 +1,94 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=14 format=3 uid="uid://110o1smqlvuf"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=19 format=3 uid="uid://110o1smqlvuf"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_si2j4"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_1d5em"]
+[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="2_omonf"]
+[ext_resource type="SpriteFrames" uid="uid://bdy12qbhoxr72" path="res://assets/heroes/sam.tres" id="3_hb7g5"]
+[ext_resource type="SpriteFrames" uid="uid://fctp5v5050op" path="res://assets/heroes/archer.tres" id="4_whebu"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="5_0tse5"]
+[ext_resource type="SpriteFrames" uid="uid://cjt5h4bplfh1m" path="res://assets/heroes/strider.tres" id="6_m0wym"]
 
 [sub_resource type="Resource" id="Resource_0olng"]
 script = ExtResource("1_si2j4")
 character_name = ""
 text = "(O grupo avança pelos túneis escuros da mina. O som de garras arranhando pedra ecoa ao redor. Os olhos vermelhos dos ratos brilham na escuridão..."
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_nqwme"]
 script = ExtResource("1_si2j4")
 character_name = ""
 text = "mas eles não atacam imediatamente, como se estivessem esperando algo)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_yrcku"]
 script = ExtResource("1_si2j4")
 character_name = "Blackjack"
 text = "Tá quieto demais... isso nunca é bom."
+sprite_frames = ExtResource("2_omonf")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_ffiq0"]
 script = ExtResource("1_si2j4")
 character_name = ""
 text = "(O silêncio é quebrado por um rugido profundo. A terra treme. Das sombras, uma silhueta monstruosa emerge – maior que qualquer outro rato enfrentado antes."
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_h2777"]
 script = ExtResource("1_si2j4")
 character_name = ""
 text = "Sua pele é grotescamente deformada, pulsando com a mesma energia verde do minério)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_2vm6t"]
 script = ExtResource("1_si2j4")
 character_name = "Dusty Sam (sussurando aparvorado)"
 text = "A gente... a gente nunca devia ter aberto esse lugar"
+sprite_frames = ExtResource("3_hb7g5")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_lqyks"]
 script = ExtResource("1_si2j4")
 character_name = "Hakan"
 text = "Esse não é um rato qualquer... ele é o primeiro!"
+sprite_frames = ExtResource("4_whebu")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_b20bt"]
 script = ExtResource("1_si2j4")
 character_name = ""
 text = "(O monstro ruge novamente, e os outros ratos, antes hesitantes, começam a avançar com fúria renovada.)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_f1xjs"]
 script = ExtResource("1_si2j4")
 character_name = "Xerife Harlan"
 text = "\"Então é ele... o líder dessa praga. O primeiro a ser corrompido."
+sprite_frames = ExtResource("5_0tse5")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_luavw"]
 script = ExtResource("1_si2j4")
 character_name = "Andarilho"
 text = "Se quisermos sair daqui, temos que derrubar ele primeiro."
+sprite_frames = ExtResource("6_m0wym")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_cfofg"]
 script = ExtResource("1_si2j4")
 character_name = ""
 text = "(O grupo se posiciona, armas em punho, enquanto o Rato Primordial avança, trazendo o verdadeiro pesadelo da infestação para a batalha)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [resource]
 script = ExtResource("2_1d5em")

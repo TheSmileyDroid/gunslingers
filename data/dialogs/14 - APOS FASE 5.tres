@@ -1,85 +1,89 @@
-[gd_resource type="Resource" script_class="DialogData" load_steps=14 format=3 uid="uid://dlerexkhjsf68"]
+[gd_resource type="Resource" script_class="DialogData" load_steps=18 format=3 uid="uid://dlerexkhjsf68"]
 
 [ext_resource type="Script" path="res://resources/dialog_line.gd" id="1_obhhc"]
 [ext_resource type="Script" path="res://resources/dialog_data.gd" id="2_2rfqf"]
+[ext_resource type="SpriteFrames" uid="uid://bnt540j3s6n7n" path="res://assets/heroes/slinger.tres" id="2_eu6e3"]
+[ext_resource type="SpriteFrames" uid="uid://fctp5v5050op" path="res://assets/heroes/archer.tres" id="3_u6f5m"]
+[ext_resource type="SpriteFrames" uid="uid://cq36nesqo3ici" path="res://assets/heroes/sheriff.tres" id="4_6kr4g"]
+[ext_resource type="SpriteFrames" uid="uid://bdy12qbhoxr72" path="res://assets/heroes/sam.tres" id="5_67ub2"]
+[ext_resource type="SpriteFrames" uid="uid://cjt5h4bplfh1m" path="res://assets/heroes/strider.tres" id="6_mwwih"]
 
 [sub_resource type="Resource" id="Resource_0olng"]
 script = ExtResource("1_obhhc")
 character_name = ""
 text = "(A caverna está em silêncio. O “rato-primordial” jaz morto no centro do salão subterrâneo. Ao redor, centenas de ratos cambaleiam, desnorteados, sem saber o que fazer)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_nqwme"]
 script = ExtResource("1_obhhc")
 character_name = "Blackjack"
 text = "Heh... matamos o chefe, e os capangas não sabem pra onde correr!"
+sprite_frames = ExtResource("2_eu6e3")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_yrcku"]
 script = ExtResource("1_obhhc")
 character_name = "Hakan"
 text = "A natureza sem seu líder... desmorona."
+sprite_frames = ExtResource("3_u6f5m")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_ffiq0"]
 script = ExtResource("1_obhhc")
 character_name = "Xerife Harlan"
 text = "Então vamos acabar com isso de vez. Fechem essa maldita entrada!"
+sprite_frames = ExtResource("4_6kr4g")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_h2777"]
 script = ExtResource("1_obhhc")
 character_name = ""
 text = "(O grupo começa a colocar explosivos ao redor do minério brilhante. O Funcionário da Mineradora observa em silêncio, como se ainda tentasse entender tudo o que aconteceu)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_2vm6t"]
 script = ExtResource("1_obhhc")
 character_name = "Dusty Sam"
 text = "Foi por isso... tudo isso... por causa da nossa ganância."
+sprite_frames = ExtResource("5_67ub2")
 position = 0
-animation = "talk"
-
-[sub_resource type="Resource" id="Resource_lqyks"]
-script = ExtResource("1_obhhc")
-character_name = ""
-text = ""
-position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_b20bt"]
 script = ExtResource("1_obhhc")
 character_name = "Andarilho"
 text = "É sempre assim..."
+sprite_frames = ExtResource("6_mwwih")
 position = 1
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_f1xjs"]
 script = ExtResource("1_obhhc")
 character_name = ""
 text = "(O último pavio é aceso. O grupo corre para fora da mina enquanto explosões ecoam atrás deles, fazendo o chão tremer. A entrada desmorona, soterrando o minério e qualquer coisa que restasse lá dentro)"
 position = 0
-animation = "DESCRIÇÃO"
+animation = ""
 
 [sub_resource type="Resource" id="Resource_luavw"]
 script = ExtResource("1_obhhc")
 character_name = "Harlan Earp"
 text = "E foi assim que terminou. A mina selada, o minério esquecido, os ratos sem um mestre. Por um tempo, a paz voltou. Mas eu sabia... algumas histórias nunca morrem"
+sprite_frames = ExtResource("4_6kr4g")
 position = 0
-animation = "talk"
+animation = "idle"
 
 [sub_resource type="Resource" id="Resource_cfofg"]
 script = ExtResource("1_obhhc")
 character_name = ""
 text = "(O agora aposentado, Xerife Harlan Earp termina de escrever sua história, e fecha seu diário)"
 position = 0
-animation = "talk"
+animation = ""
 
 [resource]
 script = ExtResource("2_2rfqf")
-lines = Array[ExtResource("1_obhhc")]([SubResource("Resource_0olng"), SubResource("Resource_nqwme"), SubResource("Resource_yrcku"), SubResource("Resource_ffiq0"), SubResource("Resource_h2777"), SubResource("Resource_2vm6t"), SubResource("Resource_lqyks"), SubResource("Resource_b20bt"), SubResource("Resource_f1xjs"), SubResource("Resource_luavw"), SubResource("Resource_cfofg")])
+lines = Array[ExtResource("1_obhhc")]([SubResource("Resource_0olng"), SubResource("Resource_nqwme"), SubResource("Resource_yrcku"), SubResource("Resource_ffiq0"), SubResource("Resource_h2777"), SubResource("Resource_2vm6t"), SubResource("Resource_b20bt"), SubResource("Resource_f1xjs"), SubResource("Resource_luavw"), SubResource("Resource_cfofg")])
