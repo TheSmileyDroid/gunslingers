@@ -53,7 +53,7 @@ grow_vertical = 2
 
 [node name="MusicLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volume Música"
+text = "Volume das Músicas"
 
 [node name="MusicSlider" type="HSlider" parent="VBoxContainer"]
 unique_name_in_owner = true
@@ -64,7 +64,7 @@ value = 0.5
 
 [node name="SoundLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volume Música"
+text = "Volume dos Sons"
 
 [node name="SoundSlider" type="HSlider" parent="VBoxContainer"]
 unique_name_in_owner = true
